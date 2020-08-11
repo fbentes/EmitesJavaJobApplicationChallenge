@@ -1,9 +1,12 @@
 /**
  * 
  */
-package com.imdb.query;
+package com.imdb.query.main;
 
 import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.util.Constants;
+import com.imdb.query.util.ImdbQueryModule;
+
 import javax.inject.Inject;
 
 import com.google.inject.Guice;
@@ -33,12 +36,7 @@ public class StartServer {
 	
 	private void execute() {
 		
-		//imdbSocketServer = new ImdbSocketServer();
+		imdbSocketServer.connect(Constants.PORT);
 		
-		System.out.println("Conectando com o servidor ...");
-		imdbSocketServer.connect();
-		
-		System.out.println("Esperando requisição do cliente ...");
-		imdbSocketServer.waitingForClientRequests();
 	}
 }

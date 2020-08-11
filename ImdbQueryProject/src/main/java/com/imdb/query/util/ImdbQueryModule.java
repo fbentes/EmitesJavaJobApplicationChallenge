@@ -1,12 +1,14 @@
 /**
  * 
  */
-package com.imdb.query;
+package com.imdb.query.util;
 
 import com.google.inject.AbstractModule;
 import com.imdb.query.client.ImdbSocketClient;
 import com.imdb.query.client.impl.ImdbSocketClientImpl;
+import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.server.impl.IMDbUrlConnectionImpl;
 import com.imdb.query.server.impl.ImdbSocketServerImpl;
 
 /**
@@ -20,5 +22,6 @@ public class ImdbQueryModule extends AbstractModule {
 		
 		bind(ImdbSocketClient.class).to(ImdbSocketClientImpl.class);
 		bind(ImdbSocketServer.class).to(ImdbSocketServerImpl.class);
+		bind(IMDbUrlConnection.class).to(IMDbUrlConnectionImpl.class);		
 	}
 }

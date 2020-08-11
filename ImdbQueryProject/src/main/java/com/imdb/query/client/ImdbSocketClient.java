@@ -9,7 +9,5 @@ package com.imdb.query.client;
  */
 public interface ImdbSocketClient {
 	
-	void connectToServer(String ipServer);
-	
-	void sendMovieTitleToSearchInServer(String title);
+	void connectToServer(String ipServer, int port);
 }
