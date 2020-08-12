@@ -10,6 +10,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -25,8 +27,10 @@ import com.imdb.query.server.IMDbUrlConnection;
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 
 	private List<String> movieList = new ArrayList<String>();
+	TreeSet<String> set = new TreeSet<String>();
 	
-	public String getMovieData(String movieTitle) {
+	@Override
+	public String getMoviesFound(String movieTitle) {
 		
 		String result = "";
 		
@@ -41,7 +45,8 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		return (!result.equals("") ? result : "Nenhum filme foi encontrado como '" + movieTitle + "'");
 	}
 	
-	public void loadMovieLlistFromImdb() {
+	@Override
+	public int loadMovieLlistFromImdb() {
 		
 		String strUrl = "https://www.imdb.com/chart/top/?ref_=wl_expl_1";
 		
@@ -69,8 +74,7 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 	        in.close();
         
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Problema ao conectar na url " + strUrl + ": " + e.getMessage());
 		}
         
         Document document = Jsoup.parse(strHtml.toString());
@@ -83,6 +87,12 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
         		
         		movieList.add(element.text());
         	}
-        }        	
+        }
+        
+        movieList = movieList.stream().sorted().collect(Collectors.toList());
+        
+        System.out.println(movieList.toArray());
+        
+        return movieList.size();
     }
 }

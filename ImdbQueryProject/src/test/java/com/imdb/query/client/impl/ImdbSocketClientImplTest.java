@@ -3,14 +3,77 @@
  */
 package com.imdb.query.client.impl;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ImdbSocketClientImplTest {
+import java.util.Random;
+
+import javax.inject.Inject;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.Module;
+import com.imdb.query.TestBase;
+import com.imdb.query.client.ImdbSocketClient;
+import com.imdb.query.util.Constants;
+import com.imdb.query.util.ImdbQueryModule;
+
+public class ImdbSocketClientImplTest extends TestBase {
     
-	@Test 
-    public void testSomeLibraryMethod() {
-       // Library classUnderTest = new Library();
-      //  assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
-    }
+	@Inject
+	private ImdbSocketClient imdbSocketClient;
+	
+	@BeforeAll
+	public void initializeTests() {
+
+		Module module = new ImdbQueryModule();
+        Injector injector = Guice.createInjector(module);
+        injector.injectMembers(this);
+	}
+	
+	@Test
+    @Order(1)
+	public void connectToServerTest() {
+		
+		boolean connected = imdbSocketClient.connectToServer(Constants.LOCAL_HOST, Constants.PORT);
+		
+		assertTrue(connected);
+	}
+	
+	@Test
+    @Order(2)
+	public void keyBoardInputMovieTitle() {
+		
+		String movieTitle = ".."; // imdbSocketClient.keyBoardInputMovieTitle();
+		
+		assertNotNull(movieTitle);
+	}
+	
+	@Test
+    @Order(3)
+	public void sendMovieTitleToSearchInServer() {
+
+		Random random = new Random();
+
+		String movieTitleExample = movieArrayTest[random.nextInt(movieArrayTest.length)];
+
+		String sent = imdbSocketClient.sendMovieTitleToSearchInServer(movieTitleExample);
+
+		boolean movieTitleFound = sent != null && !sent.trim().equals("");
+
+		assertTrue(movieTitleFound);
+	}
+	
+	@AfterAll
+	public void stopConnectionTest() {
+		
+		boolean stopped = imdbSocketClient.stopConnection();
+		
+		assertTrue(stopped);
+	}
 }

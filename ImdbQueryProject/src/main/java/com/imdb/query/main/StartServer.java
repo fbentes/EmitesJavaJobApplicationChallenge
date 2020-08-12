@@ -36,7 +36,30 @@ public class StartServer {
 	
 	private void execute() {
 		
-		imdbSocketServer.connect(Constants.PORT);
+		System.out.println("Conectando no servidor na porta " + Constants.PORT);
+		
+		boolean connected = imdbSocketServer.connect(Constants.PORT);
+		
+		if(connected) {
+
+			System.out.println("Servidor conectado.");
+
+			System.out.println("Carregando a lista de filmes ...");
+			
+			int totalMovies = imdbSocketServer.loadMovieLlistFromImdb();
+			
+			System.out.println("Total de filmes carregados = " + totalMovies);
+			
+			System.out.println("");
+			System.out.println("Esperando requisição do cliente ...");
+			
+			imdbSocketServer.waitingForClientRequests();			
+		
+		} else {
+			System.out.println("Servidor não conectado !!!");			
+		}
+		
+		System.out.println("");
 		
 	}
 }

@@ -6,9 +6,8 @@ package com.imdb.query.client.impl;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 import com.imdb.query.client.ImdbSocketClient;
 
@@ -19,72 +18,104 @@ import com.imdb.query.client.ImdbSocketClient;
 public class ImdbSocketClientImpl implements ImdbSocketClient {
 	
 	private Socket clientSocket;
-    private BufferedReader in;
+    private BufferedReader readFromServerBufferedReader;
+    private PrintWriter writeToServerPrintWriter;
     
 	@Override
-	public void connectToServer(String ipServer, int port) {
+	public boolean connectToServer(String ipServer, int port) {
 		
 		try {
-
-			clientSocket = new Socket(ipServer,port);
-
-			in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-
-			inputMovieTitle();
-
-		} catch (UnknownHostException e) {
 			
-			System.out.println(e.getMessage());
+			clientSocket = new Socket(ipServer,port);
+			
+			return true;
 			
 		} catch (IOException e) {
-
 			System.out.println(e.getMessage());
+			
+			return false;
 		}
 	}
 	
-	private void inputMovieTitle() {
+	@Override
+	public String keyBoardInputMovieTitle() {
 		
-		System.out.println("");
-		System.out.print("Digite o título do filme para pesquisa no IMDB: ");
-
-        BufferedReader reader =  
+        BufferedReader movieTitleBufferedReader =  
                 new BufferedReader(new InputStreamReader(System.in)); 
       
-        String movieTitle = " ";
+        String movieTitle = "";
         
-		while(!movieTitle.trim().toLowerCase().equals("sair")) {
+		try {
+			
+			movieTitle = movieTitleBufferedReader.readLine();
+			
+		} catch (IOException e) {
+			
+			System.out.println("Problema na leitura do título do filme: " + e.getMessage());
+		} 
 		
-			try {
-				movieTitle = reader.readLine();
-			} catch (IOException e) {
-				
-				System.out.println("Problema na leitura do título do filme: " + e.getMessage());
-			} 
-			
-			String response = sendMovieTitleToSearchInServer(movieTitle);
-			
-			System.out.println("");
-			System.out.println("Resposta: \n" + response);
-		}
+		return movieTitle;
 	}
 	
-	private String sendMovieTitleToSearchInServer(String title) {
+	@Override
+	public String sendMovieTitleToSearchInServer(String movieTitle) {
+				
+		try {
 		
-		PrintStream output;
-		
+			readFromServerBufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+	        
+			writeToServerPrintWriter = new PrintWriter(clientSocket.getOutputStream(), true);
+
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+
 		try {
 
-			output = new PrintStream(clientSocket.getOutputStream());
-	        
-			output.println(title);	
+			writeToServerPrintWriter.println(movieTitle);	
 			
-			String response = in.readLine();
+			String responseOfServerWithMovieTitles = "";
 			
-			return response;
+			String responseReadLine;
+			
+            while ((responseReadLine = readFromServerBufferedReader.readLine()) != null) {
+            	
+            	responseOfServerWithMovieTitles += responseReadLine + "\n";
+ 	        }
+
+	        return responseOfServerWithMovieTitles;
 
 		} catch (IOException e) {
 
 			return e.getMessage();
 		}
    }
+	
+	@Override
+    public boolean stopConnection() {
+		
+        try {
+			
+        	readFromServerBufferedReader.close();
+			
+		} catch (IOException e) {
+			
+			System.out.println(e.getMessage());
+			return false;
+		}
+        
+        writeToServerPrintWriter.close();
+        
+        try {
+			
+        	clientSocket.close();
+        	
+		} catch (IOException e) {
+			
+			System.out.println(e.getMessage());
+			return false;
+		}
+        
+        return true;
+    }	
 }
