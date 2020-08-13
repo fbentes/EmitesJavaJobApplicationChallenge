@@ -3,7 +3,6 @@
  */
 package com.imdb.query.client.impl;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Random;
@@ -12,28 +11,58 @@ import javax.inject.Inject;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
-import com.imdb.query.TestBase;
 import com.imdb.query.client.ImdbSocketClient;
+import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.server.ServerCommand;
+import com.imdb.query.server.impl.ServerCommandImpl;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.ImdbQueryModule;
 
-public class ImdbSocketClientImplTest extends TestBase {
+@TestInstance(Lifecycle.PER_CLASS)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class ImdbSocketClientImplTest {
     
 	@Inject
 	private ImdbSocketClient imdbSocketClient;
 	
-	@BeforeAll
-	public void initializeTests() {
+	@Inject
+	private ImdbSocketServer imdbSocketServer;
 
+	@BeforeAll
+	public void initializeTests() throws InterruptedException {
+
+		System.out.println("************ PREPARA SERVIDOR PARA CLIENTE ************");
+		System.out.println("");
+		
 		Module module = new ImdbQueryModule();
         Injector injector = Guice.createInjector(module);
         injector.injectMembers(this);
+        
+		Thread thread = new Thread(new Runnable() {
+		    public void run() {
+
+		    	ServerCommand serverCommand = new ServerCommandImpl();
+		    	serverCommand.setImdbSocketServer(imdbSocketServer);
+		    	serverCommand.execute();
+		    }
+		  });
+		
+        thread.start();
+	    thread.join(3000);
+
+		System.out.println("");			
+		System.out.println("************ INICA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************");
+		System.out.println("");			
 	}
 	
 	@Test
@@ -43,23 +72,42 @@ public class ImdbSocketClientImplTest extends TestBase {
 		boolean connected = imdbSocketClient.connectToServer(Constants.LOCAL_HOST, Constants.PORT);
 		
 		assertTrue(connected);
+		
+		if(connected) {			
+			System.out.println("Cliente conectado com o servidor !");
+		} else {
+			System.out.println("Cliente não conectado com o servidor !");			
+		}
 	}
 	
 	@Test
     @Order(2)
-	public void keyBoardInputMovieTitle() {
-		
-		String movieTitle = ".."; // imdbSocketClient.keyBoardInputMovieTitle();
-		
-		assertNotNull(movieTitle);
-	}
-	
-	@Test
-    @Order(3)
 	public void sendMovieTitleToSearchInServer() {
 
 		Random random = new Random();
-
+		
+		String[] movieArrayTest = 
+			{"...E o Vento Levou, ",
+	         "12 Anos", 
+	         "12 Homens", 
+	         "1917, 2001: Uma Odisséia no Espaço", 
+	         "3 ", 
+	         "A Batalha ", 
+	         "A Caça", 
+	         "A Chantagem", 
+	         "A Criada", 
+	         "A Felicidade", 
+	         "A General", 
+	         "A Lista ", 
+	         "A Malvada", 
+	         "A Mulher Faz o Homem", 
+	         "A Origem", 
+	         "A Separação", 
+	         "Alien", 
+	         "Antes" , 
+	         "Batman", 
+	         "Um sonho"};
+		
 		String movieTitleExample = movieArrayTest[random.nextInt(movieArrayTest.length)];
 
 		String sent = imdbSocketClient.sendMovieTitleToSearchInServer(movieTitleExample);
@@ -67,13 +115,36 @@ public class ImdbSocketClientImplTest extends TestBase {
 		boolean movieTitleFound = sent != null && !sent.trim().equals("");
 
 		assertTrue(movieTitleFound);
+		
+		if(movieTitleFound) {			
+			System.out.println("Filme(s) encontrado(s): " + movieTitleExample);
+		} else {
+			System.out.println("Nenhum filme foi encontrado !");			
+		}
 	}
 	
 	@AfterAll
 	public void stopConnectionTest() {
 		
-		boolean stopped = imdbSocketClient.stopConnection();
+		boolean isClientStopped = imdbSocketClient.stopConnection();
 		
-		assertTrue(stopped);
+		imdbSocketServer.stop();
+		
+		boolean isServerStopped = imdbSocketServer.isStoped();
+		
+		assertTrue(isClientStopped && isServerStopped);
+		
+		if(isClientStopped) {
+			System.out.println("Conexão do cliente encerrada !");
+		} else {
+			System.out.println("Cliente não encerrado !!!");
+		}
+		
+		if(isServerStopped) {		
+			System.out.println("Servidor finalizado !");	
+		} else {
+			System.out.println("Servidor não finalizado !");
+		}
+		
 	}
 }

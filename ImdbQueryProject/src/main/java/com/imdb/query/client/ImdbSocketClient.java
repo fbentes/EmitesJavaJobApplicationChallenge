@@ -11,8 +11,6 @@ public interface ImdbSocketClient {
 	
 	boolean connectToServer(String ipServer, int port);
 	
-	String keyBoardInputMovieTitle();
-	
 	String sendMovieTitleToSearchInServer(String movieTitle);
 	
 	boolean stopConnection();

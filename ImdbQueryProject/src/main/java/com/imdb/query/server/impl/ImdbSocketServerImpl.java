@@ -25,10 +25,14 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 	
 	private boolean isExecuting;
 	
+	public boolean isStoped() {
+		
+		return !isExecuting;
+	}
+	
 	@Inject
 	private IMDbUrlConnection iMDbUrlConnection;
 	
-	@Override
 	public boolean connect(int port) {
 		
 		try {
@@ -47,17 +51,16 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 		return isExecuting;
 	}
 	
-	@Override
 	public int loadMovieLlistFromImdb() {
 		
 		if(!isExecuting) {
 			System.out.println("O método connect() deve ser chamado !");
+			return -1;
 		}
 		
 		return iMDbUrlConnection.loadMovieLlistFromImdb();
 	}
 	
-	@Override
 	public void waitingForClientRequests() {
 		
 		 while (isExecuting) {
@@ -95,8 +98,7 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 		 return false;
 	}
 	
-	@Override
-    public void stop() {
+	public void stop() {
 		
 		isExecuting = false;
     }

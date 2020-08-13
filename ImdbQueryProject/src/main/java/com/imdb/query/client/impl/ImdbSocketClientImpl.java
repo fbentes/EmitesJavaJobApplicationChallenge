@@ -21,7 +21,6 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
     private BufferedReader readFromServerBufferedReader;
     private PrintWriter writeToServerPrintWriter;
     
-	@Override
 	public boolean connectToServer(String ipServer, int port) {
 		
 		try {
@@ -37,27 +36,6 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
 		}
 	}
 	
-	@Override
-	public String keyBoardInputMovieTitle() {
-		
-        BufferedReader movieTitleBufferedReader =  
-                new BufferedReader(new InputStreamReader(System.in)); 
-      
-        String movieTitle = "";
-        
-		try {
-			
-			movieTitle = movieTitleBufferedReader.readLine();
-			
-		} catch (IOException e) {
-			
-			System.out.println("Problema na leitura do título do filme: " + e.getMessage());
-		} 
-		
-		return movieTitle;
-	}
-	
-	@Override
 	public String sendMovieTitleToSearchInServer(String movieTitle) {
 				
 		try {
@@ -91,8 +69,7 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
 		}
    }
 	
-	@Override
-    public boolean stopConnection() {
+	public boolean stopConnection() {
 		
         try {
 			

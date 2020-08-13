@@ -26,17 +26,15 @@ import com.imdb.query.server.IMDbUrlConnection;
  */
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 
-	private List<String> movieList = new ArrayList<String>();
-	TreeSet<String> set = new TreeSet<String>();
+	private List<Object> movieList = new ArrayList<Object>();
 	
-	@Override
 	public String getMoviesFound(String movieTitle) {
 		
 		String result = "";
 		
-		for (String title : movieList) {
+		for (Object title : movieList) {
 			
-			if(title.trim().toLowerCase().startsWith(movieTitle.trim().toLowerCase())) {
+			if(title.toString().trim().toLowerCase().startsWith(movieTitle.trim().toLowerCase())) {
 				
 				result += title + "\n";
 			}
@@ -45,7 +43,6 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		return (!result.equals("") ? result : "Nenhum filme foi encontrado como '" + movieTitle + "'");
 	}
 	
-	@Override
 	public int loadMovieLlistFromImdb() {
 		
 		String strUrl = "https://www.imdb.com/chart/top/?ref_=wl_expl_1";
@@ -90,8 +87,6 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
         }
         
         movieList = movieList.stream().sorted().collect(Collectors.toList());
-        
-        System.out.println(movieList.toArray());
         
         return movieList.size();
     }

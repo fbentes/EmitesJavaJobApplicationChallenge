@@ -16,4 +16,6 @@ public interface ImdbSocketServer {
 	int loadMovieLlistFromImdb();
 	
 	void stop();
+	
+	boolean isStoped();
 }

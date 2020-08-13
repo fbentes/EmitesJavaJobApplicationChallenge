@@ -3,7 +3,9 @@
  */
 package com.imdb.query.main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import javax.inject.Inject;
 
@@ -28,7 +30,7 @@ public class StartClient {
 	 */
 	public static void main(String[] args) throws IOException {
 		
-		String ipServer = "127.0.0.1";
+		String ipServer = Constants.LOCAL_HOST;
 		
 		if(args != null && args.length == 1) {
 			ipServer = args[0];
@@ -55,8 +57,18 @@ public class StartClient {
 			
 			System.out.print("Digite o título do filme para pesquisa no IMDB: ");
 
-			movieTitle = imdbSocketClient.keyBoardInputMovieTitle();
-			
+	        BufferedReader movieTitleBufferedReader =  
+	                new BufferedReader(new InputStreamReader(System.in)); 
+	      
+			try {
+				
+				movieTitle = movieTitleBufferedReader.readLine();
+				
+			} catch (IOException e) {
+				
+				System.out.println("Problema na leitura do título do filme: " + e.getMessage());
+			} 
+		
 			if(movieTitle.equals("sair") ) {
 				break;
 			}
