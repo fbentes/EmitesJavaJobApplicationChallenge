@@ -9,15 +9,17 @@ import java.io.InputStreamReader;
 
 import javax.inject.Inject;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Module;
 import com.imdb.query.client.ImdbSocketClient;
 import com.imdb.query.util.Constants;
-import com.imdb.query.util.ImdbQueryModule;
+import com.imdb.query.util.IMDbQueryModuleInjector;
 /**
  * @author Fábio Bentes
  *
+ *	Classe responsável para iniciar o Client Socket para solicitações de nomes de filmes com o servidor Socket.
+ *
+ *  Podem ser pesquisados nomes completos, mas também iniciais de nomes de filmes para o retorno
+ *  dos nomes concatenados com "\n". Nesse caso a pesquisa no funcionará como um like no SQL.
+ *  
  */
 public class StartClient {
 
@@ -30,7 +32,7 @@ public class StartClient {
 	 */
 	public static void main(String[] args) throws IOException {
 		
-		String ipServer = Constants.LOCAL_HOST;
+		String ipServer = Constants.IP_SERVER;
 		
 		if(args != null && args.length == 1) {
 			ipServer = args[0];
@@ -38,9 +40,7 @@ public class StartClient {
 		
 		StartClient startClient = new StartClient();
 		
-		Module module = new ImdbQueryModule();
-        Injector injector = Guice.createInjector(module);
-        injector.injectMembers(startClient);
+		IMDbQueryModuleInjector.initialize(startClient);
        		
 		startClient.execute(ipServer);
 	}
@@ -51,7 +51,13 @@ public class StartClient {
 			
 			System.out.println("Conectando com o servidor...\n");
 			
-			imdbSocketClient.connectToServer(ipServer, Constants.PORT);
+			boolean connected = imdbSocketClient.connectToServer(ipServer, Constants.PORT);
+			
+			if(!connected) {
+				
+				System.out.println("");
+				break;
+			}
 
 			String movieTitle = "";
 			
@@ -82,8 +88,8 @@ public class StartClient {
 			
 		} while(true);
 		
-		System.out.println("************");
-		System.out.println("Finalizado !");
+		System.out.println("*********************");
+		System.out.println("Conexão do cliente encerrada !");
 		
 		imdbSocketClient.stopConnection();
 	}

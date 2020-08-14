@@ -15,12 +15,12 @@ import com.imdb.query.util.Constants;
 
 /**
  * @author Fábio Bentes
+ * 
+ * Classe responsável pela 
  *
  */
 public class ImdbSocketServerImpl implements ImdbSocketServer {
 		
-	//final static Log logger = LogFactory.getLog(ImdbSocketServer.class);
-	
 	private ServerSocket serverSocket;
 	
 	private boolean isExecuting;
@@ -58,7 +58,7 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 			return -1;
 		}
 		
-		return iMDbUrlConnection.loadMovieLlistFromImdb();
+		return iMDbUrlConnection.loadMovieLlistFromImdbUrl();
 	}
 	
 	public void waitingForClientRequests() {
@@ -68,7 +68,9 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 			 Socket clientSocket = null;
 
 			 try {
-				clientSocket = serverSocket.accept();
+				
+				 clientSocket = serverSocket.accept();
+				
 			} catch (IOException e) {
 				
 				System.out.println("Problema ao conectar no servidor: " + e.getMessage());

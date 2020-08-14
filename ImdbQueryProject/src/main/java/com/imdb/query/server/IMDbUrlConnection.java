@@ -11,5 +11,5 @@ public interface IMDbUrlConnection {
 
 	String getMoviesFound(String movieTitle);
 	
-	int loadMovieLlistFromImdb();
+	int loadMovieLlistFromImdbUrl();
 }

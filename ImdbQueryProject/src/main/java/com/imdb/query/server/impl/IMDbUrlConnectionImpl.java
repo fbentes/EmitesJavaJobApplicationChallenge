@@ -5,12 +5,10 @@ package com.imdb.query.server.impl;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
@@ -19,9 +17,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.imdb.query.server.IMDbUrlConnection;
+import com.imdb.query.util.Constants;
 
 /**
  * @author Fábio Bentes
+ * 
+ * Classe responsável pela busca dos filmes do site IMDb e 
+ * armazenamento numa lista para uso pelo servidor Socket.
  *
  */
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
@@ -43,35 +45,33 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		return (!result.equals("") ? result : "Nenhum filme foi encontrado como '" + movieTitle + "'");
 	}
 	
-	public int loadMovieLlistFromImdb() {
-		
-		String strUrl = "https://www.imdb.com/chart/top/?ref_=wl_expl_1";
+	public int loadMovieLlistFromImdbUrl() {
 		
         URL urlIMDb;
         URLConnection urlConnection;
-        BufferedReader in = null;
+        BufferedReader inputUrlBufferedReader;
         
         StringBuilder strHtml = new StringBuilder();
         
 		try {
-			urlIMDb = new URL(strUrl);
+			urlIMDb = new URL(Constants.IMDb_MOVIES_URL);
 
 			urlConnection = urlIMDb.openConnection();
 
-	        in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
+	        inputUrlBufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
 
 	        String inputLine;
 	        
-	        while ((inputLine = in.readLine()) != null) {
+	        while ((inputLine = inputUrlBufferedReader.readLine()) != null) {
 	        	
 	        	strHtml.append(inputLine);
 	        	strHtml.append(System.getProperty("line.separator"));
 	        }
 	       
-	        in.close();
+	        inputUrlBufferedReader.close();
         
 		} catch (Exception e) {
-			System.out.println("Problema ao conectar na url " + strUrl + ": " + e.getMessage());
+			System.out.println("Problema ao conectar na url " + Constants.IMDb_MOVIES_URL + ". Erro: " + e.getMessage());
 		}
         
         Document document = Jsoup.parse(strHtml.toString());

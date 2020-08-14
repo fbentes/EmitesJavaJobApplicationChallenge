@@ -18,15 +18,12 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Module;
 import com.imdb.query.client.ImdbSocketClient;
 import com.imdb.query.server.ImdbSocketServer;
 import com.imdb.query.server.ServerCommand;
 import com.imdb.query.server.impl.ServerCommandImpl;
 import com.imdb.query.util.Constants;
-import com.imdb.query.util.ImdbQueryModule;
+import com.imdb.query.util.IMDbQueryModuleInjector;
 
 @TestInstance(Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -41,13 +38,13 @@ public class ImdbSocketClientImplTest {
 	@BeforeAll
 	public void initializeTests() throws InterruptedException {
 
+		// Injetando dependências ...
+		
+		IMDbQueryModuleInjector.initialize(this);
+        
 		System.out.println("************ PREPARA SERVIDOR PARA CLIENTE ************");
 		System.out.println("");
 		
-		Module module = new ImdbQueryModule();
-        Injector injector = Guice.createInjector(module);
-        injector.injectMembers(this);
-        
 		Thread thread = new Thread(new Runnable() {
 		    public void run() {
 
@@ -69,7 +66,7 @@ public class ImdbSocketClientImplTest {
     @Order(1)
 	public void connectToServerTest() {
 		
-		boolean connected = imdbSocketClient.connectToServer(Constants.LOCAL_HOST, Constants.PORT);
+		boolean connected = imdbSocketClient.connectToServer(Constants.IP_SERVER, Constants.PORT);
 		
 		assertTrue(connected);
 		
@@ -137,14 +134,13 @@ public class ImdbSocketClientImplTest {
 		if(isClientStopped) {
 			System.out.println("Conexão do cliente encerrada !");
 		} else {
-			System.out.println("Cliente não encerrado !!!");
+			System.out.println("Conexão do cliente não encerrada !!!");
 		}
 		
 		if(isServerStopped) {		
-			System.out.println("Servidor finalizado !");	
+			System.out.println("Servidor parado !");	
 		} else {
-			System.out.println("Servidor não finalizado !");
+			System.out.println("Servidor não parado !");
 		}
-		
 	}
 }

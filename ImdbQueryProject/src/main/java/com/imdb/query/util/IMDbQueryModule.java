@@ -10,12 +10,14 @@ import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.server.ImdbSocketServer;
 import com.imdb.query.server.impl.IMDbUrlConnectionImpl;
 import com.imdb.query.server.impl.ImdbSocketServerImpl;
+import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
+import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * @author Fábio Bentes
  *
  */
-public class ImdbQueryModule extends AbstractModule {
+public class IMDbQueryModule extends AbstractModule {
 
 	@Override
 	protected void configure() {

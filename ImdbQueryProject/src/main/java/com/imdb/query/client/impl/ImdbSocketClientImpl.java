@@ -10,6 +10,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 import com.imdb.query.client.ImdbSocketClient;
+import com.imdb.query.util.Constants;
+import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
+import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * @author Fábio Bentes
@@ -21,27 +24,47 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
     private BufferedReader readFromServerBufferedReader;
     private PrintWriter writeToServerPrintWriter;
     
+    private IMDbCommunicationProtocol iMDbCommunicationProtocol;
+    
 	public boolean connectToServer(String ipServer, int port) {
 		
 		try {
 			
 			clientSocket = new Socket(ipServer,port);
 			
+			iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();
+			
 			return true;
 			
 		} catch (IOException e) {
-			System.out.println(e.getMessage());
+			
+			System.out.println("");
+			
+			if(e.getMessage().trim().toLowerCase().equals("connection refused: connect")) {
+				
+				System.out.println("A conexão do cliente foi recusada porque o servidor não responde !");
+			} else {
+				
+				System.out.println(e.getMessage());
+			}
 			
 			return false;
 		}
 	}
 	
-	public String sendMovieTitleToSearchInServer(String movieTitle) {
-				
-		try {
+	private boolean isMatchPatternProtocol(String movieTitle) {
+						
+		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(Constants.PREFIX_PROTOCOL + movieTitle + Constants.SUFIX_PROTOCOL);
 		
+		return iMDbCommunicationProtocol.isMatchPatternProtocol();	
+	}
+	
+	public String sendMovieTitleToSearchInServer(String movieTitle) {
+
+		try {
+
 			readFromServerBufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-	        
+
 			writeToServerPrintWriter = new PrintWriter(clientSocket.getOutputStream(), true);
 
 		} catch (IOException e) {
@@ -50,7 +73,12 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
 
 		try {
 
-			writeToServerPrintWriter.println(movieTitle);	
+			if(!isMatchPatternProtocol(movieTitle)) {
+				
+				return Constants.IVALID_MESSAGE_PROTOCOL;
+			}
+			
+			writeToServerPrintWriter.println(iMDbCommunicationProtocol.getMovieTitle());	
 			
 			String responseOfServerWithMovieTitles = "";
 			

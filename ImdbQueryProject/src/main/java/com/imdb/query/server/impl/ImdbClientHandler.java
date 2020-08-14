@@ -8,6 +8,8 @@ import java.net.Socket;
 
 import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.util.Constants;
+import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
+import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 public class ImdbClientHandler extends Thread {
 	
@@ -17,9 +19,14 @@ public class ImdbClientHandler extends Thread {
     private PrintWriter writeToClientPrintWriter;
     private BufferedReader readFromClientBufferedReader;
     
+    private IMDbCommunicationProtocol iMDbCommunicationProtocol;
+    
     public ImdbClientHandler(Socket clientSocket, IMDbUrlConnection iMDbUrlConnection) {
+    	
         this.clientSocket = clientSocket;
         this.iMDbUrlConnection = iMDbUrlConnection;
+
+		iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();
     }
     
     public void run() {
@@ -31,8 +38,13 @@ public class ImdbClientHandler extends Thread {
 			readFromClientBufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 			
 	        String movieTitle = readFromClientBufferedReader.readLine();
+	        
+	        if(!isMatchPatternProtocol(movieTitle)) {
+	        	
+	            writeToClientPrintWriter.println(Constants.IVALID_MESSAGE_PROTOCOL);
+	        }
 
-            String moviesFound = iMDbUrlConnection.getMoviesFound(movieTitle);
+            String moviesFound = iMDbUrlConnection.getMoviesFound(iMDbCommunicationProtocol.getMovieTitleWithOutPatternProtocol());
 
             writeToClientPrintWriter.println(moviesFound);
 			
@@ -44,7 +56,14 @@ public class ImdbClientHandler extends Thread {
 			close();
 		}
     }
-    
+
+	private boolean isMatchPatternProtocol(String movieTitle) {
+		
+		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(movieTitle);
+		
+		return iMDbCommunicationProtocol.isMatchPatternProtocol();	
+	}
+	
     public void close() {
         try {
 			readFromClientBufferedReader.close();

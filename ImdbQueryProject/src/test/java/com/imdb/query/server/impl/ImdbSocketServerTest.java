@@ -18,7 +18,7 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.imdb.query.server.ImdbSocketServer;
 import com.imdb.query.util.Constants;
-import com.imdb.query.util.ImdbQueryModule;
+import com.imdb.query.util.IMDbQueryModule;
 
 @TestInstance(Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -30,7 +30,7 @@ public class ImdbSocketServerTest {
 	@BeforeAll
 	public void initializeTests() {
 
-		Module module = new ImdbQueryModule();
+		Module module = new IMDbQueryModule();
         Injector injector = Guice.createInjector(module);
         injector.injectMembers(this);
 	}
