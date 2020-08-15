@@ -12,11 +12,12 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
- * 
- * @author Fábio Bentes
- * 
  * Handler responsável pelos atendimentos das requisições dos clientes.
  *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class IMDbClientHandler extends Thread {
 	

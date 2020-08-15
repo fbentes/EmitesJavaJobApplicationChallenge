@@ -4,10 +4,12 @@
 package com.imdb.query.server;
 
 /**
- * @author Fábio Bentes
- * 
  * Responsável pela comunicação com o site IMDb para busca de filmes.
  *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public interface IMDbUrlConnection {
 
@@ -19,13 +21,14 @@ public interface IMDbUrlConnection {
 	 * 
 	 * @param movieTitle 
 	 * @return
+	 * @see Origem dos dados: https://www.imdb.com/chart/top/?ref_=wl_expl_1
 	 */
 	String getMoviesFound(String movieTitle);
 	
 	/**
 	 * Preenche a lista em memória com os nomes retornados do site IMDb.
 	 * 
-	 * @return
+	 * @return Quantidade de filmes inseridos na lista.
 	 */
 	int fillMovieListFromImdbUrl();
 }

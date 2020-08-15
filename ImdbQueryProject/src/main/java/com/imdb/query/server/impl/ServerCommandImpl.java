@@ -8,10 +8,12 @@ import com.imdb.query.server.ServerCommand;
 import com.imdb.query.util.Constants;
 
 /**
- * @author Fábio Bentes
- *
  * Classe que implementa o pattern Command responsável para iniciar o servidor TCP Socket, 
  * esperando as solicitações do cliente.
+ * 
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
  * 
  */
 public class ServerCommandImpl implements ServerCommand {

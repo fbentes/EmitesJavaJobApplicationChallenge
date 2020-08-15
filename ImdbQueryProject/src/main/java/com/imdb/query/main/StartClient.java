@@ -14,13 +14,15 @@ import com.imdb.query.util.Constants;
 import com.imdb.query.util.IMDbQueryModuleInjector;
 
 /**
- * @author Fábio Bentes
- *
  *	Classe responsável para iniciar o Client Socket para solicitações de nomes de filmes para o servidor Socket.
  *
  *  Podem ser pesquisados nomes completos, mas também iniciais de nomes de filmes para o retorno
  *  dos nomes concatenados com "\n". Nesse caso a pesquisa funcionará como um like no SQL !
  *  
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class StartClient {
 

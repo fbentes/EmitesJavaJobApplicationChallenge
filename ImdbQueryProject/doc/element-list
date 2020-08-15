@@ -1,0 +1,8 @@
+com.imdb.query.client
+com.imdb.query.client.impl
+com.imdb.query.main
+com.imdb.query.server
+com.imdb.query.server.impl
+com.imdb.query.util
+com.imdb.query.util.protocol
+com.imdb.query.util.protocol.impl

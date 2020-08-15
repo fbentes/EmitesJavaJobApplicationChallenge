@@ -14,10 +14,12 @@ import com.imdb.query.server.impl.ServerCommandImpl;
 import com.imdb.query.util.IMDbQueryModuleInjector;
 
 /**
- * @author Fábio Bentes
- *
  *  Classe responsável para iniciar o servidor Socket no prompt de comando.
  *  
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class StartServer {
 

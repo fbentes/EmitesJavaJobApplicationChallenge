@@ -17,11 +17,13 @@ import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.util.Constants;
 
 /**
- * @author Fábio Bentes
- * 
  * Responsável pela busca dos filmes do site IMDb e armazenamento numa lista  
  * em cache usada pelo servidor Socket para o atendimento das requisições dos clientes.
  *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 

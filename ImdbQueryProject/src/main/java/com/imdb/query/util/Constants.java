@@ -4,10 +4,12 @@
 package com.imdb.query.util;
 
 /**
- * @author Fábio Bentes
- * 
  * Responsável por todas as constantes da solução.
  *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class Constants {
 	

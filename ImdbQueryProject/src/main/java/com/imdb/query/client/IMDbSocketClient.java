@@ -4,9 +4,12 @@
 package com.imdb.query.client;
 
 /**
- * @author Fábio Bentes
- *
  * Cliente socket para solicitações de filmes ao servidor.
+ * 
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public interface IMDbSocketClient {
 	

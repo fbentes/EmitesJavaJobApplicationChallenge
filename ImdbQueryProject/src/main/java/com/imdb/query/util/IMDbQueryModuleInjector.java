@@ -8,7 +8,11 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 
 /**
- * @author fbent
+ * Inicializa as dependências necessárias.
+ * 
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
  *
  */
 public class IMDbQueryModuleInjector {

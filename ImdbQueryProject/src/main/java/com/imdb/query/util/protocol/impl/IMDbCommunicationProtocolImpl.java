@@ -7,13 +7,14 @@ import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 
 /**
+ * Responsável pela aplicação do protocolo de comunicação entre o cliente e servidor Sockets.
  * 
- * @author Fábio Bentes
- * 
- * Classe responsável pela aplicação do protocolo de comunicação entre o cliente e servidor Sockets.
- * 
- * Ex.: O Cliente deve enviar IMDb_nome do filme_IMDb para ser aceito pelo servidor.
+ * Ex.: O Cliente deve enviar "IMDb_" + movieTitle + "_IMDb" para ser aceito pelo servidor.
  *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol {
 

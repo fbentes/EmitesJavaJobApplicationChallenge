@@ -6,16 +6,18 @@ package com.imdb.query.util;
 import com.google.inject.AbstractModule;
 import com.imdb.query.client.IMDbSocketClient;
 import com.imdb.query.client.impl.IMDbSocketClientImpl;
-import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.server.IMDbSocketServer;
-import com.imdb.query.server.impl.IMDbUrlConnectionImpl;
+import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.server.impl.IMDbSocketServerImpl;
-import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
-import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
+import com.imdb.query.server.impl.IMDbUrlConnectionImpl;
 
 /**
+ * Injeta as dependências necessárias para a solução.
+ * 
  * @author Fábio Bentes
- *
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class IMDbQueryModule extends AbstractModule {
 

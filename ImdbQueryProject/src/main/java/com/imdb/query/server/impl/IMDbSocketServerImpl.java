@@ -14,13 +14,15 @@ import com.imdb.query.server.IMDbSocketServer;
 import com.imdb.query.util.Constants;
 
 /**
- * @author Fábio Bentes
- * 
  * Responsável pelo atendimento das requisições dos clientes.
  * Fica em loop até o usuário do servidor socket solicitar a parada do mesmo.
  * Enquanto em loop, a cada solicitação uma Thread (ImdbClientHandler) é instanciada 
  * para o atendimento.
  *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class IMDbSocketServerImpl implements IMDbSocketServer {
 		

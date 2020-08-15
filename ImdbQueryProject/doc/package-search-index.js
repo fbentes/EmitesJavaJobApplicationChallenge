@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.imdb.query.client.impl"},{"l":"com.imdb.query.main"},{"l":"com.imdb.query.server.impl"},{"l":"com.imdb.query.util"},{"l":"com.imdb.query.util.protocol"},{"l":"com.imdb.query.util.protocol.impl"}]

@@ -15,10 +15,12 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
- * @author Fábio Bentes
- * 
  * Responsável pela comunicação com o servidor Socket.
  *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class IMDbSocketClientImpl implements IMDbSocketClient {
 	
