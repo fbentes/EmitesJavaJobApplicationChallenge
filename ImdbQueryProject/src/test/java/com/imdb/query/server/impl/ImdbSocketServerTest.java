@@ -16,7 +16,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
-import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.server.IMDbSocketServer;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.IMDbQueryModule;
 
@@ -25,7 +25,7 @@ import com.imdb.query.util.IMDbQueryModule;
 public class ImdbSocketServerTest {
 
 	@Inject
-	private ImdbSocketServer imdbSocketServer;
+	private IMDbSocketServer imdbSocketServer;
 	
 	@BeforeAll
 	public void initializeTests() {

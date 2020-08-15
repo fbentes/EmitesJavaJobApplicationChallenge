@@ -10,16 +10,19 @@ import java.net.Socket;
 import javax.inject.Inject;
 
 import com.imdb.query.server.IMDbUrlConnection;
-import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.server.IMDbSocketServer;
 import com.imdb.query.util.Constants;
 
 /**
  * @author Fábio Bentes
  * 
- * Classe responsável pela 
+ * Responsável pelo atendimento das requisições dos clientes.
+ * Fica em loop até o usuário do servidor socket solicitar a parada do mesmo.
+ * Enquanto em loop, a cada solicitação uma Thread (ImdbClientHandler) é instanciada 
+ * para o atendimento.
  *
  */
-public class ImdbSocketServerImpl implements ImdbSocketServer {
+public class IMDbSocketServerImpl implements IMDbSocketServer {
 		
 	private ServerSocket serverSocket;
 	
@@ -33,6 +36,7 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 	@Inject
 	private IMDbUrlConnection iMDbUrlConnection;
 	
+	@Override
 	public boolean connect(int port) {
 		
 		try {
@@ -51,6 +55,7 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 		return isExecuting;
 	}
 	
+	@Override
 	public int loadMovieLlistFromImdb() {
 		
 		if(!isExecuting) {
@@ -58,9 +63,10 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 			return -1;
 		}
 		
-		return iMDbUrlConnection.loadMovieLlistFromImdbUrl();
+		return iMDbUrlConnection.fillMovieListFromImdbUrl();
 	}
 	
+	@Override
 	public void waitingForClientRequests() {
 		
 		 while (isExecuting) {
@@ -76,7 +82,7 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 				System.out.println("Problema ao conectar no servidor: " + e.getMessage());
 			}
 			 
-			 ImdbClientHandler imdbClientHandler = new ImdbClientHandler(clientSocket, iMDbUrlConnection);
+			 IMDbClientHandler imdbClientHandler = new IMDbClientHandler(clientSocket, iMDbUrlConnection);
 			 
 			 imdbClientHandler.start();
 		 }
@@ -100,6 +106,7 @@ public class ImdbSocketServerImpl implements ImdbSocketServer {
 		 return false;
 	}
 	
+	@Override
 	public void stop() {
 		
 		isExecuting = false;

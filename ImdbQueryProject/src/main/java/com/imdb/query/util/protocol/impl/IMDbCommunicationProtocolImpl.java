@@ -43,28 +43,4 @@ public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol 
 		
 		return matcher.find();
 	}
-	
-	public static void main(String[] args) {
-
-		IMDbCommunicationProtocolImpl iMDbCommunicationProtocol =  new IMDbCommunicationProtocolImpl();
-		
-		String movieTitle = "A Separação";
-		
-		System.out.println("************* SEM PADRÃO ******************");
-
-		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(movieTitle);
-		
-		boolean b = iMDbCommunicationProtocol.isMatchPatternProtocol();
-		
-		System.out.println("isMatch = " +b);
-		System.out.println(iMDbCommunicationProtocol.getMovieTitleWithOutPatternProtocol());
-
-		System.out.println("************* COM PADRÃO ******************");
-		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol("IMDb_"+movieTitle+"_IMDb");
-		
-		b = iMDbCommunicationProtocol.isMatchPatternProtocol();
-		
-		System.out.println("isMatch = " +b);
-		System.out.println(iMDbCommunicationProtocol.getMovieTitleWithOutPatternProtocol());
-	}
 }

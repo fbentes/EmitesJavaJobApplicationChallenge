@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.server.impl;
 
 import java.io.BufferedReader;
@@ -22,14 +19,15 @@ import com.imdb.query.util.Constants;
 /**
  * @author Fábio Bentes
  * 
- * Classe responsável pela busca dos filmes do site IMDb e 
- * armazenamento numa lista para uso pelo servidor Socket.
+ * Responsável pela busca dos filmes do site IMDb e armazenamento numa lista  
+ * em cache usada pelo servidor Socket para o atendimento das requisições dos clientes.
  *
  */
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 
 	private List<Object> movieList = new ArrayList<Object>();
 	
+	@Override
 	public String getMoviesFound(String movieTitle) {
 		
 		String result = "";
@@ -45,7 +43,8 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		return (!result.equals("") ? result : "Nenhum filme foi encontrado como '" + movieTitle + "'");
 	}
 	
-	public int loadMovieLlistFromImdbUrl() {
+	@Override
+	public int fillMovieListFromImdbUrl() {
 		
         URL urlIMDb;
         URLConnection urlConnection;
@@ -85,6 +84,8 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
         		movieList.add(element.text());
         	}
         }
+        
+        // Ordenação para tornar os retornos mais rápidos para os clientes.
         
         movieList = movieList.stream().sorted().collect(Collectors.toList());
         

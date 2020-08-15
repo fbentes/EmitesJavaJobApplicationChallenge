@@ -6,14 +6,14 @@ package com.imdb.query.util;
 /**
  * @author Fábio Bentes
  * 
- * Classe responsável por todas as constantes da solução.
+ * Responsável por todas as constantes da solução.
  *
  */
 public class Constants {
 	
 	public static final int PORT = 2021;
 	
-	public static final String IP_SERVER = "127.0.0.1";
+	public static final String IP_SERVER_DEFAULT = "127.0.0.1";
 	
 	public static final String IMDb_MOVIES_URL = "https://www.imdb.com/chart/top/?ref_=wl_expl_1";
 	

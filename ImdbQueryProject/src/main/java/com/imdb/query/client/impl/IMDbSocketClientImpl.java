@@ -9,16 +9,18 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import com.imdb.query.client.ImdbSocketClient;
+import com.imdb.query.client.IMDbSocketClient;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * @author Fábio Bentes
+ * 
+ * Responsável pela comunicação com o servidor Socket.
  *
  */
-public class ImdbSocketClientImpl implements ImdbSocketClient {
+public class IMDbSocketClientImpl implements IMDbSocketClient {
 	
 	private Socket clientSocket;
     private BufferedReader readFromServerBufferedReader;
@@ -26,6 +28,7 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
     
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
     
+    @Override
 	public boolean connectToServer(String ipServer, int port) {
 		
 		try {
@@ -52,13 +55,20 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
 		}
 	}
 	
-	private boolean isMatchPatternProtocol(String movieTitle) {
+	/**
+	 * Aplica o protocolo de comunicação entre o cliente e servidor.
+	 * 
+	 * @param movieTitle O título de um filme a ser pesquisado pelo usuário.
+	 * @return Verdadeiro se o padrão de protocolo aplicado for válido.
+	 */
+	private boolean isAppliedProtocol(String movieTitle) {
 						
 		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(Constants.PREFIX_PROTOCOL + movieTitle + Constants.SUFIX_PROTOCOL);
 		
 		return iMDbCommunicationProtocol.isMatchPatternProtocol();	
 	}
 	
+    @Override
 	public String sendMovieTitleToSearchInServer(String movieTitle) {
 
 		try {
@@ -73,7 +83,7 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
 
 		try {
 
-			if(!isMatchPatternProtocol(movieTitle)) {
+			if(!isAppliedProtocol(movieTitle)) {
 				
 				return Constants.IVALID_MESSAGE_PROTOCOL;
 			}
@@ -97,6 +107,7 @@ public class ImdbSocketClientImpl implements ImdbSocketClient {
 		}
    }
 	
+    @Override
 	public boolean stopConnection() {
 		
         try {

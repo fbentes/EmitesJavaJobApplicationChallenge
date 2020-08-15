@@ -18,8 +18,8 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import com.imdb.query.client.ImdbSocketClient;
-import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.client.IMDbSocketClient;
+import com.imdb.query.server.IMDbSocketServer;
 import com.imdb.query.server.ServerCommand;
 import com.imdb.query.server.impl.ServerCommandImpl;
 import com.imdb.query.util.Constants;
@@ -30,10 +30,10 @@ import com.imdb.query.util.IMDbQueryModuleInjector;
 public class ImdbSocketClientImplTest {
     
 	@Inject
-	private ImdbSocketClient imdbSocketClient;
+	private IMDbSocketClient imdbSocketClient;
 	
 	@Inject
-	private ImdbSocketServer imdbSocketServer;
+	private IMDbSocketServer imdbSocketServer;
 
 	@BeforeAll
 	public void initializeTests() throws InterruptedException {
@@ -49,16 +49,18 @@ public class ImdbSocketClientImplTest {
 		    public void run() {
 
 		    	ServerCommand serverCommand = new ServerCommandImpl();
-		    	serverCommand.setImdbSocketServer(imdbSocketServer);
+		    	serverCommand.setIMDbSocketServer(imdbSocketServer);
 		    	serverCommand.execute();
 		    }
 		  });
 		
         thread.start();
-	    thread.join(3000);
+
+        // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a execução principal.
+	    thread.join(4000);  
 
 		System.out.println("");			
-		System.out.println("************ INICA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************");
+		System.out.println("************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************");
 		System.out.println("");			
 	}
 	
@@ -66,11 +68,11 @@ public class ImdbSocketClientImplTest {
     @Order(1)
 	public void connectToServerTest() {
 		
-		boolean connected = imdbSocketClient.connectToServer(Constants.IP_SERVER, Constants.PORT);
+		boolean connected = imdbSocketClient.connectToServer(Constants.IP_SERVER_DEFAULT, Constants.PORT);
 		
 		assertTrue(connected);
 		
-		if(connected) {			
+		if(connected) {
 			System.out.println("Cliente conectado com o servidor !");
 		} else {
 			System.out.println("Cliente não conectado com o servidor !");			
@@ -107,6 +109,8 @@ public class ImdbSocketClientImplTest {
 		
 		String movieTitleExample = movieArrayTest[random.nextInt(movieArrayTest.length)];
 
+		System.out.println("Filme pesquisado: " + movieTitleExample);
+		
 		String sent = imdbSocketClient.sendMovieTitleToSearchInServer(movieTitleExample);
 
 		boolean movieTitleFound = sent != null && !sent.trim().equals("");
@@ -114,7 +118,7 @@ public class ImdbSocketClientImplTest {
 		assertTrue(movieTitleFound);
 		
 		if(movieTitleFound) {			
-			System.out.println("Filme(s) encontrado(s): " + movieTitleExample);
+			System.out.println("Filme(s) encontrado(s): " + sent);
 		} else {
 			System.out.println("Nenhum filme foi encontrado !");			
 		}

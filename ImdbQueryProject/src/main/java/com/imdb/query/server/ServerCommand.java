@@ -4,11 +4,13 @@
 package com.imdb.query.server;
 
 /**
- * @author fbent
+ * @author Fábio Bentes
+ * 
+ * Padrão Command para iniciar o servidor socket.
  *
  */
 public interface ServerCommand {
 
-	void setImdbSocketServer(ImdbSocketServer imdbSocketServer);
+	void setIMDbSocketServer(IMDbSocketServer imdbSocketServer);
 	void execute();
 }

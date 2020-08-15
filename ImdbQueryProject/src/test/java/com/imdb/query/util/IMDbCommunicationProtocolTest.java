@@ -8,8 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Random;
 
-import javax.inject.Inject;
-
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -18,14 +17,11 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Module;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
- * @author fbent
+ * @author Fábio Bentes
  *
  */
 @TestInstance(Lifecycle.PER_CLASS)
@@ -35,11 +31,13 @@ public class IMDbCommunicationProtocolTest {
 	private IMDbCommunicationProtocol iMDbCommunicationProtocol;
 
 	@BeforeAll
-	public void initializeTests() throws InterruptedException {
-
-		// Injetando dependências ...
+	public void initialize() {
 
 		iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();	
+		
+		System.out.println("");
+		System.out.println("******** INICIANDO IMDbCommunicationProtocolTest ************");
+		System.out.println("");
 	}
 	
 	@Test
@@ -62,6 +60,8 @@ public class IMDbCommunicationProtocolTest {
 		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol();
 		
 		assertTrue(isMatch);
+		
+		printResult("isMatchPatternProtocolTest()", isMatch);
 	}
 	
 	@Test
@@ -75,6 +75,8 @@ public class IMDbCommunicationProtocolTest {
 		boolean equal = movieTitle.replace(Constants.PREFIX_PROTOCOL, "").replace(Constants.SUFIX_PROTOCOL, "").equals(movieTitleWithPatternProtocol);
 		
 		assertTrue(equal);
+
+		printResult("getMovieTitleWithOutPatternProtocolTest()", equal);
 	}
 	
 	@Test
@@ -97,5 +99,21 @@ public class IMDbCommunicationProtocolTest {
 		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol();
 		
 		assertFalse(isMatch);
+		
+		printResult("isNotMatchPatternProtocolTest()", isMatch);
+	}
+	
+	private void printResult(String method, boolean status) {
+		
+		String statusMessage = (status ? "passou" : "não passou");
+		
+		System.out.println(method + " " + statusMessage);
+	}
+	
+	@AfterAll
+	public void end() {
+		System.out.println("");
+		System.out.println("******** FINALIZADO IMDbCommunicationProtocolTest ************");
+		System.out.println("");
 	}
 }

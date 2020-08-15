@@ -3,7 +3,7 @@
  */
 package com.imdb.query.server.impl;
 
-import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.server.IMDbSocketServer;
 import com.imdb.query.server.ServerCommand;
 import com.imdb.query.util.Constants;
 
@@ -16,9 +16,9 @@ import com.imdb.query.util.Constants;
  */
 public class ServerCommandImpl implements ServerCommand {
 
-	private ImdbSocketServer imdbSocketServer;
+	private IMDbSocketServer imdbSocketServer;
 	
-	public void setImdbSocketServer(ImdbSocketServer imdbSocketServer) {
+	public void setIMDbSocketServer(IMDbSocketServer imdbSocketServer) {
 		this.imdbSocketServer = imdbSocketServer;
 	}
 	

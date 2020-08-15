@@ -5,12 +5,14 @@ package com.imdb.query.main;
 
 import java.io.IOException;
 
+
 import javax.inject.Inject;
 
-import com.imdb.query.server.ImdbSocketServer;
+import com.imdb.query.server.IMDbSocketServer;
 import com.imdb.query.server.ServerCommand;
 import com.imdb.query.server.impl.ServerCommandImpl;
 import com.imdb.query.util.IMDbQueryModuleInjector;
+
 /**
  * @author Fábio Bentes
  *
@@ -20,7 +22,7 @@ import com.imdb.query.util.IMDbQueryModuleInjector;
 public class StartServer {
 
 	@Inject
-	private ImdbSocketServer imdbSocketServer;
+	private IMDbSocketServer imdbSocketServer;
 	
 	/**
 	 * @param args
@@ -41,13 +43,16 @@ public class StartServer {
 		    public void run() {
 
 		    	ServerCommand serverCommand = new ServerCommandImpl();
-		    	serverCommand.setImdbSocketServer(startServer.imdbSocketServer);
+		    	serverCommand.setIMDbSocketServer(startServer.imdbSocketServer);
 		    	serverCommand.execute();
 		    }
 		  });
 		
         thread.start();
-	    thread.join(3000); // Adiciona 3 segs por causa do tempo da carga da lista de filmes em memória do servidor.
+        
+        // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a execução principal.
+	    
+        thread.join(3000); 
 
 	    System.out.println("");
 		System.out.println("Digite kill para parar o servidor: ");	

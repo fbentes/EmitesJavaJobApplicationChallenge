@@ -11,7 +11,14 @@ import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
-public class ImdbClientHandler extends Thread {
+/**
+ * 
+ * @author Fábio Bentes
+ * 
+ * Handler responsável pelos atendimentos das requisições dos clientes.
+ *
+ */
+public class IMDbClientHandler extends Thread {
 	
 	private Socket clientSocket;
 	private IMDbUrlConnection iMDbUrlConnection;
@@ -21,7 +28,7 @@ public class ImdbClientHandler extends Thread {
     
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
     
-    public ImdbClientHandler(Socket clientSocket, IMDbUrlConnection iMDbUrlConnection) {
+    public IMDbClientHandler(Socket clientSocket, IMDbUrlConnection iMDbUrlConnection) {
     	
         this.clientSocket = clientSocket;
         this.iMDbUrlConnection = iMDbUrlConnection;
@@ -37,8 +44,10 @@ public class ImdbClientHandler extends Thread {
 	        
 			readFromClientBufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 			
+			// Recebe o nome, ou parte inicial do nome, do filme digitado pelo usuário.
+			
 	        String movieTitle = readFromClientBufferedReader.readLine();
-	        
+	        	        
 	        if(!isMatchPatternProtocol(movieTitle)) {
 	        	
 	            writeToClientPrintWriter.println(Constants.IVALID_MESSAGE_PROTOCOL);
@@ -57,6 +66,12 @@ public class ImdbClientHandler extends Thread {
 		}
     }
 
+    /**
+     * Checa se o protocolo de comunicação está sendo atendido.
+     *  
+     * @param movieTitle Nome, ou parte inicial do nome, do filme digitado pelo usuário.
+     * @return Verdadeiro caso o cliente tenha aplicado corretamente o protocolo exigido. Falso caso contrário.
+     */
 	private boolean isMatchPatternProtocol(String movieTitle) {
 		
 		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(movieTitle);
@@ -65,17 +80,19 @@ public class ImdbClientHandler extends Thread {
 	}
 	
     public void close() {
+    	
         try {
 			readFromClientBufferedReader.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
+        
         writeToClientPrintWriter.close();
 
         try {
 			clientSocket.close();
 		} catch (IOException e) {
+			System.out.println(e.getMessage());
 		}
     }
 }
