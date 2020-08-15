@@ -1,7 +1,10 @@
 # EmitesJavaJobApplicationChallenge
 Aplicação console em Java para consultas via socket de títulos de filmes no site IMDB.
 
+
 Fontes: 
+Java openjdk version "1.8.0_41"
+
 https://www.eclipse.org/downloads/  Version: 2020-06 (4.16.0)
 
 https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php
