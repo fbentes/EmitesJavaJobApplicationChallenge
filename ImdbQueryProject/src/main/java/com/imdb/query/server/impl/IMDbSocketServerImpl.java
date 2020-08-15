@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.server.impl;
 
 import java.io.IOException;

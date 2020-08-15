@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.server.impl;
 
 import com.imdb.query.server.IMDbSocketServer;
@@ -13,7 +10,7 @@ import com.imdb.query.util.Constants;
  * 
  * @author Fábio Bentes
  * @version 1.0.0.0
- * @since 09/08/2020
+ * @since 10/08/2020
  * 
  */
 public class ServerCommandImpl implements ServerCommand {

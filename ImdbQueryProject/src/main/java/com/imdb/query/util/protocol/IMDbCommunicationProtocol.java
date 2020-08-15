@@ -5,7 +5,7 @@ package com.imdb.query.util.protocol;
  * 
  * @author Fábio Bentes
  * @version 1.0.0.0
- * @since 09/08/2020
+ * @since 14/08/2020
  * 
  */
 public interface IMDbCommunicationProtocol {

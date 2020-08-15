@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.util;
 
 import com.google.inject.AbstractModule;
@@ -16,7 +13,7 @@ import com.imdb.query.server.impl.IMDbUrlConnectionImpl;
  * 
  * @author Fábio Bentes
  * @version 1.0.0.0
- * @since 09/08/2020
+ * @since 11/08/2020
  * 
  */
 public class IMDbQueryModule extends AbstractModule {

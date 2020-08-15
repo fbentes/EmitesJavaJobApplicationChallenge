@@ -13,7 +13,7 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
  *
  * @author Fábio Bentes
  * @version 1.0.0.0
- * @since 09/08/2020
+ * @since 14/08/2020
  * 
  */
 public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol {

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.server;
 
 /**
@@ -14,10 +11,11 @@ package com.imdb.query.server;
 public interface IMDbSocketServer {
 	
 	/**
-	 * Conecta na porta específica. O padrão é 2021.
+	 * Inicia a conexão do servidor socket. 
 	 * 
-	 * @param port
-	 * @return
+	 * @param port Porta de conexão. 
+	 * @return Verdadeiro caso seja estabelecida a conexão. Falso caso contrário.
+	 * @see ServerCommand#execute()
 	 */
 	boolean connect(int port);
 	
@@ -30,6 +28,7 @@ public interface IMDbSocketServer {
 	 * Carrega em cache a lista de filmes buscadas do site IMDb.
 	 * 
 	 * @return Quantidade de itens da lista.
+	 * @see IMDbUrlConnection#fillMovieListFromImdbUrl()
 	 */
 	int loadMovieLlistFromImdb();
 	

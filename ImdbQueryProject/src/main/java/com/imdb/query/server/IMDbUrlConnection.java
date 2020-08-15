@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.server;
 
 /**
@@ -19,9 +16,8 @@ public interface IMDbUrlConnection {
 	 * 
 	 * Ex.: Quando o usuário pesquisar "Batman", será retornado: "Batman Begins, Batman - Cavaleiro das Trevas", etc... 
 	 * 
-	 * @param movieTitle 
-	 * @return
-	 * @see Origem dos dados: https://www.imdb.com/chart/top/?ref_=wl_expl_1
+	 * @param movieTitle Título do filme para pesquisa na lista em cache.
+	 * @return Filmes encontrados.
 	 */
 	String getMoviesFound(String movieTitle);
 	
@@ -29,6 +25,7 @@ public interface IMDbUrlConnection {
 	 * Preenche a lista em memória com os nomes retornados do site IMDb.
 	 * 
 	 * @return Quantidade de filmes inseridos na lista.
+	 * @see IMDbSocketServer#loadMovieLlistFromImdb()
 	 */
 	int fillMovieListFromImdbUrl();
 }

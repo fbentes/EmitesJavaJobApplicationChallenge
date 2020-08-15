@@ -12,7 +12,7 @@ import com.google.inject.Module;
  * 
  * @author Fábio Bentes
  * @version 1.0.0.0
- * @since 09/08/2020
+ * @since 13/08/2020
  *
  */
 public class IMDbQueryModuleInjector {

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.client;
 
 /**
@@ -16,9 +13,9 @@ public interface IMDbSocketClient {
 	/**
 	 * Conecta no ip do servidor na porta especificada. A porta padrão é 2021.
 	 * 
-	 * @param ipServer
-	 * @param port
-	 * @return
+	 * @param ipServer IP do servidor iniciado.
+	 * @param port Porta usada para conexão. O padrão é 2021.
+	 * @return Verdadeiro caso seja estabelecida a conexão com o servidor. Falso caso contrário.
 	 */
 	boolean connectToServer(String ipServer, int port);
 	

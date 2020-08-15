@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.main;
 
 import java.io.IOException;
@@ -27,9 +24,9 @@ public class StartServer {
 	private IMDbSocketServer imdbSocketServer;
 	
 	/**
-	 * @param args
-	 * @throws InterruptedException 
-	 * @throws IOException 
+	 * @param args Náo usado.
+	 * @throws InterruptedException Disparado caso haja algum problema na chamada de thread.join(3000).
+	 * @throws IOException Disparado caso haja algum problema na chamada de System.in.read().
 	 */
 	public static void main(String[] args) throws InterruptedException, IOException {
 			

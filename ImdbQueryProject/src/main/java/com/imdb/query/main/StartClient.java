@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.main;
 
 import java.io.BufferedReader;
@@ -32,9 +29,8 @@ public class StartClient {
 	/**
 	 * @param args IP do servidor socket caso não seja o mesmo host do cliente. Por default é 127.0.0.1. 
 	 * 
-	 * @throws IOException 
 	 */
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
 		String ipServer = Constants.IP_SERVER_DEFAULT;
 		

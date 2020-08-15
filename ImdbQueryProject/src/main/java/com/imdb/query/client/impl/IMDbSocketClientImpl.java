@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.client.impl;
 
 import java.io.BufferedReader;
