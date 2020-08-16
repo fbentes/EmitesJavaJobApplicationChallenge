@@ -1,8 +1,7 @@
 package com.imdb.query.server.impl;
 
-import com.imdb.query.server.IMDbSocketServer;
+import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.ServerCommand;
-import com.imdb.query.util.Constants;
 
 /**
  * Classe que implementa o pattern Command responsável para iniciar o servidor TCP Socket, 
@@ -15,28 +14,22 @@ import com.imdb.query.util.Constants;
  */
 public class ServerCommandImpl implements ServerCommand {
 
-	private IMDbSocketServer imdbSocketServer;
-	
-	public void setIMDbSocketServer(IMDbSocketServer imdbSocketServer) {
-		this.imdbSocketServer = imdbSocketServer;
-	}
-	
 	@Override
-	public void execute() {
+	public void execute(IMDbServerSocket imdbSocketServer) {
 		
-		System.out.println("Conectando no servidor na porta " + Constants.PORT_DEFAULT);
+		System.out.println("Conectando no servidor na porta " + imdbSocketServer.getPort());
 		
-		boolean connected = imdbSocketServer.connect(Constants.PORT_DEFAULT);
+		boolean connected = imdbSocketServer.connect();
 		
 		if(connected) {
 
-			if(Constants.PORT_DEFAULT == imdbSocketServer.getAlternativePort()) {
+			if(imdbSocketServer.getPort() == imdbSocketServer.getAlternativePort()) {
 				
-				System.out.println("Servidor conectado na porta " + imdbSocketServer.getAlternativePort());
+				System.out.println("Servidor conectado na porta " + imdbSocketServer.getPort());
 			}
 			else {
 				System.out.println("****************************************");
-				System.out.println("Porta "+Constants.PORT_DEFAULT+" fechada.");
+				System.out.println("Porta " + imdbSocketServer.getPort() + " está ocupada !");
 				System.out.println("Servidor conectado na porta " + imdbSocketServer.getAlternativePort());
 				System.out.println("****************************************");
 			}

@@ -10,6 +10,5 @@ package com.imdb.query.server;
  */
 public interface ServerCommand {
 
-	void setIMDbSocketServer(IMDbSocketServer imdbSocketServer);
-	void execute();
+	void execute(IMDbServerSocket imdbSocketServer);
 }

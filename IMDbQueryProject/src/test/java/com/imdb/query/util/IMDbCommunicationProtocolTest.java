@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.imdb.query.util;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -68,7 +65,7 @@ public class IMDbCommunicationProtocolTest {
     @Order(2)
 	public void getMovieTitleWithOutPatternProtocolTest() {
 		
-		String movieTitle = iMDbCommunicationProtocol.getMovieTitle();
+		String movieTitle = iMDbCommunicationProtocol.getMovieTitleWithPatternProtocol();
 		
 		String movieTitleWithPatternProtocol = iMDbCommunicationProtocol.getMovieTitleWithOutPatternProtocol();
 		

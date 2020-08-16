@@ -25,7 +25,7 @@ public interface IMDbUrlConnection {
 	 * Preenche a lista em memória com os nomes retornados do site IMDb.
 	 * 
 	 * @return Quantidade de filmes inseridos na lista.
-	 * @see IMDbSocketServer#loadMovieLlistFromImdb()
+	 * @see IMDbServerSocket#loadMovieLlistFromImdb()
 	 */
 	int fillMovieListFromImdbUrl();
 }

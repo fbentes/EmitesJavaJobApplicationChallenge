@@ -24,7 +24,7 @@ public interface IMDbCommunicationProtocol {
 	 * 
 	 * @return . Ex.: "IMDb_Batman_IMDb"
 	 */
-	String getMovieTitle();
+	String getMovieTitleWithPatternProtocol();
 	
 	/**
 	 * @return Apenas o título do filme sem o protocolo para pesquisa no site IMDb.

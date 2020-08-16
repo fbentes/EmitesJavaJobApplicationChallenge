@@ -24,7 +24,7 @@ public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol 
 		this.movieTitle = movieTitle;
 	}
 	
-	public String getMovieTitle() {
+	public String getMovieTitleWithPatternProtocol() {
 		return movieTitle;
 	}
 	

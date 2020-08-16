@@ -1,0 +1,36 @@
+package com.imdb.query.client;
+
+/**
+ * Cliente socket para solicitações de filmes ao servidor.
+ * 
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
+ */
+public interface IMDbClientSocket {
+	
+	/**
+	 * Conecta no ip do servidor na porta especificada. A porta padrão é 20222.
+	 * 
+	 * @param ipServer IP do servidor iniciado.
+	 * @param port Porta usada para conexão. O padrão é 20222.
+	 * @return Verdadeiro caso seja estabelecida a conexão com o servidor. Falso caso contrário.
+	 */
+	boolean connectToServer(String ipServer, int port);
+	
+	/**
+	 * Busca de filmes no servidor.
+	 * 
+	 * @param movieTitle título do filme com o protocolo aplicado
+	 * @return 	Todos os filmes encontrados.
+	 */
+	String sendMovieTitleToSearchInServer(String movieTitle);
+	
+	/**
+	 * Libera os recursos alocados pelo cliente.
+	 * 
+	 * @return Verdadeiro caso todos os recursos sejam liberados.
+	 */
+	boolean stopConnection();
+}

@@ -1,14 +1,17 @@
 package com.imdb.query.main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-
+import java.io.InputStreamReader;
 
 import javax.inject.Inject;
 
-import com.imdb.query.server.IMDbSocketServer;
+import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.ServerCommand;
 import com.imdb.query.server.impl.ServerCommandImpl;
+import com.imdb.query.util.Constants;
 import com.imdb.query.util.IMDbQueryModuleInjector;
+import com.imdb.query.util.network.TCPPortUtility;
 
 /**
  *  Classe responsável para iniciar o servidor Socket no prompt de comando.
@@ -20,16 +23,27 @@ import com.imdb.query.util.IMDbQueryModuleInjector;
  */
 public class StartServer {
 
+	private static int port = Constants.PORT_DEFAULT;
+
 	@Inject
-	private IMDbSocketServer imdbSocketServer;
+	private IMDbServerSocket imdbServerSocket;
 	
 	/**
-	 * @param args Náo usado.
+	 * Tenta conectar na porta padrão 20222. Caso já tenha sido alocada por conexão desse 
+	 * servidor socket ou algum outro processo, há a tentativa para conexão em outra porta disponível.
+	 * Sendo assim, torna-se possível o atendimento de solicitações dos clientes por diferentes portas
+	 * conectadas.
+	 * 
+	 * @param args Porta para conexão socket. Se não for informada, a porta darão 20222 será usada.
 	 * @throws InterruptedException Disparado caso haja algum problema na chamada de thread.join(3000).
 	 * @throws IOException Disparado caso haja algum problema na chamada de System.in.read().
 	 */
 	public static void main(String[] args) throws InterruptedException, IOException {
 			
+		if(!readArguments(args)) {
+			return;
+		}
+		
 		StartServer startServer = new StartServer();
 		
 		// Infeção de dependência para a instância de StartServer
@@ -37,19 +51,23 @@ public class StartServer {
 		IMDbQueryModuleInjector.initialize(startServer);
 		
         // Iniciando o servidor TCP Socket para esperar solicitações do(s) cliente(s)
+		// Cada instância do servidor socket iniciará numa thread única, podendo assim,
+		// ser parada pelo usuário na thread principal a qualquer momento.
         
         Thread thread = new Thread(new Runnable() {
 		    public void run() {
 
 		    	ServerCommand serverCommand = new ServerCommandImpl();
-		    	serverCommand.setIMDbSocketServer(startServer.imdbSocketServer);
-		    	serverCommand.execute();
+		    	
+		    	startServer.imdbServerSocket.setPort(port);
+		    	
+		    	serverCommand.execute(startServer.imdbServerSocket);
 		    }
 		  });
 		
         thread.start();
         
-        // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a execução principal.
+        // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a thread principal.
 	    
         thread.join(3000); 
 
@@ -61,21 +79,72 @@ public class StartServer {
 
 		    // Só para o servidor se for digitado, literalmente, "kill" !
 		    
-		    int read = System.in.read();
+	        BufferedReader movieTitleBufferedReader =  
+	                new BufferedReader(new InputStreamReader(System.in)); 
+	      
+	        String read = null;
+	        
+			try {
+				
+				read = movieTitleBufferedReader.readLine();
+				
+			} catch (IOException e) {
+				
+				System.out.println("Problema na leitura do teclado: " + e.getMessage());
+				read = "kill";
+			} 
 
-		    if(read == 107) {
+		    if(read.equals("kill")) {
 		    	
-				startServer.imdbSocketServer.stop();
+				startServer.imdbServerSocket.stop();
 				
 				break;
 		    }
 
 	    } while (true);
 		
-	    if(startServer.imdbSocketServer.isStoped()) {
+	    if(startServer.imdbServerSocket.isStoped()) {
 			
 			System.out.println("*********************");
 			System.out.println("Servidor parado !");
 		}	
+	}
+	
+	/**
+	 * Captura a porta informada na linha de comando. Caso não seja  
+	 * informado argumento, a porta padrão 20222 será usada.
+	 * 
+	 * Ex.: C:\java -jar IMDbServerSocket.jar 23908
+	 * 
+	 * @param args Porta para conexão socket.
+	 * @return Verdadeiro se não foi informado argumento ou se uma porta válida foi informada. Falso caso contrário.
+	 */
+	private static boolean readArguments(String[] args) {
+		
+		if(args == null || args.length == 0) {
+			
+			return true;
+		}
+		
+		if(args.length > 1) {
+			
+			System.out.println("Não pode haver mais de um argumento !");
+			
+			return false;
+		}
+		
+		TCPPortUtility tcpPortUtility = new TCPPortUtility();
+		
+		if(tcpPortUtility.isPortValid(args[0])) {
+			
+			port = Integer.parseInt(args[0]);
+			
+			return true;
+			
+		} 
+		
+		System.out.println("A porta informada é inválida !");
+		
+		return false;
 	}
 }
