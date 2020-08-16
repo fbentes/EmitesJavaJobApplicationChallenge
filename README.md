@@ -1,9 +1,26 @@
 # EmitesJavaJobApplicationChallenge
 Aplicação console em Java para consultas via socket de títulos de filmes no site IMDB.
 
+Tutorial para avaliação da solução:
 
-Fontes: 
+1) Baixar os arquivos IMDbServerSocket.jar e IMDbClientSocket.jar num diretório local (Ex.: C:\Temp).
+
+2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
+   Vários servidores podem ser instanciados em sua porta para futuras conexões de clientes.
+   O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222.    
+
+*    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. 
+
+3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]) . 
+   Cada cliente deve ser executado em sua instância do prompt para simular chamadas simultâneas;
+
+*    Os argumentos são opcionais. Se forem omititos o ip será localhost e a porta padrão será 20222.
+   
+
+Referências:
+
 Java openjdk version "1.8.0_41"
+https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi
 
 https://www.eclipse.org/downloads/  Version: 2020-06 (4.16.0)
 
