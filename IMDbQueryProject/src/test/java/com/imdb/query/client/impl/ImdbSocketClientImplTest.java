@@ -68,7 +68,7 @@ public class ImdbSocketClientImplTest {
     @Order(1)
 	public void connectToServerTest() {
 		
-		boolean connected = imdbSocketClient.connectToServer(Constants.IP_SERVER_DEFAULT, Constants.PORT);
+		boolean connected = imdbSocketClient.connectToServer(Constants.IP_SERVER_DEFAULT, Constants.PORT_DEFAULT);
 		
 		assertTrue(connected);
 		

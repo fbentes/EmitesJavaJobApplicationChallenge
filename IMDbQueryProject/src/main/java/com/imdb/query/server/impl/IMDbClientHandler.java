@@ -60,7 +60,7 @@ public class IMDbClientHandler extends Thread {
 			
 		} catch (IOException e) {
 			
-			System.out.println("Problema ao conectar na porta " + Constants.PORT + ": " + e.getMessage());
+			System.out.println("Problema ao conectar na porta " + Constants.PORT_DEFAULT + ": " + e.getMessage());
 		} finally {
 			
 			close();

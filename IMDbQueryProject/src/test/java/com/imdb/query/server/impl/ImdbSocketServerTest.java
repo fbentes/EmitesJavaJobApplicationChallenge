@@ -39,7 +39,7 @@ public class ImdbSocketServerTest {
 	@Order(1)
 	public void connectTest() {
 		
-		boolean connected = imdbSocketServer.connect(Constants.PORT);
+		boolean connected = imdbSocketServer.connect(Constants.PORT_DEFAULT);
 		
 		assertTrue(connected);
 		

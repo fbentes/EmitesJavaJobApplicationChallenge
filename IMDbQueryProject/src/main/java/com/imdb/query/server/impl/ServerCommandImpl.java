@@ -24,13 +24,22 @@ public class ServerCommandImpl implements ServerCommand {
 	@Override
 	public void execute() {
 		
-		System.out.println("Conectando no servidor na porta " + Constants.PORT);
+		System.out.println("Conectando no servidor na porta " + Constants.PORT_DEFAULT);
 		
-		boolean connected = imdbSocketServer.connect(Constants.PORT);
+		boolean connected = imdbSocketServer.connect(Constants.PORT_DEFAULT);
 		
 		if(connected) {
 
-			System.out.println("Servidor conectado.");
+			if(Constants.PORT_DEFAULT == imdbSocketServer.getAlternativePort()) {
+				
+				System.out.println("Servidor conectado na porta " + imdbSocketServer.getAlternativePort());
+			}
+			else {
+				System.out.println("****************************************");
+				System.out.println("Porta "+Constants.PORT_DEFAULT+" fechada.");
+				System.out.println("Servidor conectado na porta " + imdbSocketServer.getAlternativePort());
+				System.out.println("****************************************");
+			}
 
 			System.out.println("Carregando a lista de filmes ...");
 			

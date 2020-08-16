@@ -10,7 +10,9 @@ package com.imdb.query.util;
  */
 public class Constants {
 	
-	public static final int PORT = 2021;
+	public static final int PORT_DEFAULT = 20222;
+	
+	public static final int PORT_TCP_MAX = 65535;
 	
 	public static final String IP_SERVER_DEFAULT = "127.0.0.1";
 	

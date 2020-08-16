@@ -51,32 +51,12 @@ public class StartClient {
 			
 			do {
 				
-				System.out.println("Conectando com o servidor...\n");
-				
-				boolean connected = imdbSocketClient.connectToServer(ipServer, Constants.PORT);
-				
-				if(!connected) {
-					
-					System.out.println("");
+				String movieTitle = getMovieTitleInputed();
+			
+				if(!canConnectServer(ipServer)) {
 					break;
 				}
-	
-				String movieTitle = "";
 				
-				System.out.print("Digite o título do filme para pesquisa no IMDB: ");
-	
-		        BufferedReader movieTitleBufferedReader =  
-		                new BufferedReader(new InputStreamReader(System.in)); 
-		      
-				try {
-					
-					movieTitle = movieTitleBufferedReader.readLine();
-					
-				} catch (IOException e) {
-					
-					System.out.println("Problema na leitura do título do filme: " + e.getMessage());
-				} 
-			
 				if(movieTitle.trim().toLowerCase().equals("exit") ) {
 					break;
 				}
@@ -98,4 +78,40 @@ public class StartClient {
 			imdbSocketClient.stopConnection();
 		}
 	}
+
+	private boolean canConnectServer(String ipServer) {
+		
+		System.out.println("Conectando com o servidor...\n");
+		
+		boolean connected = imdbSocketClient.connectToServer(ipServer, Constants.PORT_DEFAULT);
+		
+		if(!connected) {
+			
+			System.out.println("");
+			return false;
+		}
+		
+		return true;
+	}
+	
+	private String getMovieTitleInputed() {
+		
+		String movieTitle = "";
+		
+		System.out.print("Digite o título do filme para pesquisa no IMDB: ");
+
+        BufferedReader movieTitleBufferedReader =  
+                new BufferedReader(new InputStreamReader(System.in)); 
+      
+		try {
+			
+			movieTitle = movieTitleBufferedReader.readLine();
+			
+		} catch (IOException e) {
+			
+			System.out.println("Problema na leitura do título do filme: " + e.getMessage());
+		} 
+		
+		return movieTitle;
+	}	
 }

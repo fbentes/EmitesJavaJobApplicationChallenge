@@ -18,6 +18,14 @@ public interface IMDbSocketServer {
 	 * @see ServerCommand#execute()
 	 */
 	boolean connect(int port);
+
+	/**
+	 * Se connect() disparar exceção pela porta ocupada, uma outra porta disponível 
+	 * será encontrada para conexão.
+	 * 
+	 * @return Porta aberta para conexão socket.
+	 */
+	Integer getAlternativePort();
 	
 	/**
 	 * Fica espera de solicitações dos clientes enquanto não for parado pelo usuário.

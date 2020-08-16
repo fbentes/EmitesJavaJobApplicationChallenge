@@ -53,14 +53,14 @@ public class StartServer {
 	    
         thread.join(3000); 
 
-	    System.out.println("");
-		System.out.println("Digite kill para parar o servidor: ");	
-	    System.out.println("");
-
-	    // Só para o servidor se for digitado, literalmente, "kill" !
-	    
 	    do {
 			
+		    System.out.println("");
+			System.out.println("Digite kill para parar o servidor: ");	
+		    System.out.println("");
+
+		    // Só para o servidor se for digitado, literalmente, "kill" !
+		    
 		    int read = System.in.read();
 
 		    if(read == 107) {

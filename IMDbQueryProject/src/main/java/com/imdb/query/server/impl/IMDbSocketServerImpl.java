@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.server.IMDbSocketServer;
 import com.imdb.query.util.Constants;
+import com.imdb.query.util.WindowsPort;
 
 /**
  * Responsável pelo atendimento das requisições dos clientes.
@@ -27,10 +28,7 @@ public class IMDbSocketServerImpl implements IMDbSocketServer {
 	
 	private boolean isExecuting;
 	
-	public boolean isStoped() {
-		
-		return !isExecuting;
-	}
+	private Integer alternativePort;
 	
 	@Inject
 	private IMDbUrlConnection iMDbUrlConnection;
@@ -38,20 +36,37 @@ public class IMDbSocketServerImpl implements IMDbSocketServer {
 	@Override
 	public boolean connect(int port) {
 		
-		try {
+		alternativePort = port;
+		
+		do {
 			
-			serverSocket = new ServerSocket(port);
-			
-			isExecuting = true;
-			
-		} catch (IOException e) {
-			
-			System.out.println("Problema ao conectar na porta " + Constants.PORT + ": " + e.getMessage());
-			
-			isExecuting = false;
-		}
+			try {
+				
+				serverSocket = new ServerSocket(alternativePort);
+				
+				isExecuting = true;
+				
+			} catch (IOException e) {
+				
+				System.out.println("Problema ao conectar na porta " + Constants.PORT_DEFAULT + ": " + e.getMessage());
+				
+				isExecuting = false;
+				
+				System.out.println("Tentando outra porta");
+				
+				WindowsPort windowsPort = new WindowsPort();
+				
+				alternativePort = windowsPort.getNextPortOpenedToUse();
+			}
+
+		} while(!isExecuting);
 		
 		return isExecuting;
+	}
+	
+	@Override
+	public Integer getAlternativePort() {
+		return alternativePort;
 	}
 	
 	@Override
@@ -110,4 +125,10 @@ public class IMDbSocketServerImpl implements IMDbSocketServer {
 		
 		isExecuting = false;
     }
+	
+	@Override
+	public boolean isStoped() {
+		
+		return !isExecuting;
+	}
 }
