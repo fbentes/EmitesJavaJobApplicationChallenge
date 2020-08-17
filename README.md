@@ -13,7 +13,7 @@ Tutorial para avaliação da solução:
         
         C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
         
-*    Vários servidores podem ser instanciados em uma porta diferente para futuras conexões de clientes em sua própria instância de prompt de comando.     
+*    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes.     
 
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta que será impressa no console para que o cliente      saiba qual porta se conectar.
 
