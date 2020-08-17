@@ -9,7 +9,7 @@ https://app.lucidchart.com/documents/view/0d56f59b-9c80-4575-a536-f7564f94275a/0
 Javadoc:
 https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query
 
-* Para renderizar as páginas, é melhor pelo Eclipse porque o github apenas visualiza o conteúdo html !
+* Para renderizar as páginas, é melhor acessá-las pelo Eclipse porque o github apenas visualiza o conteúdo html !
 
 ### Documentação para usuário final:
 
