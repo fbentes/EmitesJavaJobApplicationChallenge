@@ -15,7 +15,7 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 ### Documentação para usuário final:
 
-#### Tutorial para executar da solução:
+#### Tutorial para executar a solução pelo prompt de comando:
 
 1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
 
