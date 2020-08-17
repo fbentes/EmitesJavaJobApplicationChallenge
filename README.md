@@ -1,6 +1,10 @@
 # EmitesJavaJobApplicationChallenge
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDB.
 
+Baixar e instalar o Java OpenJDK version "1.8.0_41" do link https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi.
+
+> OBS.: O Java OpenJDK 14 dispara a exceção quando há tentativa na conexão com algum site https: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**
+Por não ser o foco do desafio resolver essa questão, foi usado um JDK sem restrições de segurança !
 
 ### Documentação técnica:
 
@@ -17,13 +21,10 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 #### Tutorial para executar a solução pelo prompt de comando:
 
-1) Baixar e instalar o Java OpenJDK version "1.8.0_41" do link https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi.
 
-* Configurar o path e JAVA_HOME. 
+1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
 
-2) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
-
-3) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
+2) Abrir uma instância do prompt de comando e executar o servidor socket ('C:\Temp\java -jar IMDbServerSocket.jar [porta]'). 
 
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222. 
    Ex.: 
@@ -36,7 +37,7 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
 
-4) Abrir outra instância do prompt de comando e executar o cliente socket 
+3) Abrir outra instância do prompt de comando e executar o cliente socket 
 
    (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] | [ipServidor] [porta]). 
 
@@ -56,9 +57,7 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 ### Referências:
 
-Version: 2020-06 (4.16.0)
-
-https://www.eclipse.org/downloads/  
+https://www.eclipse.org/downloads/   Eclipse Version: 2020-06 (4.16.0)
 
 https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php
 
