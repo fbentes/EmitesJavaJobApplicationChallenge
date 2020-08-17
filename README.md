@@ -6,7 +6,7 @@ Tutorial para avaliação da solução:
 1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos IMDbServerSocket.jar e IMDbClientSocket.jar num diretório local (Ex.: C:\Temp).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
-   Vários servidores podem ser instanciados em sua porta para futuras conexões de clientes.
+   Vários servidores podem ser instanciados em sua porta para futuras conexões de clientes em sua própria instância do prompt de comando.
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222.    
 
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. 
