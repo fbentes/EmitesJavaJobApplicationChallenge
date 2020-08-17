@@ -15,7 +15,7 @@ Tutorial para avaliação da solução:
         
 *    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes.     
 
-*    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta que será impressa no console para que o cliente      saiba qual porta se conectar.
+*    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]). 
 
