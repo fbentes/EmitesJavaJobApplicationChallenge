@@ -19,7 +19,7 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 1) Baixar e instalar o Java OpenJDK version "1.8.0_41" do link https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi.
 
-* Setar o path para a pasta \bin instalada.
+* Configurar o path e JAVA_HOME. 
 
 2) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
 
