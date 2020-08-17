@@ -1,6 +1,9 @@
 # EmitesJavaJobApplicationChallenge
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDB.
 
+Diagrama de Pacotes da solução:
+https://app.lucidchart.com/invitations/accept/66fdae9e-a00f-4b52-8d47-5904d4f7e322
+
 Javadoc:
 https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query
 
