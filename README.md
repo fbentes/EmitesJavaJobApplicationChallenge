@@ -22,7 +22,8 @@ Referências:
 Java openjdk version "1.8.0_41"
 https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi
 
-https://www.eclipse.org/downloads/  Version: 2020-06 (4.16.0)
+Version: 2020-06 (4.16.0)
+https://www.eclipse.org/downloads/  
 
 https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php
 
