@@ -18,7 +18,7 @@ Tutorial para avaliação da solução:
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]). 
-
+   Os argumentos são opcionais. Se forem omititos o ipServidor será localhost e a porta padrão será 20222.
    Ex.: 
         
         C:\Temp\java -jar IMDbClientSocket.jar  (conecta no servidor em localhost e porta padrão 20222).
@@ -29,10 +29,8 @@ Tutorial para avaliação da solução:
         
         C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
         
-   Cada cliente deve ser executado em sua instância do prompt para simular chamadas simultâneas;
+*   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
 
-*    Os argumentos são opcionais. Se forem omititos o ip será localhost e a porta padrão será 20222.
-   
 
 Referências:
 
