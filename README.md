@@ -2,7 +2,7 @@
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
 > Eclipse IDE for Java Developers Version: 2020-06 (4.16.0)
 
-Uso do [RedHat OpenJDK 8](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
+Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
 
 > OBS.: O Oracle JDK 14 dispara uma exceção quando há tentativa de conexão com algum site https: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**.
  Por não ser o foco do desafio resolver essa questão, foi usado o RedHat OpenJDK 8 que não tem essa restrição de segurança !
@@ -56,7 +56,7 @@ Uso do [RedHat OpenJDK 8](https://developers.redhat.com/download-manager/file/ja
 
 ### Referências:
 
-[Eclipse Version: 2020-06 (4.16.0)](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576)
+[Eclipse Version: 2020-06 (4.16.0) Download](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576)
 
 [Eclipse Community](https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php)
 
