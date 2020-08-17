@@ -3,7 +3,7 @@ Aplicação console em Java para consultas via socket de títulos de filmes no s
 
 Tutorial para avaliação da solução:
 
-1) Baixar os arquivos IMDbServerSocket.jar e IMDbClientSocket.jar num diretório local (Ex.: C:\Temp).
+1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos IMDbServerSocket.jar e IMDbClientSocket.jar num diretório local (Ex.: C:\Temp).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
    Vários servidores podem ser instanciados em sua porta para futuras conexões de clientes.
