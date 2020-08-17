@@ -17,9 +17,9 @@ Tutorial para avaliação da solução:
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]). 
 
-   Ex.: C:\Temp\java -jar IMDbClientSocket.jar  *(conecta no servidor em localhost e porta padrão 20222)*.&nbsp;
-        C:\Temp\java -jar IMDbClientSocket.jar 34985 *(conecta no servidor em localhost e porta 34985)*.&nbsp;
-        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 *(conecta no servidor em 192.168.0.16 e porta padrão 20222)*.&nbsp;
+   Ex.: C:\Temp\java -jar IMDbClientSocket.jar  *(conecta no servidor em localhost e porta padrão 20222)*.&nbsp;&nbsp;
+        C:\Temp\java -jar IMDbClientSocket.jar 34985 *(conecta no servidor em localhost e porta 34985)*.&nbsp;&nbsp;
+        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 *(conecta no servidor em 192.168.0.16 e porta padrão 20222)*.&nbsp;&nbsp;
         C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 *(conecta no servidor em 192.168.0.16 e porta 33845)*.
         
    Cada cliente deve ser executado em sua instância do prompt para simular chamadas simultâneas;
