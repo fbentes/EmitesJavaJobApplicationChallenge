@@ -3,9 +3,8 @@
 
 Baixar e instalar o Java OpenJDK version "1.8.0_41" do link https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi.
 
-> OBS.: O Java OpenJDK 14 dispara uma exceção quando há tentativa na conexão com algum site https: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**
-
-> Por não ser o foco do desafio resolver essa questão, foi usado um JDK sem restrições de segurança !
+> OBS.: O Java OpenJDK 14 dispara uma exceção quando há tentativa na conexão com algum site https: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**.
+ Por não ser o foco do desafio resolver essa questão, foi usado um JDK sem restrições de segurança !
 
 ### Documentação técnica:
 
