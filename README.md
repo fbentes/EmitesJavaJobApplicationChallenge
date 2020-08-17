@@ -1,6 +1,10 @@
 # EmitesJavaJobApplicationChallenge
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDB.
 
+Javadoc:
+https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query
+
+
 Tutorial para avaliação da solução:
 
 1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
