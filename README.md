@@ -12,6 +12,7 @@ Tutorial para executar da solução:
 1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
+
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222. 
    Ex.: 
         
@@ -23,7 +24,10 @@ Tutorial para executar da solução:
 
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
 
-3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]). 
+3) Abrir outra instância do prompt de comando e executar o cliente socket 
+
+   (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] | [ipServidor] [porta]). 
+
    Os argumentos são opcionais. Se forem omititos o ipServidor será localhost e a porta padrão será 20222.
    Ex.: 
         
