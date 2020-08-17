@@ -7,7 +7,9 @@ Tutorial para avaliação da solução:
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
 
-   Ex.: C:\Temp\java -jar IMDbServerSocket.jar  *(executa na porta padrão 20222)*.
+   Ex.: 
+        
+        C:\Temp\java -jar IMDbServerSocket.jar  *(executa na porta padrão 20222)*.
         
         C:\Temp\java -jar IMDbServerSocket.jar 32987 *(executa na porta 32987)*.
         
@@ -18,7 +20,9 @@ Tutorial para avaliação da solução:
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]). 
 
-   Ex.: C:\Temp\java -jar IMDbClientSocket.jar  *(conecta no servidor em localhost e porta padrão 20222)*.
+   Ex.: 
+        
+        C:\Temp\java -jar IMDbClientSocket.jar  *(conecta no servidor em localhost e porta padrão 20222)*.
    
         C:\Temp\java -jar IMDbClientSocket.jar 34985 *(conecta no servidor em localhost e porta 34985)*.
    
@@ -34,9 +38,11 @@ Tutorial para avaliação da solução:
 Referências:
 
 Java openjdk version "1.8.0_41"
+
 https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi
 
 Version: 2020-06 (4.16.0)
+
 https://www.eclipse.org/downloads/  
 
 https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php
