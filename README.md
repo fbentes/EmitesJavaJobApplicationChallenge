@@ -17,9 +17,13 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 #### Tutorial para executar a solução pelo prompt de comando:
 
-1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
+1) Baixar e instalar o Java OpenJDK version "1.8.0_41" do link https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi.
 
-2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
+* Setar o path para a pasta \bin instalada.
+
+2) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
+
+3) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
 
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222. 
    Ex.: 
@@ -32,7 +36,7 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
 
-3) Abrir outra instância do prompt de comando e executar o cliente socket 
+4) Abrir outra instância do prompt de comando e executar o cliente socket 
 
    (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] | [ipServidor] [porta]). 
 
@@ -50,11 +54,7 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 *   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
 
 
-Referências:
-
-Java openjdk version "1.8.0_41"
-
-https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi
+### Referências:
 
 Version: 2020-06 (4.16.0)
 
