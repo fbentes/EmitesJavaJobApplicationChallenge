@@ -56,12 +56,12 @@ Uso do [RedHat OpenJDK 8](https://developers.redhat.com/download-manager/file/ja
 
 ### Referências:
 
-https://www.eclipse.org/downloads/   Eclipse Version: 2020-06 (4.16.0)
+[Eclipse Version: 2020-06 (4.16.0)](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576)
 
-https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php
+[Eclipse Community](https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php)
 
-https://riptutorial.com/guice
+[Google Guice](https://riptutorial.com/guice)
 
-https://junit.org/junit5/docs/current/user-guide
+[JUnit5 User Guide](https://junit.org/junit5/docs/current/user-guide)
 
-https://www.baeldung.com/junit-5-gradle
+[JUnit5 Gradle](https://www.baeldung.com/junit-5-gradle)
