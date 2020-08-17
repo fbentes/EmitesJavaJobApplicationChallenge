@@ -9,7 +9,7 @@ Tutorial para avaliação da solução:
    Vários servidores podem ser instanciados em sua porta para futuras conexões de clientes em sua própria instância do prompt de comando.
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222.    
 
-*    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. 
+*    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta que será impressa no console.
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]) . 
    Cada cliente deve ser executado em sua instância do prompt para simular chamadas simultâneas;
