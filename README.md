@@ -1,20 +1,18 @@
 # EmitesJavaJobApplicationChallenge
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
 
-Baixar e instalar o [Java OpenJDK "1.8.0_41"](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi.)
+Baixar e instalar o [RedHat Java OpenJDK 8](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
 
 > OBS.: O Java OpenJDK 14 dispara uma exceção quando há tentativa na conexão com algum site https: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**.
  Por não ser o foco do desafio resolver essa questão, foi usado um JDK sem restrições de segurança !
 
 ### Documentação técnica:
 
-Diagrama de Pacotes da solução:
-https://app.lucidchart.com/documents/view/0d56f59b-9c80-4575-a536-f7564f94275a/0_0
+[IMDbQueryProject Lucidchart Package Diagram](https://app.lucidchart.com/documents/view/0d56f59b-9c80-4575-a536-f7564f94275a/0_0)
 
-Javadoc:
-https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query
+[IMDbQueryProject Javadoc](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query)
 
-* Para renderizar as páginas, é melhor acessá-las pelo Eclipse porque o github apenas visualiza o conteúdo html !
+> OBS.: Para renderizar as páginas, é melhor acessá-las pelo Eclipse porque o github apenas visualiza o conteúdo html !
 
 
 ### Documentação para usuário final:
@@ -24,7 +22,7 @@ https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQue
 
 1) Baixar da pasta https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
 
-2) Abrir uma instância do prompt de comando e executar o servidor socket ('C:\Temp\java -jar IMDbServerSocket.jar [porta]'). 
+2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
 
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222. 
    Ex.: 
