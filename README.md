@@ -1,4 +1,4 @@
-# EmitesJavaJobApplicationChallenge
+# IMDbQueryProject Eclipse IDE
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
 
 Baixar e instalar o [RedHat Java OpenJDK 8](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
