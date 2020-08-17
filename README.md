@@ -1,5 +1,5 @@
 # EmitesJavaJobApplicationChallenge
-Aplicação console em Java para consultas via socket de títulos de filmes no site IMDB.
+## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDB.
 
 Tutorial para avaliação da solução:
 
@@ -7,8 +7,8 @@ Tutorial para avaliação da solução:
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
 
-   Ex.: C:\Temp\java -jar IMDbServerSocket.jar  (executa na porta padrão 20222).<\br>
-        C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
+   Ex.: C:\Temp\java -jar IMDbServerSocket.jar  *(executa na porta padrão 20222)*.
+        C:\Temp\java -jar IMDbServerSocket.jar 32987 *(executa na porta 32987)*.
         
    Vários servidores podem ser instanciados em sua porta para futuras conexões de clientes em sua própria instância do prompt de comando.
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222.    
@@ -17,10 +17,10 @@ Tutorial para avaliação da solução:
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] [porta]). 
 
-   Ex.: C:\Temp\java -jar IMDbClientSocket.jar  (conecta no servidor em localhost e porta padrão 20222).<\br>
-        C:\Temp\java -jar IMDbClientSocket.jar 34985 (conecta no servidor em localhost e porta 34985).<\br>
-        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 (conecta no servidor em 192.168.0.16 e porta padrão 20222).<\br>
-        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
+   Ex.: C:\Temp\java -jar IMDbClientSocket.jar  *(conecta no servidor em localhost e porta padrão 20222)*.&nbsp;
+        C:\Temp\java -jar IMDbClientSocket.jar 34985 *(conecta no servidor em localhost e porta 34985)*.&nbsp;
+        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 *(conecta no servidor em 192.168.0.16 e porta padrão 20222)*.&nbsp;
+        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 *(conecta no servidor em 192.168.0.16 e porta 33845)*.
         
    Cada cliente deve ser executado em sua instância do prompt para simular chamadas simultâneas;
 
