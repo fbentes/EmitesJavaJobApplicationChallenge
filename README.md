@@ -4,6 +4,8 @@
 Javadoc:
 https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query
 
+* Para renderizar as páginas, é melhor pelo Eclipse porque no github visualiza apenas o conteúdo html !
+
 
 Tutorial para executar da solução:
 
