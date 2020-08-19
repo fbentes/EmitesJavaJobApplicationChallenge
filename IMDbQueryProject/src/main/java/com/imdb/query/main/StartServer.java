@@ -13,6 +13,8 @@ import com.imdb.query.server.impl.ServerCommandImpl;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.IMDbQueryModuleInjector;
 import com.imdb.query.util.network.TCPPortUtility;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *  Classe responsável para iniciar o servidor Socket no prompt de comando.
@@ -24,7 +26,16 @@ import com.imdb.query.util.network.TCPPortUtility;
  */
 public class StartServer {
 
-	private static int port = Constants.PORT_DEFAULT;
+    private static final Logger logger;
+    
+    static {
+    	
+    	System.out.println("Iniciando mecanismo de log, aguarde ...");
+    	
+    	logger = LogManager.getLogger("StartServer");
+    }
+    
+    private static int port = Constants.PORT_DEFAULT;
 
 	@Inject
 	private IMDbServerSocket imdbServerSocket;
@@ -74,9 +85,9 @@ public class StartServer {
 
 	    do {
 			
-		    System.out.println(Constants.STRING_EMPTY);
+		    logger.info(Constants.STRING_EMPTY);
 			System.out.print("Digite kill para parar o servidor: ");	
-		    System.out.println(Constants.STRING_EMPTY);
+		    logger.info(Constants.STRING_EMPTY);
 
 		    // Só para o servidor se for digitado, literalmente, "kill" !
 		    
@@ -91,7 +102,8 @@ public class StartServer {
 				
 			} catch (IOException e) {
 				
-				System.out.println("Problema na leitura do teclado: " + e.getMessage());
+				logger.info("Problema na leitura do teclado: " + e.getMessage());
+				logger.info("Problema na leitura do teclado: " + e.getMessage());
 				
 				readKeyboard = Optional.of("kill");
 			} 
@@ -109,8 +121,8 @@ public class StartServer {
 			
 	    	thread.interrupt();
 	    	
-			System.out.println(Constants.STRING_EMPTY);
-			System.out.println("Servidor parado pelo usuário !!!");
+			logger.info(Constants.STRING_EMPTY);
+			logger.info("Servidor parado pelo usuário !!!");
 		}	
 	}
 	
@@ -134,7 +146,7 @@ public class StartServer {
 		
 		if(optionalArgs.get().length > 1) {  // Usuário informou a porta de conexão pela linha de comando.
 			
-			System.out.println("Não pode haver mais de um argumento !");
+			logger.info("Não pode haver mais de um argumento !");
 			
 			return false;
 		}
@@ -150,7 +162,7 @@ public class StartServer {
 			return true;
 		} 
 		
-		System.out.println("A porta " + optionalFirstArg.get() + " é inválida. O número máximo permitido é " + Constants.PORT_TCP_MAX);
+		logger.info(String.format("A porta %s é inválida. O número máximo permitido é %d !", optionalFirstArg.get(), Constants.PORT_TCP_MAX));
 		
 		return false;
 	}

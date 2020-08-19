@@ -4,6 +4,9 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 
@@ -19,7 +22,9 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
  */
 public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol {
 
-	private String movieTitle;
+    private static final Logger logger = LogManager.getLogger("IMDbCommunicationProtocolImpl");
+
+    private String movieTitle;
 	
 	@Override
 	public void setMovieTitleWithPatternProtocol(String movieTitle) {
@@ -54,6 +59,13 @@ public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol 
 		
 		final Matcher matcher = pattern.matcher(optionalMovieTitle.get());
 		
-		return matcher.find();
+		boolean isMatch = matcher.find();
+		
+		if(!isMatch ) {
+			
+			logger.info(String.format(Constants.IVALID_MESSAGE_PROTOCOL, movieTitle));
+		}
+		
+		return isMatch;
 	}
 }

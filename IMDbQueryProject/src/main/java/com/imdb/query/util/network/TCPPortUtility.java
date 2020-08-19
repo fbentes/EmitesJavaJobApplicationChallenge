@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Optional;
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.imdb.query.util.Constants;
 
 /**
@@ -18,8 +21,9 @@ import com.imdb.query.util.Constants;
  */
 public class TCPPortUtility {
 
+    private static final Logger logger = LogManager.getLogger("TCPPortUtility");
 
-	/**
+    /**
 	 * Valida se a porta está dentro da faixa numérica permitida.
 	 * 
 	 * @param port Porta a ser validada. O tipo é Object para facilitar a chamada pelo cliente.
@@ -31,7 +35,9 @@ public class TCPPortUtility {
 				
 		if(!optionalPort.isPresent()) {
 			
-			throw new IllegalArgumentException("A porta não pode ser nula !");
+			logger.info("A porta não pode ser nula !");
+			
+			return false;
 		}
 		
 	    try {
@@ -41,7 +47,10 @@ public class TCPPortUtility {
 	        return portNumber >= 1 && portNumber <= Constants.PORT_TCP_MAX;
 
 	    } catch (NumberFormatException e) {
-	        return false;
+			
+	    	logger.error(String.format("A porta %s é inválida !", port));
+
+			return false;
 	    }
 	}
 		
@@ -66,7 +75,7 @@ public class TCPPortUtility {
 			
 		} catch (IOException e) {
 			
-			System.out.println(e.getMessage());
+			logger.error(e.getMessage());
 			
 			return false;
 		}
@@ -79,7 +88,7 @@ public class TCPPortUtility {
 	        		        
 		} catch (IOException e) {
 			
-			System.out.println(e.getMessage());
+			logger.error(e.getMessage());
 		}
         
         return false;
@@ -93,7 +102,7 @@ public class TCPPortUtility {
 	 */
 	public Integer getNextPortOpenedToUse() {
 		
-		int attempts = 1;
+		int attemptsToAllocPort = 1;
 		
 		Integer port = null;
 		
@@ -103,9 +112,9 @@ public class TCPPortUtility {
 			
 			port = random.nextInt(Constants.PORT_TCP_MAX);
 			
-		} while(!isPortOpened(port) && ++attempts <= 30);
+		} while(!isPortOpened(port) && ++attemptsToAllocPort <= 30);
 		
-		if(attempts > 30) {
+		if(attemptsToAllocPort > 30) {
 			return null;
 		}
 		

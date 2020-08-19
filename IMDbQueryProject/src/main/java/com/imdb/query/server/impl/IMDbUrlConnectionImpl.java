@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -29,6 +31,8 @@ import com.imdb.query.util.Constants;
  */
 @Singleton
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
+
+    private static final Logger logger = LogManager.getLogger("IMDbUrlConnectionImpl");
 
 	private List<Object> movieList = new ArrayList<Object>();
 	
@@ -85,7 +89,7 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 	        inputUrlBufferedReader.close();
         
 		} catch (Exception e) {
-			System.out.println("Problema ao conectar na url " + Constants.IMDb_MOVIES_URL + ". Erro: " + e.getMessage());
+			logger.error("Problema ao conectar na url " + Constants.IMDb_MOVIES_URL + ". Erro: " + e.getMessage());
 		}
         
         Document document = Jsoup.parse(strHtml.toString());

@@ -5,6 +5,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Optional;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.google.inject.Inject;
 import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.IMDbUrlConnection;
@@ -23,6 +26,8 @@ import com.imdb.query.util.network.TCPPortUtility;
  */
 public class IMDbServerSocketImpl implements IMDbServerSocket {
 		
+    private static final Logger logger = LogManager.getLogger("IMDbServerSocketImpl");
+
 	private ServerSocket serverSocket;
 	
 	private boolean isExecuting;
@@ -49,9 +54,9 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 				
 			} catch (IOException e) {
 				
-				System.out.println("Problema ao conectar na porta " + alternativePort + ": " + e.getMessage());
+				logger.error("Problema ao conectar na porta " + alternativePort + ": " + e.getMessage());
 				
-				System.out.println("Tentando outra porta ...");
+				logger.error("Tentando outra porta ...");
 				
 				TCPPortUtility tcpPortUtility = new TCPPortUtility();
 				
@@ -85,7 +90,7 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 	public int loadMovieLlistFromImdb() {
 		
 		if(!isExecuting) {
-			System.out.println("O método connect() deve ser chamado !");
+			logger.error("O método connect() deve ser chamado !");
 			return -1;
 		}
 		
@@ -95,7 +100,7 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 	@Override
 	public void waitingForClientRequests() {
 		
-		int attemptsNumberToAcceptClientRequest = 1;
+		int attemptsToAcceptClientRequest = 1;
 		
 		while (isExecuting) {
 			 
@@ -111,11 +116,11 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 					break;
 				}
 				
-				System.out.println("Tentiva " + attemptsNumberToAcceptClientRequest + ". Problema na espera de requisição do cliente: " + e.getMessage());
+				logger.error("Tentiva " + attemptsToAcceptClientRequest + ". Problema na espera de requisição do cliente: " + e.getMessage());
 				
 				// Tenta 30 vezes receber requisição do cliente. Se ultrapassar encerra o servidor.
 				
-				if(++attemptsNumberToAcceptClientRequest > 30) {
+				if(++attemptsToAcceptClientRequest > 30) {
 					break;
 				}
 				
@@ -160,7 +165,7 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 			
 		} catch (IOException e) {
 			
-			System.out.println("Problema ao fechar conexão do servidor: "+ e.getMessage());
+			logger.error("Problema ao fechar conexão do servidor: "+ e.getMessage());
 		}
 		 
 		 return false;

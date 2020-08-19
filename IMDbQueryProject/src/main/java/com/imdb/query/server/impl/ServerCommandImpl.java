@@ -1,5 +1,8 @@
 package com.imdb.query.server.impl;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.ServerCommand;
 import com.imdb.query.util.Constants;
@@ -15,10 +18,12 @@ import com.imdb.query.util.Constants;
  */
 public class ServerCommandImpl implements ServerCommand {
 
-	@Override
+    private static final Logger logger = LogManager.getLogger("ServerCommandImpl");
+
+    @Override
 	public void execute(IMDbServerSocket imdbServerSocket) {
 		
-		System.out.println("Conectando no servidor na porta " + imdbServerSocket.getPort());
+		logger.info(String.format("Conectando no servidor na porta %d ...", imdbServerSocket.getPort()));
 		
 		boolean connected = imdbServerSocket.connect();
 		
@@ -26,31 +31,31 @@ public class ServerCommandImpl implements ServerCommand {
 
 			if(imdbServerSocket.getPort() == imdbServerSocket.getAlternativePort()) {
 				
-				System.out.println("Servidor conectado na porta " + imdbServerSocket.getPort());
+				logger.info(String.format("Servidor conectado na porta %d.", imdbServerSocket.getPort()));
 			}
 			else {
-				System.out.println("****************************************");
-				System.out.println("Porta " + imdbServerSocket.getPort() + " está ocupada !");
-				System.out.println("Servidor conectado na porta " + imdbServerSocket.getAlternativePort());
-				System.out.println("****************************************");
+				logger.info("****************************************");
+				logger.info(String.format("Porta %d está ocupada !", imdbServerSocket.getPort()));
+				logger.info(String.format("Servidor conectado na porta %d.", imdbServerSocket.getAlternativePort()));
+				logger.info("****************************************");
 			}
 
-			System.out.println("Carregando a lista de filmes ...");
+			logger.info("Carregando a lista de filmes ...");
 			
 			int totalMovies = imdbServerSocket.loadMovieLlistFromImdb();
 			
-			System.out.println("Total de filmes carregados = " + totalMovies);
+			logger.info("Total de filmes carregados = " + totalMovies);
 			
-			System.out.println(Constants.STRING_EMPTY);
-			System.out.println("Esperando requisição do cliente ...");
-			System.out.println(Constants.STRING_EMPTY);
+			logger.info(Constants.STRING_EMPTY);
+			logger.info("Esperando requisição do cliente ...");
+			logger.info(Constants.STRING_EMPTY);
 			
 			imdbServerSocket.waitingForClientRequests();			
 		
 		} else {
-			System.out.println("Servidor não conectado !!!");			
+			logger.info("Servidor não conectado !!!");			
 		}
 		
-		System.out.println(Constants.STRING_EMPTY);		
+		logger.info(Constants.STRING_EMPTY);		
 	}
 }

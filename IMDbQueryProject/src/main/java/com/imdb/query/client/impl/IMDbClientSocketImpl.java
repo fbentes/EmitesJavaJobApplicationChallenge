@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.google.inject.Inject;
 
 import com.imdb.query.client.IMDbClientSocket;
@@ -22,7 +25,9 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
  */
 public class IMDbClientSocketImpl implements IMDbClientSocket {
 	
-	private boolean isClientSocketConnected;
+    private static final Logger logger = LogManager.getLogger("IMDbClientSocketImpl");
+
+    private boolean isClientSocketConnected;
 	
 	private Socket clientSocket;
 	
@@ -44,14 +49,14 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 			
 		} catch (Exception e) {
 			
-			System.out.println(Constants.STRING_EMPTY);
+			logger.error(Constants.STRING_EMPTY);
 			
 			if(e.getMessage().trim().toLowerCase().equals("connection refused: connect")) {
 				
-				System.out.println("A conexão do cliente foi recusada porque o servidor não responde !");
+				logger.error("A conexão do cliente foi recusada porque o servidor não responde !");
 			} else {
 				
-				System.out.println(e.getMessage());
+				logger.error(e.getMessage());
 			}
 			
 			isClientSocketConnected = false;
@@ -79,7 +84,7 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 
 		if(!isAppliedProtocol(movieTitle)) {
 			
-			return Constants.IVALID_MESSAGE_PROTOCOL;
+			return String.format(Constants.IVALID_MESSAGE_PROTOCOL, movieTitle);
 		}
 		
 		try {
@@ -90,7 +95,7 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 
 		} catch (IOException e) {
 			
-			System.out.println(e.getMessage());
+			logger.error(e.getMessage());
 			
 			return Constants.STRING_EMPTY;
 		}
@@ -117,6 +122,8 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 
 		} catch (IOException e) {
 
+			logger.error(e.getMessage());
+			
 			return e.getMessage();
 		}
    }
@@ -134,7 +141,8 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 			
 		} catch (IOException e) {
 			
-			System.out.println(e.getMessage());
+			logger.error(e.getMessage());
+			
 			return false;
 		}
         
@@ -146,7 +154,8 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
         	
 		} catch (IOException e) {
 			
-			System.out.println(e.getMessage());
+			logger.error(e.getMessage());
+			
 			return false;
 		}
         
