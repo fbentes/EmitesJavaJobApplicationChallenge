@@ -1,0 +1,15 @@
+2020-08-19 17:11:18 [main] INFO  TCPPortUtility:38 - A porta não pode ser nula !
+2020-08-19 17:11:18 [main] INFO  AddressNetworkValidator:48 - O IP 678.168.0.14 é inválido !
+2020-08-19 17:11:18 [main] INFO  IMDbCommunicationProtocolImpl:66 - O protocolo de comunicação em 1917, 2001: Uma Odisséia no Espaço está inválido
+2020-08-19 17:11:18 [Thread-2] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 17:11:18 [Thread-2] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 20222: Address already in use: JVM_Bind
+2020-08-19 17:11:18 [Thread-2] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 17:11:18 [Thread-2] INFO  ServerCommandImpl:37 - ****************************************
+2020-08-19 17:11:18 [Thread-2] INFO  ServerCommandImpl:38 - Porta 20222 está ocupada !
+2020-08-19 17:11:18 [Thread-2] INFO  ServerCommandImpl:39 - Servidor conectado na porta 50148.
+2020-08-19 17:11:18 [Thread-2] INFO  ServerCommandImpl:40 - ****************************************
+2020-08-19 17:11:18 [Thread-2] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 17:11:19 [Thread-2] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 17:11:19 [Thread-2] INFO  ServerCommandImpl:49 - 
+2020-08-19 17:11:19 [Thread-2] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 17:11:19 [Thread-2] INFO  ServerCommandImpl:51 - 
