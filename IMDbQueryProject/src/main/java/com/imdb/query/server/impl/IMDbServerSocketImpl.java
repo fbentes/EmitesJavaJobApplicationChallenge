@@ -3,12 +3,13 @@ package com.imdb.query.server.impl;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Optional;
 
-import javax.inject.Inject;
-
+import com.google.inject.Inject;
 import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.util.network.TCPPortUtility;
+import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * Responsável pelo atendimento das requisições dos clientes.
@@ -95,30 +96,64 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 	@Override
 	public void waitingForClientRequests() {
 		
-		 while (isExecuting) {
+		int attemptsNumberToAcceptClientRequest = 1;
+		
+		while (isExecuting) {
 			 
-			 Socket clientSocket = null;
-
+			Optional<Socket> clientSocket = Optional.empty();
+	
 			 try {
 				
-				 clientSocket = serverSocket.accept();
+				 clientSocket = Optional.ofNullable(serverSocket.accept());
 				
-			} catch (IOException e) {
+			} catch (Exception e) {
 				
-				System.out.println("Problema ao conectar no servidor: " + e.getMessage());
+				if(isRequestedStoped()) {  // Se foi requisitado para parar o servidor socket pela thread chamadora.
+					break;
+				}
+				
+				System.out.println("Tentiva " + attemptsNumberToAcceptClientRequest + ". Problema na espera de requisição do cliente: " + e.getMessage());
+				
+				// Tenta 30 vezes receber requisição do cliente. Se ultrapassar encerra o servidor.
+				
+				if(++attemptsNumberToAcceptClientRequest > 30) {
+					break;
+				}
+				
+				continue;
 			}
 			 
-			 IMDbClientHandler imdbClientHandler = new IMDbClientHandler(clientSocket, iMDbUrlConnection);
+			 // Inicia uma Thread para atendimento da solicitação por cliente socket.
 			 
-			 imdbClientHandler.start();
-		 }
-
-		 close();
+			 if(clientSocket.isPresent()) {
+				 
+				IMDbClientHandler imdbClientHandler = new IMDbClientHandler(); 
+				
+				imdbClientHandler.setClientSocket(clientSocket.get());
+				
+              	imdbClientHandler.start();
+			 }
+		}
+	
+		close();
 	}
 	
-	private boolean close() {
+	@Override
+	public void requestStop() {
 		
-		 try {
+		isExecuting = false;
+    }
+	
+	@Override
+	public boolean isRequestedStoped() {
+		
+		return !isExecuting;
+	}
+	
+	@Override
+	public boolean close() {
+		
+		try {
 				
 			 serverSocket.close();
 			 
@@ -126,21 +161,9 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 			
 		} catch (IOException e) {
 			
-			System.out.println(e.getMessage());
+			System.out.println("Problema ao fechar conexão do servidor: "+ e.getMessage());
 		}
 		 
 		 return false;
-	}
-	
-	@Override
-	public void stop() {
-		
-		isExecuting = false;
-    }
-	
-	@Override
-	public boolean isStoped() {
-		
-		return !isExecuting;
 	}
 }

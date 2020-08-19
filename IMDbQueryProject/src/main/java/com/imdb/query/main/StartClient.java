@@ -3,8 +3,9 @@ package com.imdb.query.main;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Optional;
 
-import javax.inject.Inject;
+import com.google.inject.Inject;
 
 import com.imdb.query.client.IMDbClientSocket;
 import com.imdb.query.util.Constants;
@@ -65,37 +66,41 @@ public class StartClient {
 	 */
 	private static boolean readArguments(String[] args) {
 		
-		if(args == null || args.length == 0) {
+		Optional<String[]> optionalArgs = Optional.ofNullable(args); 
+		
+		if(!optionalArgs.isPresent() || optionalArgs.get().length == 0) { // Se args == null ou args.length == 0.
 			
 			return true;
 		}
 		
-		if(args.length > 2) {
+		if(optionalArgs.get().length > 2) {
 			
 			System.out.println("Não pode haver mais de 2 argumentos !");
 			
 			return false;
 		}
 		
+		Optional<String> optionalFirstArg = Optional.of(args[0]);
+
 		AddressNetworkValidator addressNetworkValidator = new AddressNetworkValidator();
 		
 		TCPPortUtility tcpPortUtility = new TCPPortUtility();
 		
 		boolean retorno = false;
 		
-		if(args.length == 1) {  // Ou é um IP ou é uma porta.
+		if(optionalArgs.get().length == 1) {  // Ou é um IP ou é uma porta.
 
-			if(addressNetworkValidator.isIpValid(args[0])) {
+			if(addressNetworkValidator.isIpValid(optionalFirstArg.get())) {
 				
-				ipServer = args[0];
+				ipServer = optionalFirstArg.get();
 				
 				retorno = true;
 				
 			} else {
 				
-				if(tcpPortUtility.isPortValid(args[0])) {
+				if(tcpPortUtility.isPortValid(optionalFirstArg.get())) {
 					
-					port = Integer.parseInt(args[0]);
+					port = Integer.parseInt(optionalFirstArg.get());
 					
 					retorno = true;
 				}
@@ -111,23 +116,25 @@ public class StartClient {
 		// args[0] deve ser um IP e args[1], se houver, deve ser uma porta. 
 		// A porta padrão 20222 será usada se a porta não for informada pelo usuário.
 		
-		if(args.length == 2) {    
+		Optional<String> optionalSecondArg = Optional.of(args[1]);
+		
+		if(optionalArgs.get().length == 2) {    
 			
-			if(addressNetworkValidator.isIpValid(args[0])) {
+			if(addressNetworkValidator.isIpValid(optionalFirstArg.get())) {
 				
-				ipServer = args[0];
+				ipServer = optionalFirstArg.get();
 				
 			} else {
-				System.out.println("O IP " + args[0] + " é inválido !");
+				System.out.println("O IP " + optionalFirstArg.get() + " é inválido !");
 				return false;
 			}
 
-			if(tcpPortUtility.isPortValid(args[1])) {
+			if(tcpPortUtility.isPortValid(optionalSecondArg.get())) {
 				
-				port = Integer.parseInt(args[1]);
+				port = Integer.parseInt(optionalSecondArg.get());
 				
 			} else {
-				System.out.println("A porta " + args[1] + " é inválida !");
+				System.out.println("A porta " + optionalSecondArg.get() + " é inválida !");
 				return false;
 			}		
 		}
@@ -143,36 +150,32 @@ public class StartClient {
 	 */
 	private void execute(String ipServer, int port) {
 		
-		try {
+		do {
 			
-			do {
-				
-				String movieTitle = getMovieTitleInputed();
-			
-				if(movieTitle.trim().toLowerCase().equals("exit") ) {
-					break;
-				}
-	
-				if(!canConnectServer(ipServer, port)) {
-					continue;
-				}
-				
-				String responseOfServerWithMovieTitles = imdbClientSocket.sendMovieTitleToSearchInServer(movieTitle);
-				
-				System.out.println("");
-				System.out.println("Resposta:");
-				System.out.println(responseOfServerWithMovieTitles);
-				System.out.println("");
-				
-			} while(true);
+			Optional<String> movieTitle = getMovieTitleInputed();
 		
-		} finally {
+			if(movieTitle.get().trim().toLowerCase().equals("exit") ) {
+				break;
+			}
+
+			if(!canConnectServer(ipServer, port)) {
+				continue;
+			}
 			
-			System.out.println("*********************");
-			System.out.println("Conexão do cliente encerrada !");
+			String responseOfServerWithMovieTitles = imdbClientSocket.sendMovieTitleToSearchInServer(movieTitle.get());
+			
+			System.out.println(Constants.STRING_EMPTY);
+			System.out.println("Resposta:");
+			System.out.println(responseOfServerWithMovieTitles);
+			System.out.println("Conexão com o servidor fechada !");
+			System.out.println("******************************************************");
 			
 			imdbClientSocket.stopConnection();
-		}
+
+		} while(true);
+		
+		System.out.println(Constants.STRING_EMPTY);
+		System.out.println("Cliente finalizado pelo usuário !!!");
 	}
 
 	private boolean canConnectServer(String ipServer, int port) {
@@ -184,15 +187,17 @@ public class StartClient {
 		if(!connected) {
 			
 			System.out.println("Conexão não estabelecida entre o cliente e servidor !");
+			System.out.println("******************************************************");
 		}
 		
 		return connected;
 	}
 	
-	private String getMovieTitleInputed() {
+	private Optional<String> getMovieTitleInputed() {
 		
-		String movieTitle = "";
+		Optional<String> movieTitle = Optional.empty();
 		
+		System.out.println(Constants.STRING_EMPTY);		
 		System.out.print("Digite o título do filme para pesquisa no IMDB (exit encerra o cliente): ");
 
         BufferedReader movieTitleBufferedReader =  
@@ -200,7 +205,7 @@ public class StartClient {
       
 		try {
 			
-			movieTitle = movieTitleBufferedReader.readLine();
+			movieTitle = Optional.ofNullable(movieTitleBufferedReader.readLine());
 			
 		} catch (IOException e) {
 			

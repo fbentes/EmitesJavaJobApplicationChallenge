@@ -3,6 +3,7 @@ package com.imdb.query.util.network;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Optional;
 import java.util.Random;
 
 import com.imdb.query.util.Constants;
@@ -21,14 +22,16 @@ public class TCPPortUtility {
 	/**
 	 * Valida se a porta está dentro da faixa numérica permitida.
 	 * 
-	 * @param port Porta a ser validada.
+	 * @param port Porta a ser validada. O tipo é Object para facilitar a chamada pelo cliente.
 	 * @return Verdadeiro se for válida. Falso caso contrário.
 	 */
 	public boolean isPortValid(Object port) {
 		
-		if( port == null) {
+		Optional<Object> optionalPort =  Optional.ofNullable(port);
+				
+		if(!optionalPort.isPresent()) {
 			
-			throw new NullPointerException("A porta não pode ser nula !");
+			throw new IllegalArgumentException("A porta não pode ser nula !");
 		}
 		
 	    try {
@@ -55,27 +58,31 @@ public class TCPPortUtility {
             
         builder.redirectErrorStream(true);
             
-        Process p = null;
+        Optional<Process> process = Optional.empty();
 		
         try {
 			
-        	p = builder.start();
+        	process = Optional.ofNullable(builder.start());
 			
 		} catch (IOException e) {
+			
+			System.out.println(e.getMessage());
+			
+			return false;
+		}
+        
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.get().getInputStream()));
+        
+    	try {
+    		
+	        return bufferedReader.readLine() == null;
+	        		        
+		} catch (IOException e) {
+			
 			System.out.println(e.getMessage());
 		}
         
-		BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        
-    	try {
-	        if(r.readLine() != null) {
-	        	return false;
-	        }
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
-		}           
-        
-        return true;
+        return false;
 	}
 	
 	/**

@@ -19,7 +19,7 @@ public interface IMDbUrlConnection {
 	 * @param movieTitle Título do filme para pesquisa na lista em cache.
 	 * @return Filmes encontrados.
 	 */
-	String getMoviesFound(String movieTitle);
+	 String getMoviesFound(String movieTitle);
 	
 	/**
 	 * Preenche a lista em memória com os nomes retornados do site IMDb.

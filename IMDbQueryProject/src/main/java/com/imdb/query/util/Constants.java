@@ -25,4 +25,6 @@ public class Constants {
 	public static final String REGEX_PATTERN_PROTOCOL = PREFIX_PROTOCOL + "(.+?)" + SUFIX_PROTOCOL;
 	
 	public static final String IVALID_MESSAGE_PROTOCOL = "Protocolo de comunicação inválido";
+	
+	public static final String STRING_EMPTY = "";
 }

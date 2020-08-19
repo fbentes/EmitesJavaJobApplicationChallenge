@@ -2,6 +2,7 @@ package com.imdb.query.client.impl;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.Optional;
 import java.util.Random;
 
 import javax.inject.Inject;
@@ -40,7 +41,7 @@ public class ImdbClientSocketImplTest {
 		IMDbQueryModuleInjector.initialize(this);
         
 		System.out.println("************ PREPARA SERVIDOR PARA CLIENTE ************");
-		System.out.println("");
+		System.out.println(Constants.STRING_EMPTY);
 		
 		Thread thread = new Thread(new Runnable() {
 		    public void run() {
@@ -58,9 +59,9 @@ public class ImdbClientSocketImplTest {
         // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a execução principal.
 	    thread.join(4000);  
 
-		System.out.println("");			
+		System.out.println(Constants.STRING_EMPTY);			
 		System.out.println("************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************");
-		System.out.println("");			
+		System.out.println(Constants.STRING_EMPTY);			
 	}
 	
 	@Test
@@ -112,7 +113,7 @@ public class ImdbClientSocketImplTest {
 		
 		String sent = imdbSocketClient.sendMovieTitleToSearchInServer(movieTitleExample);
 
-		boolean movieTitleFound = sent != null && !sent.trim().equals("");
+		boolean movieTitleFound = !sent.trim().equals(Constants.STRING_EMPTY);
 
 		assertTrue(movieTitleFound);
 		
@@ -128,9 +129,9 @@ public class ImdbClientSocketImplTest {
 		
 		boolean isClientStopped = imdbSocketClient.stopConnection();
 		
-		imdbSocketServer.stop();
+		imdbSocketServer.requestStop();
 		
-		boolean isServerStopped = imdbSocketServer.isStoped();
+		boolean isServerStopped = imdbSocketServer.isRequestedStoped();
 		
 		assertTrue(isClientStopped && isServerStopped);
 		

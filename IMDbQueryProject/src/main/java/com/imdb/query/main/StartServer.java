@@ -3,8 +3,9 @@ package com.imdb.query.main;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Optional;
 
-import javax.inject.Inject;
+import com.google.inject.Inject;
 
 import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.ServerCommand;
@@ -43,7 +44,7 @@ public class StartServer {
 		if(!readArguments(args)) {
 			return;
 		}
-		
+
 		StartServer startServer = new StartServer();
 		
 		// Infeção de dependência para a instância de StartServer
@@ -67,46 +68,49 @@ public class StartServer {
 		
         thread.start();
         
-        // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a thread principal.
+        // Espera 3 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a thread principal.
 	    
         thread.join(3000); 
 
 	    do {
 			
-		    System.out.println("");
-			System.out.println("Digite kill para parar o servidor: ");	
-		    System.out.println("");
+		    System.out.println(Constants.STRING_EMPTY);
+			System.out.print("Digite kill para parar o servidor: ");	
+		    System.out.println(Constants.STRING_EMPTY);
 
 		    // Só para o servidor se for digitado, literalmente, "kill" !
 		    
 	        BufferedReader movieTitleBufferedReader =  
 	                new BufferedReader(new InputStreamReader(System.in)); 
 	      
-	        String read = null;
+	        Optional<String> readKeyboard = Optional.empty();
 	        
 			try {
 				
-				read = movieTitleBufferedReader.readLine();
+				readKeyboard = Optional.ofNullable(movieTitleBufferedReader.readLine());
 				
 			} catch (IOException e) {
 				
 				System.out.println("Problema na leitura do teclado: " + e.getMessage());
-				read = "kill";
+				
+				readKeyboard = Optional.of("kill");
 			} 
 
-		    if(read.equals("kill")) {
+		    if(readKeyboard.isPresent() && readKeyboard.get().toLowerCase().trim().equals("kill")) {
 		    	
-				startServer.imdbServerSocket.stop();
+				startServer.imdbServerSocket.requestStop();
 				
 				break;
 		    }
 
 	    } while (true);
-		
-	    if(startServer.imdbServerSocket.isStoped()) {
+			    
+	    if(startServer.imdbServerSocket.close()) {
 			
-			System.out.println("*********************");
-			System.out.println("Servidor parado !");
+	    	thread.interrupt();
+	    	
+			System.out.println(Constants.STRING_EMPTY);
+			System.out.println("Servidor parado pelo usuário !!!");
 		}	
 	}
 	
@@ -121,29 +125,32 @@ public class StartServer {
 	 */
 	private static boolean readArguments(String[] args) {
 		
-		if(args == null || args.length == 0) {
+		Optional<String[]> optionalArgs = Optional.ofNullable(args); 
+
+		if(!optionalArgs.isPresent() || optionalArgs.get().length == 0) { // Se args == null ou args.length == 0.
 			
-			return true;
+			return true;  // continua com port = Constants.PORT_DEFAULT;
 		}
 		
-		if(args.length > 1) {
+		if(optionalArgs.get().length > 1) {  // Usuário informou a porta de conexão pela linha de comando.
 			
 			System.out.println("Não pode haver mais de um argumento !");
 			
 			return false;
 		}
 		
+		Optional<String> optionalFirstArg = Optional.of(args[0]);
+
 		TCPPortUtility tcpPortUtility = new TCPPortUtility();
 		
-		if(tcpPortUtility.isPortValid(args[0])) {
+		if(tcpPortUtility.isPortValid(optionalFirstArg.get())) {
 			
-			port = Integer.parseInt(args[0]);
+			port = Integer.parseInt(optionalFirstArg.get());
 			
 			return true;
-			
 		} 
 		
-		System.out.println("A porta informada é inválida !");
+		System.out.println("A porta " + optionalFirstArg.get() + " é inválida !");
 		
 		return false;
 	}

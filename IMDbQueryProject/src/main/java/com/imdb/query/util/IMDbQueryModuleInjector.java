@@ -17,12 +17,20 @@ import com.google.inject.Module;
  */
 public class IMDbQueryModuleInjector {
 
-	public static void initialize(Object object) {
+	private static Module module;
+	
+	private static Injector injector;
+	
+	static {
+		module = new IMDbQueryModule();
 		
-		Module module = new IMDbQueryModule();
-        
-		Injector injector = Guice.createInjector(module);
-        
+		injector = Guice.createInjector(module);
+	}
+	
+	public static Injector initialize(Object object) {
+		
 		injector.injectMembers(object);
+		
+		return injector;
 	}
 }

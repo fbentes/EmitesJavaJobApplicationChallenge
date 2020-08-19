@@ -83,9 +83,9 @@ public class ImdbServerSocketTest {
 	@AfterAll
 	public void isStoped() {
 		
-		imdbSocketServer.stop();
+		imdbSocketServer.requestStop();
 		
-		boolean isStopped = imdbSocketServer.isStoped();
+		boolean isStopped = imdbSocketServer.isRequestedStoped();
 		
 		assertTrue(isStopped);
 		

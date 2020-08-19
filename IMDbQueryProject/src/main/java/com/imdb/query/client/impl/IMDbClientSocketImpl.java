@@ -6,10 +6,11 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import com.google.inject.Inject;
+
 import com.imdb.query.client.IMDbClientSocket;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
-import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * Responsável pela comunicação com o servidor Socket.
@@ -21,7 +22,7 @@ import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
  */
 public class IMDbClientSocketImpl implements IMDbClientSocket {
 	
-	private boolean isConnected;
+	private boolean isClientSocketConnected;
 	
 	private Socket clientSocket;
 	
@@ -29,6 +30,7 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
     
     private PrintWriter writeToServerPrintWriter;
     
+    @Inject
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
     
     @Override
@@ -38,13 +40,11 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 			
 			clientSocket = new Socket(ipServer,port);
 			
-			iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();
+			isClientSocketConnected = true;			
 			
-			isConnected = true;			
+		} catch (Exception e) {
 			
-		} catch (IOException e) {
-			
-			System.out.println("");
+			System.out.println(Constants.STRING_EMPTY);
 			
 			if(e.getMessage().trim().toLowerCase().equals("connection refused: connect")) {
 				
@@ -54,10 +54,10 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 				System.out.println(e.getMessage());
 			}
 			
-			isConnected = false;
+			isClientSocketConnected = false;
 		}
 
-		return isConnected;
+		return isClientSocketConnected;
 	}
 	
 	/**
@@ -67,9 +67,10 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 	 * @return Verdadeiro se o padrão de protocolo aplicado for válido.
 	 */
 	private boolean isAppliedProtocol(String movieTitle) {
-						
-		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(Constants.PREFIX_PROTOCOL + movieTitle + Constants.SUFIX_PROTOCOL);
-		
+
+		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(
+				Constants.PREFIX_PROTOCOL + movieTitle + Constants.SUFIX_PROTOCOL);
+
 		return iMDbCommunicationProtocol.isMatchPatternProtocol();	
 	}
 	
@@ -91,23 +92,28 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 			
 			System.out.println(e.getMessage());
 			
-			return "";
+			return Constants.STRING_EMPTY;
 		}
 
 		try {
 
 			writeToServerPrintWriter.println(iMDbCommunicationProtocol.getMovieTitleWithPatternProtocol());	
 			
-			String responseOfServerWithMovieTitles = "";
+			StringBuffer responseOfServerWithMovieTitles = new StringBuffer();
 			
 			String responseReadLine;
 			
+			// PS: Não usado Optional e nem Constants.STRING_EMPTY para não afetar no desempenho na iteração.
+			
             while ((responseReadLine = readFromServerBufferedReader.readLine()) != null) {
             	
-            	responseOfServerWithMovieTitles += responseReadLine + "\n";
+            	if(!responseReadLine.trim().equals("")) {
+            		
+                	responseOfServerWithMovieTitles.append(responseReadLine + "\n");
+            	}
  	        }
 
-	        return responseOfServerWithMovieTitles;
+	        return responseOfServerWithMovieTitles.toString();
 
 		} catch (IOException e) {
 
@@ -118,7 +124,7 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
     @Override
 	public boolean stopConnection() {
 		
-    	if(!isConnected) {
+    	if(!isClientSocketConnected) {
     		return false;
     	}
     	

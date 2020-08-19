@@ -1,12 +1,15 @@
 package com.imdb.query.util;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.Singleton;
 import com.imdb.query.client.IMDbClientSocket;
 import com.imdb.query.client.impl.IMDbClientSocketImpl;
 import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.server.impl.IMDbServerSocketImpl;
 import com.imdb.query.server.impl.IMDbUrlConnectionImpl;
+import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
+import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * Injeta as dependências necessárias para a solução.
@@ -22,7 +25,11 @@ public class IMDbQueryModule extends AbstractModule {
 	protected void configure() {
 		
 		bind(IMDbClientSocket.class).to(IMDbClientSocketImpl.class);
+		
 		bind(IMDbServerSocket.class).to(IMDbServerSocketImpl.class);
-		bind(IMDbUrlConnection.class).to(IMDbUrlConnectionImpl.class);		
+		
+		bind(IMDbUrlConnection.class).to(IMDbUrlConnectionImpl.class).in(Singleton.class);
+		
+		bind(IMDbCommunicationProtocol.class).to(IMDbCommunicationProtocolImpl.class);		
 	}
 }

@@ -56,10 +56,17 @@ public interface IMDbServerSocket {
 	/**
 	 * Força a parada do servidor e encerramento de sua thread.
 	 */
-	void stop();
+	void requestStop();
 	
 	/**
 	 * @return Verdadeiro caso o servidor foi solicitado para parar.
 	 */
-	boolean isStoped();
+	boolean isRequestedStoped();
+	
+	/**
+	 * Encerra o servidor socket.
+	 * 
+	 * @return Verdadeiro se o servidor socket foi enceraddo com sucesso. Falso caso contrário.
+	 */
+	boolean close();
 }

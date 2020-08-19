@@ -32,9 +32,9 @@ public class IMDbCommunicationProtocolTest {
 
 		iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();	
 		
-		System.out.println("");
+		System.out.println(Constants.STRING_EMPTY);
 		System.out.println("******** INICIANDO IMDbCommunicationProtocolTest ************");
-		System.out.println("");
+		System.out.println(Constants.STRING_EMPTY);
 	}
 	
 	@Test
@@ -69,7 +69,11 @@ public class IMDbCommunicationProtocolTest {
 		
 		String movieTitleWithPatternProtocol = iMDbCommunicationProtocol.getMovieTitleWithOutPatternProtocol();
 		
-		boolean equal = movieTitle.replace(Constants.PREFIX_PROTOCOL, "").replace(Constants.SUFIX_PROTOCOL, "").equals(movieTitleWithPatternProtocol);
+		boolean equal = movieTitle.replace(
+				Constants.PREFIX_PROTOCOL, 
+				Constants.STRING_EMPTY).replace(
+						Constants.SUFIX_PROTOCOL, 
+						Constants.STRING_EMPTY).equals(movieTitleWithPatternProtocol);
 		
 		assertTrue(equal);
 
@@ -109,8 +113,8 @@ public class IMDbCommunicationProtocolTest {
 	
 	@AfterAll
 	public void end() {
-		System.out.println("");
+		System.out.println(Constants.STRING_EMPTY);
 		System.out.println("******** FINALIZADO IMDbCommunicationProtocolTest ************");
-		System.out.println("");
+		System.out.println(Constants.STRING_EMPTY);
 	}
 }

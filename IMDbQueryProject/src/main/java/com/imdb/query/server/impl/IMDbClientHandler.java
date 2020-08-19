@@ -6,10 +6,11 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import com.google.inject.Inject;
 import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.util.Constants;
+import com.imdb.query.util.IMDbQueryModuleInjector;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
-import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * Handler responsável pelos atendimentos das requisições dos clientes.
@@ -22,24 +23,27 @@ import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 public class IMDbClientHandler extends Thread {
 	
 	private Socket clientSocket;
+
+    @Inject
 	private IMDbUrlConnection iMDbUrlConnection;
-	
-    private PrintWriter writeToClientPrintWriter;
-    private BufferedReader readFromClientBufferedReader;
-    
+
+    @Inject
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
     
-    public IMDbClientHandler(Socket clientSocket, IMDbUrlConnection iMDbUrlConnection) {
+    private PrintWriter writeToClientPrintWriter;
+    
+    private BufferedReader readFromClientBufferedReader;
+    
+	public void setClientSocket(Socket clientSocket) {
     	
-        this.clientSocket = clientSocket;
-        this.iMDbUrlConnection = iMDbUrlConnection;
-
-		iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();
+    	this.clientSocket = clientSocket;
     }
     
     public void run() {
     	
 		try {
+			
+			IMDbQueryModuleInjector.initialize(this);
 			
 	        writeToClientPrintWriter = new PrintWriter(clientSocket.getOutputStream(), true);
 	        
@@ -47,7 +51,7 @@ public class IMDbClientHandler extends Thread {
 			
 			// Recebe o nome, ou parte inicial do nome, do filme digitado pelo usuário.
 			
-	        String movieTitle = readFromClientBufferedReader.readLine();
+			String movieTitle = readFromClientBufferedReader.readLine();
 	        	        
 	        if(!isMatchPatternProtocol(movieTitle)) {
 	        	
@@ -60,10 +64,11 @@ public class IMDbClientHandler extends Thread {
 			
 		} catch (IOException e) {
 			
-			System.out.println("Problema ao conectar na porta " + Constants.PORT_DEFAULT + ": " + e.getMessage());
+			System.out.println("Problema na resposta para o cliente: " + e.getMessage());
+			
 		} finally {
 			
-			close();
+			clearAllocatedResources();
 		}
     }
 
@@ -80,18 +85,23 @@ public class IMDbClientHandler extends Thread {
 		return iMDbCommunicationProtocol.isMatchPatternProtocol();	
 	}
 	
-    public void close() {
+    private void clearAllocatedResources() {
     	
         try {
-			readFromClientBufferedReader.close();
+			
+        	readFromClientBufferedReader.close();
+			
 		} catch (IOException e) {
+			
 			System.out.println(e.getMessage());
 		}
         
         writeToClientPrintWriter.close();
 
         try {
-			clientSocket.close();
+			
+        	clientSocket.close();
+			
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}

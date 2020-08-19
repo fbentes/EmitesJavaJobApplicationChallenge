@@ -6,6 +6,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
@@ -13,6 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.google.inject.Singleton;
 import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.util.Constants;
 
@@ -25,6 +27,7 @@ import com.imdb.query.util.Constants;
  * @since 09/08/2020
  * 
  */
+@Singleton
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 
 	private List<Object> movieList = new ArrayList<Object>();
@@ -32,17 +35,25 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 	@Override
 	public String getMoviesFound(String movieTitle) {
 		
-		String result = "";
+		Optional<String> optionalMovieTitle = Optional.ofNullable(movieTitle);
 		
+		if(!optionalMovieTitle.isPresent()) {
+			return Constants.STRING_EMPTY;
+		}
+		
+		StringBuffer result = new StringBuffer();
+
 		for (Object title : movieList) {
 			
-			if(title.toString().trim().toLowerCase().startsWith(movieTitle.trim().toLowerCase())) {
+			if(title.toString().trim().toLowerCase().startsWith(optionalMovieTitle.get().trim().toLowerCase())) {
 				
-				result += title + "\n";
+				result.append(title + "\n");
 			}
 		}
 		
-		return (!result.equals("") ? result : "Nenhum filme foi encontrado como '" + movieTitle + "'");
+		return (result.length() > 0 ? 
+				result.toString() : 
+					"Nenhum filme foi encontrado com o título '" + optionalMovieTitle.get() + "' !");
 	}
 	
 	@Override
@@ -63,6 +74,8 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 
 	        String inputLine;
 	        
+			// PS: Não usado Optional para não afetar o desempenho na iteração.
+
 	        while ((inputLine = inputUrlBufferedReader.readLine()) != null) {
 	        	
 	        	strHtml.append(inputLine);
@@ -81,13 +94,13 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
         
         for (Element element : elements) {
         	
-        	if(element.attributes().html().contains("href=\"/title/") && !element.text().trim().equals("")) {
+        	if(element.attributes().html().contains("href=\"/title/") && !element.text().trim().equals(Constants.STRING_EMPTY)) {
         		
         		movieList.add(element.text());
         	}
         }
         
-        // Ordenação para tornar os retornos mais rápidos para os clientes.
+        // Ordenação para tornar os retornos das pesquisas mais rápidos para os clientes.
         
         movieList = movieList.stream().sorted().collect(Collectors.toList());
         

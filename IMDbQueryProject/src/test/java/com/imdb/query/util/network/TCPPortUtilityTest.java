@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Random;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -25,6 +26,16 @@ public class TCPPortUtilityTest {
 	public void initialize() {
 		
 		tcpPortValidator =  new TCPPortUtility();
+	}
+
+	@Test
+	public void NullPortIsInValidTest() {
+		
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			
+			tcpPortValidator.isPortValid(null);
+			
+		    });
 	}
 
 	@Test
