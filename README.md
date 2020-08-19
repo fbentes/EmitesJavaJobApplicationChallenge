@@ -66,3 +66,5 @@ O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\T
 [JUnit5 User Guide](https://junit.org/junit5/docs/current/user-guide)
 
 [JUnit5 Gradle](https://www.baeldung.com/junit-5-gradle)
+
+[Log4j 2](https://logging.apache.org/log4j/2.x/)
