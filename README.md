@@ -53,6 +53,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         
 *   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
 
+***O arquivo de log será registrado no subdiretório dos executáveis (ex.: C:\Temp\log\IMDbQueryProject.log).
 
 ### Referências:
 
