@@ -23,7 +23,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
 
 1) Baixar da pasta [Executables](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables) os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
 
-2) Abrir uma instância do prompt de comando e executar o servidor socket (C:\Temp\java -jar IMDbServerSocket.jar [porta]). 
+2) Abrir uma instância do prompt de comando e executar o servidor socket (**C:\Temp\java -jar IMDbServerSocket.jar [porta]**). 
 
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222. 
    Ex.: 
@@ -38,7 +38,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket 
 
-   (C:\Temp\java -jar IMDbClientSocket.jar [ipServidor | porta]). 
+   (**C:\Temp\java -jar IMDbClientSocket.jar [ipServidor | porta]**). 
 
    Os argumentos são opcionais. Se forem omititos o ipServidor será localhost e a porta padrão será 20222.
    Ex.: 
@@ -53,7 +53,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         
 *   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
 
-***O arquivo de log será registrado no subdiretório dos executáveis (ex.: C:\Temp\log\IMDbQueryProject.log).***
+O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
 ### Referências:
 
