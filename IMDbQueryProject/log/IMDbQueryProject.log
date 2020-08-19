@@ -13,3 +13,63 @@
 2020-08-19 17:11:19 [Thread-2] INFO  ServerCommandImpl:49 - 
 2020-08-19 17:11:19 [Thread-2] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
 2020-08-19 17:11:19 [Thread-2] INFO  ServerCommandImpl:51 - 
+2020-08-19 17:13:41 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 17:13:41 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 17:13:41 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 17:13:43 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 17:13:43 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 17:13:43 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 17:13:43 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 17:13:44 [main] INFO  StartServer:88 - 
+2020-08-19 17:13:44 [main] INFO  StartServer:90 - 
+2020-08-19 17:13:53 [main] INFO  StartClient:220 - 
+2020-08-19 17:13:53 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 17:13:56 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 17:13:56 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 17:13:56 [main] INFO  StartClient:184 - 
+2020-08-19 17:13:56 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 17:13:56 [main] INFO  StartClient:186 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+2020-08-19 17:13:56 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 17:13:56 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 17:13:56 [main] INFO  StartClient:220 - 
+2020-08-19 17:13:56 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 17:14:07 [main] INFO  StartClient:194 - 
+2020-08-19 17:14:07 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 17:14:11 [main] INFO  StartServer:124 - 
+2020-08-19 17:14:11 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 17:14:11 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
