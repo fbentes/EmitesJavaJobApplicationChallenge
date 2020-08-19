@@ -38,7 +38,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket 
 
-   (C:\Temp\java -jar IMDbClientSocket.jar [porta] | [ipServidor] | [ipServidor] [porta]). 
+   (C:\Temp\java -jar IMDbClientSocket.jar [ipServidor | porta]). 
 
    Os argumentos são opcionais. Se forem omititos o ipServidor será localhost e a porta padrão será 20222.
    Ex.: 
