@@ -9,7 +9,6 @@ import com.google.inject.Inject;
 import com.imdb.query.server.IMDbServerSocket;
 import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.util.network.TCPPortUtility;
-import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * Responsável pelo atendimento das requisições dos clientes.

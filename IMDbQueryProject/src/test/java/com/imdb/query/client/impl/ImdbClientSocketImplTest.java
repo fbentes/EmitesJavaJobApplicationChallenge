@@ -2,7 +2,6 @@ package com.imdb.query.client.impl;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.Optional;
 import java.util.Random;
 
 import javax.inject.Inject;

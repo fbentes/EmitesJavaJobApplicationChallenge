@@ -150,7 +150,7 @@ public class StartServer {
 			return true;
 		} 
 		
-		System.out.println("A porta " + optionalFirstArg.get() + " é inválida !");
+		System.out.println("A porta " + optionalFirstArg.get() + " é inválida. O número máximo permitido é " + Constants.PORT_TCP_MAX);
 		
 		return false;
 	}
