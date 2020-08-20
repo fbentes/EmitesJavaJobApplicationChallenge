@@ -9,11 +9,12 @@ Uso do [RedHat Java OpenJDK 8 Download](https://developers.redhat.com/download-m
 
 [IMDbQueryProject Lucidchart Package Diagram](https://app.lucidchart.com/documents/view/0d56f59b-9c80-4575-a536-f7564f94275a/0_0)
 
+> **Nota para análise dos fontes: 
+> As classes responsáveis pela solicitação Client Socket e resposta Server Socket são, respectivamente, IMDbClientSocketImpl e IMDbClientHandler.**
+
 [IMDbQueryProject Javadoc](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query)
 
 > OBS.: Para renderizar as páginas, é melhor acessá-las pelo Eclipse porque o github apenas visualiza o conteúdo html !
-
-> **_Nota para análise dos fontes: As classes responsáveis pela solicitação Client Socket e resposta Server Socket são, respectivamente, IMDbClientSocketImpl e IMDbClientHandler._**
 
 
 ### Documentação para usuário final:
