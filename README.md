@@ -57,6 +57,8 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
 
 *   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou           rejeição no caso da porta 6969 com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request.
 
+*   As pesquisas por títulos de filmes podem ser feitas pelo nome completo ou pelo início do nome do título (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra).
+
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
 ### Referências:
