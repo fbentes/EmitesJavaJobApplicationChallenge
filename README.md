@@ -2,14 +2,15 @@
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
 > Eclipse IDE for Java Developers Version: 2020-06 (4.16.0)
 
-Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
+Uso do [RedHat Java OpenJDK 8 Download](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
 
-> OBS.: Suspendi o uso do Oracle JDK 14 porque ele dispara uma exceção quando há tentativa de conexão com algum site https: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**.
- Por não ser o foco do desafio resolver essa questão, foi usado o RedHat OpenJDK 8 que não tem essa restrição de segurança !
 
 ### Documentação técnica:
 
 [IMDbQueryProject Lucidchart Package Diagram](https://app.lucidchart.com/documents/view/0d56f59b-9c80-4575-a536-f7564f94275a/0_0)
+
+> Nota para análise dos fontes: 
+> As classes responsáveis pelo request Client Socket e response Server Socket são, respectivamente, **com.imdb.query.client.impl.IMDbClientSocketImpl** e **com.imdb.query.server.impl.IMDbClientHandler**.
 
 [IMDbQueryProject Javadoc](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query)
 
@@ -21,7 +22,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
 #### Tutorial para executar a solução pelo prompt de comando:
 
 
-1) Baixar da pasta [Executables](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables) os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
+1) Baixar da pasta [Executables](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables) os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: **C:\Temp**).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (**C:\Temp\java -jar IMDbServerSocket.jar [porta]**). 
 
@@ -32,9 +33,11 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         
         C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
         
-*    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes.     
+*    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
 
-*    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
+*    Um servidor socket é instanciado numa Thread filha para que a Thread principal possa gerenciá-lo. E o servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
+
+*    Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket 
 
@@ -52,6 +55,10 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
         
 *   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
+
+*   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou           rejeição no caso da porta 6969 (Acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse Acmsoda ou outros serviços afins.
+
+*   As pesquisas por títulos de filmes podem ser feitas pelo nome completo ou pelo início do nome do título (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra).
 
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
