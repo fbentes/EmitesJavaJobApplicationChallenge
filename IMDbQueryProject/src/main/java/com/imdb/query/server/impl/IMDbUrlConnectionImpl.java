@@ -47,13 +47,13 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		
 		StringBuffer result = new StringBuffer();
 
-		for (Object title : movieList) {
-			
-			if(title.toString().trim().toLowerCase().startsWith(optionalMovieTitle.get().trim().toLowerCase())) {
-				
-				result.append(title + "\n");
-			}
-		}
+		// Preenche o StringBuffer result apenas com os filmes encontrados (já ordenados na origem) !
+		
+		movieList.
+		stream().
+		filter(title -> 
+		title.toString().trim().toLowerCase().startsWith(optionalMovieTitle.get().trim().toLowerCase())).
+		forEach(title -> result.append(title + "\n"));
 		
 		return (result.length() > 0 ? 
 				result.toString() : 
