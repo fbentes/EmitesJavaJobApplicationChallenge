@@ -21,7 +21,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
 #### Tutorial para executar a solução pelo prompt de comando:
 
 
-1) Baixar da pasta [Executables](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables) os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: C:\Temp).
+1) Baixar da pasta [Executables](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables) os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: **C:\Temp**).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (**C:\Temp\java -jar IMDbServerSocket.jar [porta]**). 
 
