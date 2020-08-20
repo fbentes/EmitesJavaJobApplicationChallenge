@@ -55,6 +55,8 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         
 *   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
 
+*   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou           rejeição no caso da porta 6969 com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request.
+
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
 ### Referências:
