@@ -55,7 +55,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         
 *   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
 
-*   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou           rejeição no caso da porta 6969 (Acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse Acmsoda ou outros afins.
+*   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou           rejeição no caso da porta 6969 (Acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse Acmsoda ou outros serviços afins.
 
 *   As pesquisas por títulos de filmes podem ser feitas pelo nome completo ou pelo início do nome do título (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra).
 
