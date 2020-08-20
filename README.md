@@ -34,7 +34,7 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         
 *    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
 
-*    Um servidor socket é instanciado numa thread para que a Thread principal possa gerenciá-lo. E um servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
+*    Um servidor socket é instanciado numa Thread para que a Thread principal possa gerenciá-lo. E um servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
 
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
 
