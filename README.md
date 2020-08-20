@@ -32,7 +32,9 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
         
         C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
         
-*    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes.     
+*    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
+
+*    Um servidor socket é instanciado numa thread para que a Thread principal possa finalizá-lo. E um servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
 
 *    Se a porta estiver ocupada por outro processo, será feito tentativas de alocação até encontrar uma porta aberta. Essa porta será impressa no console para que o cliente      saiba qual porta se conectar.
 
