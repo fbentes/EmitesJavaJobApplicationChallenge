@@ -73,3 +73,976 @@ Até o Último Homem
 2020-08-19 17:14:11 [main] INFO  StartServer:124 - 
 2020-08-19 17:14:11 [Thread-1] INFO  ServerCommandImpl:59 - 
 2020-08-19 17:14:11 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 17:27:28 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 17:27:28 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 17:27:28 [main] INFO  StartClient:220 - 
+2020-08-19 17:27:28 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 17:27:56 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 6969 ...
+2020-08-19 17:27:56 [Thread-1] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 6969: Address already in use: JVM_Bind
+2020-08-19 17:27:56 [Thread-1] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 17:27:57 [Thread-1] INFO  ServerCommandImpl:37 - ****************************************
+2020-08-19 17:27:57 [Thread-1] INFO  ServerCommandImpl:38 - Porta 6969 está ocupada !
+2020-08-19 17:27:57 [Thread-1] INFO  ServerCommandImpl:39 - Servidor conectado na porta 36553.
+2020-08-19 17:27:57 [Thread-1] INFO  ServerCommandImpl:40 - ****************************************
+2020-08-19 17:27:57 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 17:27:59 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 17:27:59 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 17:27:59 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 17:27:59 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 17:27:59 [main] INFO  StartServer:88 - 
+2020-08-19 17:27:59 [main] INFO  StartServer:90 - 
+2020-08-19 17:28:11 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 17:28:11 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 17:28:11 [main] INFO  StartClient:220 - 
+2020-08-19 17:28:11 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 17:28:14 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 17:28:14 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 17:28:14 [main] INFO  StartClient:184 - 
+2020-08-19 17:28:14 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 17:28:14 [main] INFO  StartClient:186 - HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Wed, 19 Aug 2020 20:28:14 GMT
+Connection: close
+Content-Length: 326
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+<hr><p>HTTP Error 400. The request verb is invalid.</p>
+</BODY></HTML>
+
+2020-08-19 17:28:14 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 17:28:14 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 17:28:14 [main] INFO  StartClient:220 - 
+2020-08-19 17:28:14 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 17:28:34 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 17:28:34 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 17:28:38 [main] INFO  StartClient:220 - 
+2020-08-19 17:28:38 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 17:29:15 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 17:29:34 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 17:30:41 [main] INFO  StartClient:184 - 
+2020-08-19 17:30:41 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 17:30:41 [main] INFO  StartClient:186 - HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Wed, 19 Aug 2020 20:29:49 GMT
+Connection: close
+Content-Length: 326
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+
+2020-08-19 17:30:41 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 17:30:41 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 17:30:41 [main] INFO  StartClient:220 - 
+2020-08-19 17:30:41 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 17:30:52 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 17:30:52 [main] INFO  StartServer:124 - 
+2020-08-19 17:30:52 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:66 - isMatchPatternProtocolTest()  passou.
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:85 - getMovieTitleWithOutPatternProtocolClientTest()  passou.
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação em 1917, 2001: Uma Odisséia no Espaço está inválido
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:109 - isNotMatchPatternProtocoClientTest() não passou.
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:122 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:140 - 
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:141 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 18:52:50 [main] INFO  IMDbCommunicationProtocolTest:142 - 
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:66 - isMatchPatternProtocolTest()  passou.
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:85 - getMovieTitleWithOutPatternProtocolClientTest()  passou.
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação em Batman está inválido
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:109 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:122 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:140 - 
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:141 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 18:54:32 [main] INFO  IMDbCommunicationProtocolTest:142 - 
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:66 - isMatchPatternProtocolTest()  passou.
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:85 - getMovieTitleWithOutPatternProtocolClientTest()  passou.
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação em 1917, 2001: Uma Odisséia no Espaço está inválido
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:109 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:122 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolImpl:93 - O protocolo de comunicação em <html>bad request</html> está inválido
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:135 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:140 - 
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:141 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 18:55:51 [main] INFO  IMDbCommunicationProtocolTest:142 - 
+2020-08-19 19:02:55 [main] INFO  ImdbServerSocketTest:52 - Servidor conectado !
+2020-08-19 19:02:58 [main] INFO  ImdbServerSocketTest:63 - Quantidade de filmes = 250
+2020-08-19 19:03:03 [main] INFO  ImdbServerSocketTest:84 - Espera pelo cliente bem sucedida !
+2020-08-19 19:03:03 [main] INFO  ImdbServerSocketTest:96 - Servidor finalizado !
+2020-08-19 19:03:03 [main] INFO  TCPPortUtilityTest:100 - isPortUsedTest()  passou.
+2020-08-19 19:03:03 [main] INFO  TCPPortUtilityTest:71 - isPortNotValidTest()  passou.
+2020-08-19 19:03:03 [main] INFO  TCPPortUtility:38 - A porta não pode ser nula !
+2020-08-19 19:03:03 [main] INFO  TCPPortUtilityTest:42 - NullPortIsInValidTest()  passou.
+2020-08-19 19:03:03 [main] INFO  TCPPortUtilityTest:56 - isPortValidTest()  passou.
+2020-08-19 19:03:03 [main] INFO  TCPPortUtilityTest:110 - getNextPortOpenedToUseTest()  passou.
+2020-08-19 19:03:03 [main] INFO  TCPPortUtilityTest:85 - isPortOpenedTest()  passou.
+2020-08-19 19:03:03 [main] INFO  AddressNetworkValidatorTest:37 - NullPortIsInValidTest()  passou.
+2020-08-19 19:03:03 [main] INFO  AddressNetworkValidator:48 - O IP 678.168.0.14 é inválido !
+2020-08-19 19:03:03 [main] INFO  AddressNetworkValidatorTest:49 - isIpInvalidTest()  passou.
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:66 - isMatchPatternProtocolTest()  passou.
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:85 - getMovieTitleWithOutPatternProtocolClientTest()  passou.
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação em Um sonho está inválido
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:109 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:122 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolImpl:93 - O protocolo de comunicação em <html>bad request</html> está inválido
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:135 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:140 - 
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:141 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 19:03:03 [main] INFO  IMDbCommunicationProtocolTest:142 - 
+2020-08-19 19:03:03 [main] INFO  ImdbClientSocketImplTest:46 - ************ PREPARA SERVIDOR PARA CLIENTE ************
+2020-08-19 19:03:03 [main] INFO  ImdbClientSocketImplTest:47 - 
+2020-08-19 19:03:03 [Thread-2] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 19:03:03 [Thread-2] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 20222: Address already in use: JVM_Bind
+2020-08-19 19:03:03 [Thread-2] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 19:03:03 [Thread-2] INFO  ServerCommandImpl:37 - ****************************************
+2020-08-19 19:03:03 [Thread-2] INFO  ServerCommandImpl:38 - Porta 20222 está ocupada !
+2020-08-19 19:03:03 [Thread-2] INFO  ServerCommandImpl:39 - Servidor conectado na porta 41991.
+2020-08-19 19:03:03 [Thread-2] INFO  ServerCommandImpl:40 - ****************************************
+2020-08-19 19:03:03 [Thread-2] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 19:03:05 [Thread-2] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 19:03:05 [Thread-2] INFO  ServerCommandImpl:49 - 
+2020-08-19 19:03:05 [Thread-2] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 19:03:05 [Thread-2] INFO  ServerCommandImpl:51 - 
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:65 - 
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:66 - ************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:67 - 
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:79 - Cliente conectado com o servidor !
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:115 - Filme pesquisado: A Criada
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:124 - Filme(s) encontrado(s): A Criada
+
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:142 - Conexão do cliente encerrada !
+2020-08-19 19:03:07 [main] INFO  ImdbClientSocketImplTest:148 - Servidor parado !
+2020-08-19 19:16:17 [main] INFO  ImdbServerSocketTest:52 - Servidor conectado !
+2020-08-19 19:16:17 [main] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 135: Address already in use: JVM_Bind
+2020-08-19 19:16:17 [main] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 19:16:17 [main] INFO  ImdbServerSocketTest:68 - Servidor conectado !
+2020-08-19 19:16:19 [main] INFO  ImdbServerSocketTest:79 - Quantidade de filmes = 250
+2020-08-19 19:16:24 [main] INFO  ImdbServerSocketTest:100 - Espera pelo cliente bem sucedida !
+2020-08-19 19:16:24 [main] INFO  ImdbServerSocketTest:112 - Servidor finalizado !
+2020-08-19 19:16:25 [main] INFO  TCPPortUtilityTest:100 - isPortUsedTest()  passou.
+2020-08-19 19:16:25 [main] INFO  TCPPortUtilityTest:71 - isPortNotValidTest()  passou.
+2020-08-19 19:16:25 [main] INFO  TCPPortUtility:38 - A porta não pode ser nula !
+2020-08-19 19:16:25 [main] INFO  TCPPortUtilityTest:42 - NullPortIsInValidTest()  passou.
+2020-08-19 19:16:25 [main] INFO  TCPPortUtilityTest:56 - isPortValidTest()  passou.
+2020-08-19 19:16:25 [main] INFO  TCPPortUtilityTest:110 - getNextPortOpenedToUseTest()  passou.
+2020-08-19 19:16:25 [main] INFO  TCPPortUtilityTest:85 - isPortOpenedTest()  passou.
+2020-08-19 19:16:25 [main] INFO  AddressNetworkValidatorTest:37 - NullPortIsInValidTest()  passou.
+2020-08-19 19:16:25 [main] INFO  AddressNetworkValidator:48 - O IP 678.168.0.14 é inválido !
+2020-08-19 19:16:25 [main] INFO  AddressNetworkValidatorTest:49 - isIpInvalidTest()  passou.
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:66 - isMatchPatternProtocolTest()  passou.
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:85 - getMovieTitleWithOutPatternProtocolClientTest()  passou.
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação em 12 está inválido
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:109 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:122 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolImpl:93 - O protocolo de comunicação em <html>bad request</html> está inválido
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:135 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:140 - 
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:141 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 19:16:25 [main] INFO  IMDbCommunicationProtocolTest:142 - 
+2020-08-19 19:16:25 [main] INFO  ImdbClientSocketImplTest:46 - ************ PREPARA SERVIDOR PARA CLIENTE ************
+2020-08-19 19:16:25 [main] INFO  ImdbClientSocketImplTest:47 - 
+2020-08-19 19:16:25 [Thread-2] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 19:16:25 [Thread-2] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 19:16:25 [Thread-2] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 19:16:28 [Thread-2] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 19:16:28 [Thread-2] INFO  ServerCommandImpl:49 - 
+2020-08-19 19:16:28 [Thread-2] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 19:16:28 [Thread-2] INFO  ServerCommandImpl:51 - 
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:65 - 
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:66 - ************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:67 - 
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:79 - Cliente conectado com o servidor !
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:115 - Filme pesquisado: A Mulher Faz o Homem
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:124 - Filme(s) encontrado(s): A Mulher Faz o Homem
+
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:153 - Conexão do cliente encerrada !
+2020-08-19 19:16:29 [main] INFO  ImdbClientSocketImplTest:159 - Servidor parado !
+2020-08-19 19:16:29 [Thread-4] ERROR IMDbClientHandler:66 - Título de filme recebido vazio: ''. Tente novamente !
+2020-08-19 19:18:16 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 6969 ...
+2020-08-19 19:18:16 [Thread-1] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 6969: Address already in use: JVM_Bind
+2020-08-19 19:18:16 [Thread-1] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 19:18:16 [Thread-1] INFO  ServerCommandImpl:37 - ****************************************
+2020-08-19 19:18:16 [Thread-1] INFO  ServerCommandImpl:38 - Porta 6969 está ocupada !
+2020-08-19 19:18:16 [Thread-1] INFO  ServerCommandImpl:39 - Servidor conectado na porta 38892.
+2020-08-19 19:18:16 [Thread-1] INFO  ServerCommandImpl:40 - ****************************************
+2020-08-19 19:18:16 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 19:18:19 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 19:18:19 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 19:18:19 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 19:18:19 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 19:18:19 [main] INFO  StartServer:88 - 
+2020-08-19 19:18:19 [main] INFO  StartServer:90 - 
+2020-08-19 19:18:27 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 19:18:27 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 19:18:27 [main] INFO  StartClient:220 - 
+2020-08-19 19:18:27 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:18:30 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 19:18:30 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 19:18:30 [main] INFO  StartClient:184 - 
+2020-08-19 19:18:30 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 19:18:30 [main] INFO  StartClient:186 - HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Wed, 19 Aug 2020 22:18:30 GMT
+Connection: close
+Content-Length: 326
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+<hr><p>HTTP Error 400. The request verb is invalid.</p>
+</BODY></HTML>
+
+2020-08-19 19:18:30 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 19:18:30 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 19:18:30 [main] INFO  StartClient:220 - 
+2020-08-19 19:18:30 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:18:44 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 19:18:44 [main] INFO  StartServer:124 - 
+2020-08-19 19:18:44 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 19:19:57 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 19:19:57 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 19:20:03 [main] INFO  StartClient:220 - 
+2020-08-19 19:20:03 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:20:05 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 19:20:10 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 19:20:25 [main] INFO  StartClient:184 - 
+2020-08-19 19:20:25 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 19:20:25 [main] INFO  StartClient:186 - HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Wed, 19 Aug 2020 22:20:10 GMT
+Connection: close
+Content-Length: 326
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+<hr><p>HTTP Error 400. The request verb is invalid.</p>
+</BODY></HTML>
+
+2020-08-19 19:20:25 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 19:20:25 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 19:20:25 [main] INFO  StartClient:220 - 
+2020-08-19 19:20:25 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:21:03 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 19:21:03 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 19:21:09 [main] INFO  StartClient:220 - 
+2020-08-19 19:21:09 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:21:12 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 19:21:12 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 19:22:05 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 19:22:05 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 19:22:08 [main] INFO  StartClient:220 - 
+2020-08-19 19:22:08 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:22:10 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 19:22:10 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 19:22:44 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 19:22:44 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 19:22:45 [main] INFO  StartClient:220 - 
+2020-08-19 19:22:45 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:22:46 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 19:22:46 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 19:24:01 [main] INFO  StartClient:184 - 
+2020-08-19 19:24:01 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 19:24:01 [main] INFO  StartClient:186 - HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Wed, 19 Aug 2020 22:22:51 GMT
+Connection: close
+Content-Length: 326
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+<hr><p>HTTP Error 400. The request verb is invalid.</p>
+</BODY></HTML>
+
+2020-08-19 19:24:01 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 19:24:01 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 19:24:01 [main] INFO  StartClient:220 - 
+2020-08-19 19:24:01 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:25:17 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 19:25:17 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 19:25:17 [main] INFO  StartClient:220 - 
+2020-08-19 19:25:17 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:25:19 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 19:25:19 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 19:25:38 [main] INFO  StartClient:184 - 
+2020-08-19 19:25:38 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 19:25:38 [main] INFO  StartClient:186 - HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Wed, 19 Aug 2020 22:25:26 GMT
+Connection: close
+Content-Length: 326
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+<hr><p>HTTP Error 400. The request verb is invalid.</p>
+</BODY></HTML>
+
+2020-08-19 19:25:38 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 19:25:38 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 19:25:38 [main] INFO  StartClient:220 - 
+2020-08-19 19:25:38 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:66 - isMatchPatternProtocolTest()  passou.
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:85 - getMovieTitleWithOutPatternProtocolClientTest()  passou.
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação está inválido
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:109 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:127 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação está inválido
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:142 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:147 - 
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:148 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 19:47:02 [main] INFO  IMDbCommunicationProtocolTest:149 - 
+2020-08-19 19:56:56 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 19:56:56 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 19:56:56 [main] INFO  StartClient:220 - 
+2020-08-19 19:56:56 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:56:58 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 19:56:58 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 19:56:58 [main] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação está inválido !
+2020-08-19 19:56:58 [main] INFO  StartClient:184 - 
+2020-08-19 19:56:58 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 19:56:58 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 19:56:58 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 19:56:58 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 19:56:58 [main] INFO  StartClient:220 - 
+2020-08-19 19:56:58 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 19:57:16 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 6969 ...
+2020-08-19 19:57:16 [Thread-1] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 6969: Address already in use: JVM_Bind
+2020-08-19 19:57:16 [Thread-1] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 19:57:17 [Thread-1] INFO  ServerCommandImpl:37 - ****************************************
+2020-08-19 19:57:17 [Thread-1] INFO  ServerCommandImpl:38 - Porta 6969 está ocupada !
+2020-08-19 19:57:17 [Thread-1] INFO  ServerCommandImpl:39 - Servidor conectado na porta 7508.
+2020-08-19 19:57:17 [Thread-1] INFO  ServerCommandImpl:40 - ****************************************
+2020-08-19 19:57:17 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 19:57:19 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 19:57:19 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 19:57:19 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 19:57:19 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 19:57:19 [main] INFO  StartServer:88 - 
+2020-08-19 19:57:19 [main] INFO  StartServer:90 - 
+2020-08-19 20:00:53 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 20:00:53 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 20:00:53 [main] INFO  StartClient:220 - 
+2020-08-19 20:00:53 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:00:55 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:00:55 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 20:00:55 [main] INFO  StartClient:184 - 
+2020-08-19 20:00:55 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:00:55 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:00:55 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:00:55 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:00:55 [main] INFO  StartClient:220 - 
+2020-08-19 20:00:55 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:01:05 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:01:05 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 20:01:05 [main] INFO  StartClient:184 - 
+2020-08-19 20:01:05 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:01:05 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:01:05 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:01:05 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:01:05 [main] INFO  StartClient:220 - 
+2020-08-19 20:01:05 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:01:31 [main] INFO  AddressNetworkValidator:48 - O IP 7508 é inválido !
+2020-08-19 20:01:31 [main] INFO  StartClient:124 - O argumento 7508 é uma porta válida !
+2020-08-19 20:01:31 [main] INFO  StartClient:220 - 
+2020-08-19 20:01:31 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:01:33 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:01:33 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:7508.
+2020-08-19 20:01:33 [Thread-2] INFO  IMDbCommunicationProtocolImpl:68 - O protocolo de comunicação está inválido !
+2020-08-19 20:01:33 [main] INFO  StartClient:184 - 
+2020-08-19 20:01:33 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:01:33 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:01:33 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:01:33 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:01:33 [main] INFO  StartClient:220 - 
+2020-08-19 20:01:33 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:03:01 [main] INFO  StartServer:124 - 
+2020-08-19 20:03:01 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 20:03:01 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 20:03:07 [main] INFO  StartClient:194 - 
+2020-08-19 20:03:07 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 20:03:11 [main] INFO  StartClient:194 - 
+2020-08-19 20:03:11 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 20:03:25 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 20:03:25 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 20:03:25 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 20:03:28 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 20:03:28 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 20:03:28 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 20:03:28 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 20:03:28 [main] INFO  StartServer:88 - 
+2020-08-19 20:03:28 [main] INFO  StartServer:90 - 
+2020-08-19 20:03:39 [main] INFO  StartClient:220 - 
+2020-08-19 20:03:39 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:03:42 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:03:42 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 20:03:42 [main] INFO  StartClient:184 - 
+2020-08-19 20:03:42 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:03:42 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:03:42 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:03:42 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:03:42 [main] INFO  StartClient:220 - 
+2020-08-19 20:03:42 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:05:09 [main] INFO  StartClient:194 - 
+2020-08-19 20:05:09 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 20:05:13 [main] INFO  StartServer:124 - 
+2020-08-19 20:05:13 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 20:05:13 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 20:05:23 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 20:05:23 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 20:05:23 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 20:05:26 [main] INFO  StartServer:88 - 
+2020-08-19 20:05:26 [main] INFO  StartServer:90 - 
+2020-08-19 20:05:34 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 20:05:34 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 20:05:34 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 20:05:34 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 20:05:46 [main] INFO  StartClient:220 - 
+2020-08-19 20:05:46 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:05:50 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:05:50 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 20:08:18 [main] INFO  StartClient:184 - 
+2020-08-19 20:08:18 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:08:18 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:08:18 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:08:18 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:08:18 [main] INFO  StartClient:220 - 
+2020-08-19 20:08:18 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:08:23 [main] INFO  StartClient:194 - 
+2020-08-19 20:08:23 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 20:08:29 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 20:08:29 [main] INFO  StartServer:124 - 
+2020-08-19 20:08:29 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 20:10:18 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 20:10:18 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 20:10:18 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 20:10:20 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 20:10:20 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 20:10:20 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 20:10:20 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 20:10:21 [main] INFO  StartServer:88 - 
+2020-08-19 20:10:21 [main] INFO  StartServer:90 - 
+2020-08-19 20:10:25 [main] INFO  StartClient:220 - 
+2020-08-19 20:10:25 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:10:27 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:10:27 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 20:10:27 [main] INFO  StartClient:184 - 
+2020-08-19 20:10:27 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:10:27 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:10:27 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:10:27 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:10:27 [main] INFO  StartClient:220 - 
+2020-08-19 20:10:27 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:10:34 [main] INFO  StartClient:194 - 
+2020-08-19 20:10:34 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 20:25:41 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 20:25:41 [main] INFO  StartServer:124 - 
+2020-08-19 20:25:41 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 20:27:51 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 20:27:51 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 20:27:51 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 20:27:53 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 20:27:53 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 20:27:53 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 20:27:53 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 20:27:54 [main] INFO  StartServer:88 - 
+2020-08-19 20:27:54 [main] INFO  StartServer:90 - 
+2020-08-19 20:27:58 [main] INFO  StartClient:220 - 
+2020-08-19 20:27:58 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:28:01 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:28:01 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 20:28:01 [main] INFO  StartClient:184 - 
+2020-08-19 20:28:01 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:28:01 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:28:01 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:28:01 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:28:01 [main] INFO  StartClient:220 - 
+2020-08-19 20:28:01 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:28:13 [main] INFO  StartServer:124 - 
+2020-08-19 20:28:13 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 20:28:13 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 20:29:39 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 20:29:39 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 20:29:39 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 20:29:42 [main] INFO  StartServer:88 - 
+2020-08-19 20:29:42 [main] INFO  StartServer:90 - 
+2020-08-19 20:29:53 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 20:29:53 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 20:29:53 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 20:29:53 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 20:30:04 [main] INFO  StartClient:220 - 
+2020-08-19 20:30:04 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:30:07 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:30:07 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 20:31:28 [main] INFO  StartClient:184 - 
+2020-08-19 20:31:28 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:31:28 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:31:28 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:31:28 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:31:28 [main] INFO  StartClient:220 - 
+2020-08-19 20:31:28 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:31:37 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 20:31:37 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 20:32:28 [main] INFO  StartClient:184 - 
+2020-08-19 20:32:28 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 20:32:28 [main] INFO  StartClient:186 - O protocolo de comunicação está inválido !
+2020-08-19 20:32:28 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 20:32:28 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 20:32:28 [main] INFO  StartClient:220 - 
+2020-08-19 20:32:28 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 20:32:37 [main] INFO  StartServer:124 - 
+2020-08-19 20:32:37 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 20:32:37 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 20:34:30 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 20:34:30 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 20:34:30 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 20:34:33 [main] INFO  StartServer:88 - 
+2020-08-19 20:34:33 [main] INFO  StartServer:90 - 
+2020-08-19 20:34:37 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 20:34:37 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 20:34:37 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 20:34:37 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 20:34:37 [main] INFO  StartServer:124 - 
+2020-08-19 20:34:37 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 20:34:37 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 21:09:27 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 21:09:27 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 21:09:27 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 21:09:29 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 21:09:29 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 21:09:29 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 21:09:29 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 21:09:30 [main] INFO  StartServer:88 - 
+2020-08-19 21:09:30 [main] INFO  StartServer:90 - 
+2020-08-19 21:09:35 [main] INFO  StartClient:220 - 
+2020-08-19 21:09:35 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:09:40 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:09:40 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 21:09:40 [main] INFO  StartClient:184 - 
+2020-08-19 21:09:40 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 21:09:40 [main] INFO  StartClient:186 - Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-19 21:09:40 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 21:09:40 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 21:09:40 [main] INFO  StartClient:220 - 
+2020-08-19 21:09:40 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:09:43 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:09:43 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 21:09:43 [main] INFO  StartClient:184 - 
+2020-08-19 21:09:43 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 21:09:43 [main] INFO  StartClient:186 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-19 21:09:43 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 21:09:43 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 21:09:43 [main] INFO  StartClient:220 - 
+2020-08-19 21:09:43 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:09:46 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:09:46 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 21:09:46 [main] INFO  StartClient:184 - 
+2020-08-19 21:09:46 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 21:09:46 [main] INFO  StartClient:186 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-19 21:09:46 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 21:09:46 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 21:09:46 [main] INFO  StartClient:220 - 
+2020-08-19 21:09:46 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:09:53 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:09:53 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 21:09:53 [main] INFO  StartClient:184 - 
+2020-08-19 21:09:53 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 21:09:53 [main] INFO  StartClient:186 - A Lista de Schindler
+
+
+2020-08-19 21:09:53 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 21:09:53 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 21:09:53 [main] INFO  StartClient:220 - 
+2020-08-19 21:09:53 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:09:58 [main] INFO  StartClient:194 - 
+2020-08-19 21:09:58 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 21:10:03 [main] INFO  StartServer:124 - 
+2020-08-19 21:10:03 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 21:10:03 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 21:10:29 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 135 ...
+2020-08-19 21:10:29 [Thread-1] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 135: Address already in use: JVM_Bind
+2020-08-19 21:10:29 [Thread-1] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 21:10:29 [Thread-1] INFO  ServerCommandImpl:37 - ****************************************
+2020-08-19 21:10:29 [Thread-1] INFO  ServerCommandImpl:38 - Porta 135 está ocupada !
+2020-08-19 21:10:29 [Thread-1] INFO  ServerCommandImpl:39 - Servidor conectado na porta 16623.
+2020-08-19 21:10:29 [Thread-1] INFO  ServerCommandImpl:40 - ****************************************
+2020-08-19 21:10:29 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 21:10:31 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 21:10:31 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 21:10:31 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 21:10:31 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 21:10:32 [main] INFO  StartServer:88 - 
+2020-08-19 21:10:32 [main] INFO  StartServer:90 - 
+2020-08-19 21:10:39 [main] INFO  AddressNetworkValidator:48 - O IP 135 é inválido !
+2020-08-19 21:10:39 [main] INFO  StartClient:124 - O argumento 135 é uma porta válida !
+2020-08-19 21:10:39 [main] INFO  StartClient:220 - 
+2020-08-19 21:10:39 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:10:43 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:10:43 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:135.
+2020-08-19 21:11:39 [main] INFO  StartServer:124 - 
+2020-08-19 21:11:39 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 21:11:39 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 21:11:52 [main] INFO  AddressNetworkValidator:48 - O IP 135 é inválido !
+2020-08-19 21:11:53 [main] INFO  StartClient:124 - O argumento 135 é uma porta válida !
+2020-08-19 21:11:53 [main] INFO  StartClient:220 - 
+2020-08-19 21:11:53 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:12:14 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:12:23 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:135.
+2020-08-19 21:13:31 [main] INFO  AddressNetworkValidator:48 - O IP 135 é inválido !
+2020-08-19 21:13:31 [main] INFO  StartClient:124 - O argumento 135 é uma porta válida !
+2020-08-19 21:13:31 [main] INFO  StartClient:220 - 
+2020-08-19 21:13:31 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:13:35 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:13:38 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:135.
+2020-08-19 21:14:09 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 21:14:09 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 21:14:10 [main] INFO  StartClient:220 - 
+2020-08-19 21:14:10 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:14:12 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:14:15 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 21:15:17 [main] INFO  AddressNetworkValidator:48 - O IP 6969 é inválido !
+2020-08-19 21:15:17 [main] INFO  StartClient:124 - O argumento 6969 é uma porta válida !
+2020-08-19 21:15:18 [main] INFO  StartClient:220 - 
+2020-08-19 21:15:18 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:15:22 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:15:30 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:6969.
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:64 - isMatchPatternProtocolTest()  passou.
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:102 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:120 - 
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:121 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 21:20:56 [main] INFO  IMDbCommunicationProtocolTest:122 - 
+2020-08-19 21:22:38 [main] INFO  ImdbServerSocketTest:52 - Servidor conectado !
+2020-08-19 21:22:38 [main] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 135: Address already in use: JVM_Bind
+2020-08-19 21:22:38 [main] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 21:22:39 [main] INFO  ImdbServerSocketTest:68 - Servidor conectado !
+2020-08-19 21:22:41 [main] INFO  ImdbServerSocketTest:79 - Quantidade de filmes = 250
+2020-08-19 21:22:46 [main] INFO  ImdbServerSocketTest:100 - Espera pelo cliente bem sucedida !
+2020-08-19 21:22:46 [main] INFO  ImdbServerSocketTest:112 - Servidor finalizado !
+2020-08-19 21:22:46 [main] INFO  TCPPortUtilityTest:100 - isPortUsedTest()  passou.
+2020-08-19 21:22:46 [main] INFO  TCPPortUtilityTest:71 - isPortNotValidTest()  passou.
+2020-08-19 21:22:46 [main] INFO  TCPPortUtility:38 - A porta não pode ser nula !
+2020-08-19 21:22:46 [main] INFO  TCPPortUtilityTest:42 - NullPortIsInValidTest()  passou.
+2020-08-19 21:22:46 [main] INFO  TCPPortUtilityTest:56 - isPortValidTest()  passou.
+2020-08-19 21:22:46 [main] INFO  TCPPortUtilityTest:110 - getNextPortOpenedToUseTest()  passou.
+2020-08-19 21:22:46 [main] INFO  TCPPortUtilityTest:85 - isPortOpenedTest()  passou.
+2020-08-19 21:22:46 [main] INFO  AddressNetworkValidatorTest:37 - NullPortIsInValidTest()  passou.
+2020-08-19 21:22:46 [main] INFO  AddressNetworkValidator:48 - O IP 678.168.0.14 é inválido !
+2020-08-19 21:22:46 [main] INFO  AddressNetworkValidatorTest:49 - isIpInvalidTest()  passou.
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:64 - isMatchPatternProtocolTest()  passou.
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:86 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:102 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:115 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:120 - 
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:121 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 21:22:46 [main] INFO  IMDbCommunicationProtocolTest:122 - 
+2020-08-19 21:22:46 [main] INFO  ImdbClientSocketImplTest:46 - ************ PREPARA SERVIDOR PARA CLIENTE ************
+2020-08-19 21:22:46 [main] INFO  ImdbClientSocketImplTest:47 - 
+2020-08-19 21:22:46 [Thread-2] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 21:22:46 [Thread-2] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 21:22:46 [Thread-2] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 21:22:48 [Thread-2] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 21:22:48 [Thread-2] INFO  ServerCommandImpl:49 - 
+2020-08-19 21:22:48 [Thread-2] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 21:22:48 [Thread-2] INFO  ServerCommandImpl:51 - 
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:65 - 
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:66 - ************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:67 - 
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:79 - Cliente conectado com o servidor !
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:115 - Filme pesquisado: Alien
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:124 - Filme(s) encontrado(s): O protocolo de comunicação está inválido !
+Alien - O 8º Passageiro
+Aliens, o Resgate
+
+
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:153 - Conexão do cliente encerrada !
+2020-08-19 21:22:50 [main] INFO  ImdbClientSocketImplTest:159 - Servidor parado !
+2020-08-19 21:22:50 [Thread-4] ERROR IMDbClientHandler:66 - Título de filme recebido vazio: ''. Tente novamente !
+2020-08-19 21:28:05 [Thread-1] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 21:28:05 [Thread-1] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 21:28:05 [Thread-1] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 21:28:07 [Thread-1] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 21:28:07 [Thread-1] INFO  ServerCommandImpl:49 - 
+2020-08-19 21:28:07 [Thread-1] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 21:28:07 [Thread-1] INFO  ServerCommandImpl:51 - 
+2020-08-19 21:28:08 [main] INFO  StartServer:88 - 
+2020-08-19 21:28:08 [main] INFO  StartServer:90 - 
+2020-08-19 21:28:12 [main] INFO  StartClient:220 - 
+2020-08-19 21:28:12 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:28:15 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:28:15 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 21:28:15 [main] INFO  StartClient:184 - 
+2020-08-19 21:28:15 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 21:28:15 [main] INFO  StartClient:186 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-19 21:28:15 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 21:28:15 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 21:28:15 [main] INFO  StartClient:220 - 
+2020-08-19 21:28:15 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:28:17 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:28:17 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 21:28:17 [main] INFO  StartClient:184 - 
+2020-08-19 21:28:17 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 21:28:17 [main] INFO  StartClient:186 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-19 21:28:17 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 21:28:17 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 21:28:17 [main] INFO  StartClient:220 - 
+2020-08-19 21:28:17 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:28:21 [main] INFO  StartClient:200 - Conectando com o servidor...
+
+2020-08-19 21:28:21 [main] INFO  StartClient:206 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-19 21:28:21 [main] INFO  StartClient:184 - 
+2020-08-19 21:28:21 [main] INFO  StartClient:185 - Resposta:
+2020-08-19 21:28:21 [main] INFO  StartClient:186 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-19 21:28:21 [main] INFO  StartClient:187 - Conexão com o servidor fechada !
+2020-08-19 21:28:21 [main] INFO  StartClient:188 - ******************************************************
+2020-08-19 21:28:21 [main] INFO  StartClient:220 - 
+2020-08-19 21:28:21 [main] INFO  StartClient:221 - Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): 
+2020-08-19 21:28:25 [main] INFO  StartClient:194 - 
+2020-08-19 21:28:25 [main] INFO  StartClient:195 - Cliente finalizado pelo usuário !!!
+2020-08-19 21:28:30 [Thread-1] INFO  ServerCommandImpl:59 - 
+2020-08-19 21:28:30 [main] INFO  StartServer:124 - 
+2020-08-19 21:28:30 [main] INFO  StartServer:125 - Servidor parado pelo usuário !!!
+2020-08-19 21:33:30 [main] INFO  ImdbServerSocketTest:52 - Servidor conectado !
+2020-08-19 21:33:30 [main] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 135: Address already in use: JVM_Bind
+2020-08-19 21:33:30 [main] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 21:33:30 [main] INFO  ImdbServerSocketTest:68 - Servidor conectado !
+2020-08-19 21:33:33 [main] INFO  ImdbServerSocketTest:79 - Quantidade de filmes = 250
+2020-08-19 21:33:38 [main] INFO  ImdbServerSocketTest:100 - Espera pelo cliente bem sucedida !
+2020-08-19 21:33:38 [main] INFO  ImdbServerSocketTest:112 - Servidor finalizado !
+2020-08-19 21:33:38 [main] INFO  TCPPortUtilityTest:100 - isPortUsedTest()  passou.
+2020-08-19 21:33:38 [main] INFO  TCPPortUtilityTest:71 - isPortNotValidTest()  passou.
+2020-08-19 21:33:38 [main] INFO  TCPPortUtility:38 - A porta não pode ser nula !
+2020-08-19 21:33:38 [main] INFO  TCPPortUtilityTest:42 - NullPortIsInValidTest()  passou.
+2020-08-19 21:33:38 [main] INFO  TCPPortUtilityTest:56 - isPortValidTest()  passou.
+2020-08-19 21:33:38 [main] INFO  TCPPortUtilityTest:110 - getNextPortOpenedToUseTest()  passou.
+2020-08-19 21:33:38 [main] INFO  TCPPortUtilityTest:85 - isPortOpenedTest()  passou.
+2020-08-19 21:33:38 [main] INFO  AddressNetworkValidatorTest:37 - NullPortIsInValidTest()  passou.
+2020-08-19 21:33:38 [main] INFO  AddressNetworkValidator:48 - O IP 678.168.0.14 é inválido !
+2020-08-19 21:33:38 [main] INFO  AddressNetworkValidatorTest:49 - isIpInvalidTest()  passou.
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:64 - isMatchPatternProtocolTest()  passou.
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:86 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:102 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:115 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:120 - 
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:121 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 21:33:38 [main] INFO  IMDbCommunicationProtocolTest:122 - 
+2020-08-19 21:33:38 [main] INFO  ImdbClientSocketImplTest:46 - ************ PREPARA SERVIDOR PARA CLIENTE ************
+2020-08-19 21:33:38 [main] INFO  ImdbClientSocketImplTest:47 - 
+2020-08-19 21:33:38 [Thread-2] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 21:33:38 [Thread-2] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 21:33:38 [Thread-2] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 21:33:40 [Thread-2] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 21:33:40 [Thread-2] INFO  ServerCommandImpl:49 - 
+2020-08-19 21:33:40 [Thread-2] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 21:33:40 [Thread-2] INFO  ServerCommandImpl:51 - 
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:65 - 
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:66 - ************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:67 - 
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:79 - Cliente conectado com o servidor !
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:115 - Filme pesquisado: A Criada
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:124 - Filme(s) encontrado(s): A Criada
+
+
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:153 - Conexão do cliente encerrada !
+2020-08-19 21:33:42 [main] INFO  ImdbClientSocketImplTest:159 - Servidor parado !
+2020-08-19 21:33:42 [Thread-2] INFO  ServerCommandImpl:59 - 
+2020-08-19 21:33:42 [Thread-4] ERROR IMDbClientHandler:66 - Título de filme recebido vazio: ''. Tente novamente !
+2020-08-19 21:36:36 [main] INFO  ImdbServerSocketTest:52 - Servidor conectado !
+2020-08-19 21:36:36 [main] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 135: Address already in use: JVM_Bind
+2020-08-19 21:36:36 [main] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-19 21:36:36 [main] INFO  ImdbServerSocketTest:68 - Servidor conectado !
+2020-08-19 21:36:39 [main] INFO  ImdbServerSocketTest:79 - Quantidade de filmes = 250
+2020-08-19 21:36:44 [main] INFO  ImdbServerSocketTest:100 - Espera pelo cliente bem sucedida !
+2020-08-19 21:36:44 [main] INFO  ImdbServerSocketTest:112 - Servidor finalizado !
+2020-08-19 21:36:44 [main] INFO  TCPPortUtilityTest:100 - isPortUsedTest()  passou.
+2020-08-19 21:36:44 [main] INFO  TCPPortUtilityTest:71 - isPortNotValidTest()  passou.
+2020-08-19 21:36:44 [main] INFO  TCPPortUtility:38 - A porta não pode ser nula !
+2020-08-19 21:36:44 [main] INFO  TCPPortUtilityTest:42 - NullPortIsInValidTest()  passou.
+2020-08-19 21:36:44 [main] INFO  TCPPortUtilityTest:56 - isPortValidTest()  passou.
+2020-08-19 21:36:44 [main] INFO  TCPPortUtilityTest:110 - getNextPortOpenedToUseTest()  passou.
+2020-08-19 21:36:44 [main] INFO  TCPPortUtilityTest:85 - isPortOpenedTest()  passou.
+2020-08-19 21:36:44 [main] INFO  AddressNetworkValidatorTest:37 - NullPortIsInValidTest()  passou.
+2020-08-19 21:36:44 [main] INFO  AddressNetworkValidator:48 - O IP 678.168.0.14 é inválido !
+2020-08-19 21:36:44 [main] INFO  AddressNetworkValidatorTest:49 - isIpInvalidTest()  passou.
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:40 - 
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:41 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:42 - 
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:64 - isMatchPatternProtocolTest()  passou.
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:86 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:102 - istMatchPatternProtocoServerTest()  passou.
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:115 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:120 - 
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:121 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-19 21:36:44 [main] INFO  IMDbCommunicationProtocolTest:122 - 
+2020-08-19 21:36:44 [main] INFO  ImdbClientSocketImplTest:46 - ************ PREPARA SERVIDOR PARA CLIENTE ************
+2020-08-19 21:36:44 [main] INFO  ImdbClientSocketImplTest:47 - 
+2020-08-19 21:36:44 [Thread-2] INFO  ServerCommandImpl:26 - Conectando no servidor na porta 20222 ...
+2020-08-19 21:36:44 [Thread-2] INFO  ServerCommandImpl:34 - Servidor conectado na porta 20222.
+2020-08-19 21:36:44 [Thread-2] INFO  ServerCommandImpl:43 - Carregando a lista de filmes ...
+2020-08-19 21:36:45 [Thread-2] INFO  ServerCommandImpl:47 - Total de filmes carregados = 250
+2020-08-19 21:36:45 [Thread-2] INFO  ServerCommandImpl:49 - 
+2020-08-19 21:36:45 [Thread-2] INFO  ServerCommandImpl:50 - Esperando requisição do cliente ...
+2020-08-19 21:36:45 [Thread-2] INFO  ServerCommandImpl:51 - 
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:65 - 
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:66 - ************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:67 - 
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:79 - Cliente conectado com o servidor !
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:115 - Filme pesquisado: A Lista 
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:124 - Filme(s) encontrado(s): A Lista de Schindler
+
+
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:153 - Conexão do cliente encerrada !
+2020-08-19 21:36:48 [main] INFO  ImdbClientSocketImplTest:159 - Servidor parado !
+2020-08-19 21:36:48 [Thread-4] ERROR IMDbClientHandler:66 - Título de filme recebido vazio: ''. Tente novamente !

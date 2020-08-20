@@ -3,15 +3,21 @@ package com.imdb.query.util.network;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
-@TestInstance(Lifecycle.PER_CLASS)
-public class AddressNetworkValidatorTest {
+import com.imdb.query.test.TestBase;
 
-	private AddressNetworkValidator addressNetworkValidator;
+@TestInstance(Lifecycle.PER_CLASS)
+public class AddressNetworkValidatorTest extends TestBase {
+
+    private static final Logger logger = LogManager.getLogger("AddressNetworkValidatorTest");
+
+    private AddressNetworkValidator addressNetworkValidator;
 	
 	@BeforeAll
 	public void initialize() {
@@ -28,7 +34,7 @@ public class AddressNetworkValidatorTest {
 		
 		assertTrue(isIpValid);
 		
-		System.out.println(ip + (isIpValid ? " é válido" : " é inválido")); 
+		logger.info(getResultTest("NullPortIsInValidTest()", isIpValid));
 	}
 	
 	@Test
@@ -40,6 +46,6 @@ public class AddressNetworkValidatorTest {
 		
 		assertFalse(isIpValid);
 		
-		System.out.println(ip + (isIpValid ? " é válido" : " é inválido")); 
+		logger.info(getResultTest("isIpInvalidTest()", !isIpValid));
 	}
 }

@@ -171,7 +171,7 @@ public class StartClient {
 			
 			Optional<String> movieTitle = getMovieTitleInputed();
 		
-			if(movieTitle.get().trim().toLowerCase().equals("exit") ) {
+			if(movieTitle.get().trim().toLowerCase().equals("quit") ) {
 				break;
 			}
 
@@ -218,7 +218,7 @@ public class StartClient {
 		Optional<String> movieTitle = Optional.empty();
 		
 		logger.info(Constants.STRING_EMPTY);		
-		logger.info("Digite o título do filme para pesquisa no IMDb (exit encerra o cliente): ");
+		logger.info("Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): ");
 
         BufferedReader movieTitleBufferedReader =  
                 new BufferedReader(new InputStreamReader(System.in)); 

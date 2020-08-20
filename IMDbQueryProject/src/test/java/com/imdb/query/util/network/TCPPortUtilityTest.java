@@ -5,11 +5,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
+import com.imdb.query.test.TestBase;
 import com.imdb.query.util.Constants;
 
 /**
@@ -17,9 +20,11 @@ import com.imdb.query.util.Constants;
  *
  */
 @TestInstance(Lifecycle.PER_CLASS)
-public class TCPPortUtilityTest {
+public class TCPPortUtilityTest extends TestBase {
 
-	private TCPPortUtility tcpPortValidator;
+    private static final Logger logger = LogManager.getLogger("TCPPortUtilityTest");
+
+    private TCPPortUtility tcpPortValidator;
 	
 	@BeforeAll
 	public void initialize() {
@@ -30,7 +35,11 @@ public class TCPPortUtilityTest {
 	@Test
 	public void NullPortIsInValidTest() {
 			
-		assertFalse(tcpPortValidator.isPortValid(null));
+		boolean isTcpPortValid = tcpPortValidator.isPortValid(null);
+		
+		assertFalse(isTcpPortValid);
+		
+		logger.info(getResultTest("NullPortIsInValidTest()", !isTcpPortValid));
 	}
 
 	@Test
@@ -43,6 +52,8 @@ public class TCPPortUtilityTest {
 		boolean isPortValid = tcpPortValidator.isPortValid(port);
 		
 		assertTrue(isPortValid);
+
+		logger.info(getResultTest("isPortValidTest()", isPortValid));
 	}
 
 	@Test
@@ -56,6 +67,8 @@ public class TCPPortUtilityTest {
 		boolean isPortValid = tcpPortValidator.isPortValid(port[idx]);
 		
 		assertFalse(isPortValid);
+
+		logger.info(getResultTest("isPortNotValidTest()", !isPortValid));
 	}
 
 	@Test
@@ -68,6 +81,8 @@ public class TCPPortUtilityTest {
 		boolean isOpened = tcpPortValidator.isPortOpened(port);
 		
 		assertTrue(isOpened);
+
+		logger.info(getResultTest("isPortOpenedTest()", isOpened));
 	}
 
 	@Test
@@ -81,6 +96,8 @@ public class TCPPortUtilityTest {
 		boolean isUsed = !tcpPortValidator.isPortOpened(port[idx]);
 		
 		assertTrue(isUsed);
+
+		logger.info(getResultTest("isPortUsedTest()", isUsed));
 	}
 	
 	@Test
@@ -89,5 +106,7 @@ public class TCPPortUtilityTest {
 		Integer port = tcpPortValidator.getNextPortOpenedToUse();
 		
 		assertTrue(port != null);
+
+		logger.info(getResultTest("getNextPortOpenedToUseTest()", port != null));
 	}
 }

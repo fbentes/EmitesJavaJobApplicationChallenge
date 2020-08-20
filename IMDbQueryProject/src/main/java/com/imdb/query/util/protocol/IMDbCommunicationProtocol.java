@@ -9,30 +9,30 @@ package com.imdb.query.util.protocol;
  * 
  */
 public interface IMDbCommunicationProtocol {
-
-	/**
-	 * Seta o títuto do filme com o protocolo aplicado. 
-	 * Usado pelo Client Socket. 
-	 * 
-	 * @param movieTitle Título do filme com o protocolo. Ex.: "IMDb_Batman_IMDb"
-	 */
-	void setMovieTitleWithPatternProtocol(String movieTitle);
-
-	/**
-	 * Título do filme com o protocolo aplicado.
-	 * Usado pelo client socket para envio para o servidor socket.
-	 * 
-	 * @return . Ex.: "IMDb_Batman_IMDb"
-	 */
-	String getMovieTitleWithPatternProtocol();
 	
 	/**
-	 * @return Apenas o título do filme sem o protocolo para pesquisa no site IMDb.
+	 * Padrão de protocolo retirado na mensagem entre o cliente e servidor.
+	 * 
+	 * @param message Mensagem a ser retirada o protocolo. 
+	 * @return Mensagem sem o protocolo aplicado.
 	 */
-	String getMovieTitleWithOutPatternProtocol();
+	String getMessageWithOutPatternProtocolApplied(String message);
 	
 	/**
-	 * @return Verdadeiro se o protocolo correto foi aplicado no nome do filme
+	 * Padrão de protocolo aplicado na mensagem entre o cliente e servidor.
+	 * 
+	 * @param message Mensagem a ser aplicada o protocolo. 
+	 * @return Mensagem com o protocolo aplicado.
 	 */
-	boolean isMatchPatternProtocol();
+	
+	String getMessageWithPatternProtocolApplied(String message);
+	
+    /**
+     * Checa se o protocolo de comunicação entre o cliente e servidor socket
+     * foi corretamente aplicadao.
+     * 
+     * @param message Mensagem entre o cliente e servidor.
+     * @return Verdadeiro se o protocolo correto foi aplicado na mensagem. Falso caso contrário.
+     */
+	boolean isMatchPatternProtocol(String message);
 }

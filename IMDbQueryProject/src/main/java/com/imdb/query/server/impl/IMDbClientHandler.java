@@ -68,14 +68,22 @@ public class IMDbClientHandler extends Thread {
 	            return;
 			}
 			
-	        if(!isMatchPatternProtocol(movieTitle.get())) {
+			//Checa se o protocolo de comunicação está sendo atendido pelo cliente socket.
+			
+	        if(!iMDbCommunicationProtocol.isMatchPatternProtocol(movieTitle.get())) {
 	        	
 	            writeToClientPrintWriter.println(Constants.IVALID_MESSAGE_PROTOCOL);
 	        }
+	        
+	        String movieTitleWithOutProtocol = 
+	        		iMDbCommunicationProtocol.getMessageWithOutPatternProtocolApplied(movieTitle.get());
+	        
+            String moviesFound = iMDbUrlConnection.getMoviesFound(movieTitleWithOutProtocol);
 
-            String moviesFound = iMDbUrlConnection.getMoviesFound(iMDbCommunicationProtocol.getMovieTitleWithOutPatternProtocol());
+	        String moviesFoundWithPatternProtocolApplied = 
+	        		iMDbCommunicationProtocol.getMessageWithPatternProtocolApplied(moviesFound);
 
-            writeToClientPrintWriter.println(moviesFound);
+            writeToClientPrintWriter.println(moviesFoundWithPatternProtocolApplied);
 			
 		} catch (IOException e) {
 			
@@ -87,19 +95,6 @@ public class IMDbClientHandler extends Thread {
 		}
     }
 
-    /**
-     * Checa se o protocolo de comunicação está sendo atendido.
-     *  
-     * @param movieTitle Nome, ou parte inicial do nome, do filme digitado pelo usuário.
-     * @return Verdadeiro caso o cliente tenha aplicado corretamente o protocolo exigido. Falso caso contrário.
-     */
-	private boolean isMatchPatternProtocol(String movieTitle) {
-		
-		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(movieTitle);
-		
-		return iMDbCommunicationProtocol.isMatchPatternProtocol();	
-	}
-	
     private void clearAllocatedResources() {
     	
         try {

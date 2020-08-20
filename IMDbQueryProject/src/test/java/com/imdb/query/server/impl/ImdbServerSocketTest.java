@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import javax.inject.Inject;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
@@ -23,6 +25,8 @@ import com.imdb.query.util.IMDbQueryModule;
 @TestInstance(Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ImdbServerSocketTest {
+
+    private static final Logger logger = LogManager.getLogger("ImdbServerSocketTest");
 
 	@Inject
 	private IMDbServerSocket imdbSocketServer;
@@ -45,22 +49,38 @@ public class ImdbServerSocketTest {
 		
 		assertTrue(connected);
 		
-		System.out.println("Servidor conectado !");
+		logger.info("Servidor conectado !");
 	}
 	
 	@Test
 	@Order(2)
+	public void connectToPortBusyTest() {
+		
+		imdbSocketServer.setPort(135);  // Port RPC
+		
+		boolean connected = imdbSocketServer.connect();
+		
+		boolean isConnectedDifferentPortOrigin = 
+				imdbSocketServer.getPort() != imdbSocketServer.getAlternativePort();
+		
+		assertTrue(connected && isConnectedDifferentPortOrigin);
+		
+		logger.info("Servidor conectado !");
+	}
+	
+	@Test
+	@Order(3)
 	public void loadMovieLlistFromImdbTest() {
 		
 		int movieQuantity = imdbSocketServer.loadMovieLlistFromImdb();
 		
 		assertTrue(movieQuantity > 0);
 		
-		System.out.println("Quantidade de filmes = " + movieQuantity);
+		logger.info("Quantidade de filmes = " + movieQuantity);
 	}
 	
 	@Test
-	@Order(3)
+	@Order(4)
 	public void waitingForClientRequests() throws InterruptedException {
 			
 		Thread thread = new Thread(new Runnable() {
@@ -77,7 +97,7 @@ public class ImdbServerSocketTest {
 		  
 		  thread.interrupt();
 
-		  System.out.println("Espera pelo cliente bem sucedida !");
+		  logger.info("Espera pelo cliente bem sucedida !");
 	}
 
 	@AfterAll
@@ -89,6 +109,6 @@ public class ImdbServerSocketTest {
 		
 		assertTrue(isStopped);
 		
-		System.out.println("Servidor finalizado !");
+		logger.info("Servidor finalizado !");
 	}
 }

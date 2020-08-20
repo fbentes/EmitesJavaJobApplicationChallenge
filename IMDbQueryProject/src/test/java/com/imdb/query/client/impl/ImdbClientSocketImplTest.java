@@ -6,6 +6,8 @@ import java.util.Random;
 
 import javax.inject.Inject;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
@@ -26,7 +28,9 @@ import com.imdb.query.util.IMDbQueryModuleInjector;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ImdbClientSocketImplTest {
     
-	@Inject
+    private static final Logger logger = LogManager.getLogger("ImdbClientSocketImplTest");
+
+    @Inject
 	private IMDbClientSocket imdbSocketClient;
 	
 	@Inject
@@ -39,8 +43,8 @@ public class ImdbClientSocketImplTest {
 		
 		IMDbQueryModuleInjector.initialize(this);
         
-		System.out.println("************ PREPARA SERVIDOR PARA CLIENTE ************");
-		System.out.println(Constants.STRING_EMPTY);
+		logger.info("************ PREPARA SERVIDOR PARA CLIENTE ************");
+		logger.info(Constants.STRING_EMPTY);
 		
 		Thread thread = new Thread(new Runnable() {
 		    public void run() {
@@ -58,9 +62,9 @@ public class ImdbClientSocketImplTest {
         // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a execução principal.
 	    thread.join(4000);  
 
-		System.out.println(Constants.STRING_EMPTY);			
-		System.out.println("************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************");
-		System.out.println(Constants.STRING_EMPTY);			
+		logger.info(Constants.STRING_EMPTY);			
+		logger.info("************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************");
+		logger.info(Constants.STRING_EMPTY);			
 	}
 	
 	@Test
@@ -72,9 +76,9 @@ public class ImdbClientSocketImplTest {
 		assertTrue(connected);
 		
 		if(connected) {
-			System.out.println("Cliente conectado com o servidor !");
+			logger.info("Cliente conectado com o servidor !");
 		} else {
-			System.out.println("Cliente não conectado com o servidor !");			
+			logger.info("Cliente não conectado com o servidor !");			
 		}
 	}
 	
@@ -108,7 +112,7 @@ public class ImdbClientSocketImplTest {
 		
 		String movieTitleExample = movieArrayTest[random.nextInt(movieArrayTest.length)];
 
-		System.out.println("Filme pesquisado: " + movieTitleExample);
+		logger.info("Filme pesquisado: " + movieTitleExample);
 		
 		String sent = imdbSocketClient.sendMovieTitleToSearchInServer(movieTitleExample);
 
@@ -117,11 +121,22 @@ public class ImdbClientSocketImplTest {
 		assertTrue(movieTitleFound);
 		
 		if(movieTitleFound) {			
-			System.out.println("Filme(s) encontrado(s): " + sent);
+			logger.info("Filme(s) encontrado(s): " + sent);
 		} else {
-			System.out.println("Nenhum filme foi encontrado !");			
+			logger.info("Nenhum filme foi encontrado !");			
 		}
 	}
+	
+	@Test
+    @Order(3)
+	public void failSendMovieTitleToServerThatDoenstKnowProtocol() {
+		
+		boolean connected = imdbSocketClient.connectToServer(Constants.IP_SERVER_DEFAULT, imdbSocketServer.getAlternativePort());
+		
+		assertTrue(connected);
+		
+	}
+
 	
 	@AfterAll
 	public void stopConnectionTest() {
@@ -135,15 +150,15 @@ public class ImdbClientSocketImplTest {
 		assertTrue(isClientStopped && isServerStopped);
 		
 		if(isClientStopped) {
-			System.out.println("Conexão do cliente encerrada !");
+			logger.info("Conexão do cliente encerrada !");
 		} else {
-			System.out.println("Conexão do cliente não encerrada !!!");
+			logger.info("Conexão do cliente não encerrada !!!");
 		}
 		
 		if(isServerStopped) {		
-			System.out.println("Servidor parado !");	
+			logger.info("Servidor parado !");	
 		} else {
-			System.out.println("Servidor não parado !");
+			logger.info("Servidor não parado !");
 		}
 	}
 }

@@ -24,9 +24,13 @@ public class Constants {
 
 	public static final String REGEX_PATTERN_PROTOCOL = PREFIX_PROTOCOL + "(.+?)" + SUFIX_PROTOCOL;
 	
-	public static final String IVALID_MESSAGE_PROTOCOL = "O protocolo de comunicação em %s está inválido";
-	
+	public static final String IVALID_MESSAGE_PROTOCOL = "O protocolo de comunicação está inválido !";
+
+	public static final String RESPONSE_OTHER_SERVER = "O servidor respondeu com protocolo de comunicação inválido !";
+
 	public static final String IVALID_MESSAGE_CLIENT_TO_SERVER = "Título de filme recebido vazio: '%s'. Tente novamente !";
 
 	public static final String STRING_EMPTY = "";
+	
+	public static final String DIGITE_TITULO_FILME = "Informe o título de filme ou parte inicial. Ex: Bat para buscar filmes que comecem com Bat."; 
 }

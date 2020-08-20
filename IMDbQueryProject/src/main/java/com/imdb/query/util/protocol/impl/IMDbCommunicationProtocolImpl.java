@@ -4,9 +4,6 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 
@@ -22,36 +19,30 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
  */
 public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol {
 
-    private static final Logger logger = LogManager.getLogger("IMDbCommunicationProtocolImpl");
-
-    private String movieTitle;
-	
 	@Override
-	public void setMovieTitleWithPatternProtocol(String movieTitle) {
-		this.movieTitle = movieTitle;
+	public String getMessageWithOutPatternProtocolApplied(String message) {
+		
+		return message.replace(
+				Constants.PREFIX_PROTOCOL, 
+				Constants.STRING_EMPTY).
+				replace(Constants.SUFIX_PROTOCOL, 
+						Constants.STRING_EMPTY);
 	}
 	
 	@Override
-	public String getMovieTitleWithPatternProtocol() {
-		return movieTitle;
+	public String getMessageWithPatternProtocolApplied(String message) {
+		
+		return Constants.PREFIX_PROTOCOL + message + Constants.SUFIX_PROTOCOL;
 	}
 	
 	@Override
-	public String getMovieTitleWithOutPatternProtocol() {
+	public boolean isMatchPatternProtocol(String message) {
 		
-		return movieTitle.replace(
-						Constants.PREFIX_PROTOCOL, 
-						Constants.STRING_EMPTY).replace(
-								Constants.SUFIX_PROTOCOL, 
-								Constants.STRING_EMPTY);
-	}
-	
-	@Override
-	public boolean isMatchPatternProtocol() {
+		Optional<String> optionalMovieTitle = Optional.ofNullable(message);
 		
-		Optional<String> optionalMovieTitle = Optional.ofNullable(movieTitle);
-		
-		if(!optionalMovieTitle.isPresent() || optionalMovieTitle.get().trim().equals(Constants.STRING_EMPTY)) {
+		if(!optionalMovieTitle.isPresent() || 
+			optionalMovieTitle.get().trim().equals(Constants.STRING_EMPTY)) {
+			
 			return false;
 		}
 		
@@ -59,13 +50,6 @@ public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol 
 		
 		final Matcher matcher = pattern.matcher(optionalMovieTitle.get());
 		
-		boolean isMatch = matcher.find();
-		
-		if(!isMatch ) {
-			
-			logger.info(String.format(Constants.IVALID_MESSAGE_PROTOCOL, movieTitle));
-		}
-		
-		return isMatch;
+		return matcher.find();
 	}
 }

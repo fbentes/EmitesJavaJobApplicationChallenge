@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -65,31 +66,13 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 		return isClientSocketConnected;
 	}
 	
-	/**
-	 * Aplica o protocolo de comunicação entre o cliente e servidor.
-	 * 
-	 * @param movieTitle O título de um filme a ser pesquisado pelo usuário.
-	 * @return Verdadeiro se o padrão de protocolo aplicado for válido.
-	 */
-	private boolean isAppliedProtocol(String movieTitle) {
-
-		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(
-				Constants.PREFIX_PROTOCOL + movieTitle + Constants.SUFIX_PROTOCOL);
-
-		return iMDbCommunicationProtocol.isMatchPatternProtocol();	
-	}
-	
     @Override
 	public String sendMovieTitleToSearchInServer(String movieTitle) {
 
-		if(!isAppliedProtocol(movieTitle)) {
-			
-			return String.format(Constants.IVALID_MESSAGE_PROTOCOL, movieTitle);
-		}
-		
 		try {
 
-			readFromServerBufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+			readFromServerBufferedReader = new BufferedReader(
+					new InputStreamReader(clientSocket.getInputStream()));
 
 			writeToServerPrintWriter = new PrintWriter(clientSocket.getOutputStream(), true);
 
@@ -101,14 +84,23 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 		}
 
 		try {
-
-			writeToServerPrintWriter.println(iMDbCommunicationProtocol.getMovieTitleWithPatternProtocol());	
+			Optional<String> optionalMovieTitle = Optional.ofNullable(movieTitle);
+			
+			if(!optionalMovieTitle.isPresent()) {
+				
+				return Constants.DIGITE_TITULO_FILME;
+			}
+			
+			String movieTitleWithProtocol = iMDbCommunicationProtocol.getMessageWithPatternProtocolApplied(movieTitle);
+			
+			writeToServerPrintWriter.println(movieTitleWithProtocol);	
 			
 			StringBuffer responseOfServerWithMovieTitles = new StringBuffer();
 			
 			String responseReadLine;
 			
-			// PS: Não usado Optional e nem Constants.STRING_EMPTY para não afetar no desempenho na iteração.
+			// PS: Não usado Optional e nem Constants.STRING_EMPTY para não afetar no 
+			// desempenho na iteração.
 			
             while ((responseReadLine = readFromServerBufferedReader.readLine()) != null) {
             	
@@ -117,8 +109,20 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
                 	responseOfServerWithMovieTitles.append(responseReadLine + "\n");
             	}
  	        }
-
-	        return responseOfServerWithMovieTitles.toString();
+            
+            // Se a resposta do servidor não obedecer o protocolo especificado, significa que outro
+            // servidor respondeu ao cliente. Então será registrado no log a resposta origiral
+            // e apresentada ao cliente apenas que a resposta desobedeceu o protocolo.
+            
+            if(!iMDbCommunicationProtocol.isMatchPatternProtocol(responseOfServerWithMovieTitles.toString())) {
+            
+            	return Constants.IVALID_MESSAGE_PROTOCOL;
+            }
+            
+            // Retira o protocolo aplicado no servidor para exibição puramente dos dados no cliente.
+            
+            return iMDbCommunicationProtocol.
+            		getMessageWithOutPatternProtocolApplied(responseOfServerWithMovieTitles.toString());
 
 		} catch (IOException e) {
 
@@ -127,7 +131,7 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 			return e.getMessage();
 		}
    }
-	
+    
     @Override
 	public boolean stopConnection() {
 		

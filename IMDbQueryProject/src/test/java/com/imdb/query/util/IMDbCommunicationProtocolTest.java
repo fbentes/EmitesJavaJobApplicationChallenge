@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
@@ -14,6 +16,7 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
+import com.imdb.query.test.TestBase;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
@@ -23,23 +26,25 @@ import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
  */
 @TestInstance(Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class IMDbCommunicationProtocolTest {
+public class IMDbCommunicationProtocolTest extends TestBase {
 
-	private IMDbCommunicationProtocol iMDbCommunicationProtocol;
+    private static final Logger logger = LogManager.getLogger("IMDbCommunicationProtocolTest");
+
+    private IMDbCommunicationProtocol iMDbCommunicationProtocol;
 
 	@BeforeAll
 	public void initialize() {
 
 		iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();	
 		
-		System.out.println(Constants.STRING_EMPTY);
-		System.out.println("******** INICIANDO IMDbCommunicationProtocolTest ************");
-		System.out.println(Constants.STRING_EMPTY);
+		logger.info(Constants.STRING_EMPTY);
+		logger.info("******** INICIANDO IMDbCommunicationProtocolTest ************");
+		logger.info(Constants.STRING_EMPTY);
 	}
 	
 	@Test
     @Order(1)
-	public void isMatchPatternProtocolTest() {
+	public void isMatchPatternProtocolClientTest() {
 		
 		Random random = new Random();
 		
@@ -52,37 +57,16 @@ public class IMDbCommunicationProtocolTest {
 		
 		String movieTitleExample = movieValidArrayTest[random.nextInt(movieValidArrayTest.length)];
 		
-		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(movieTitleExample);
-
-		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol();
+		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol(movieTitleExample);
 		
 		assertTrue(isMatch);
 		
-		printResult("isMatchPatternProtocolTest()", isMatch);
+		logger.info(getResultTest("isMatchPatternProtocolTest()", isMatch));		
 	}
 	
 	@Test
     @Order(2)
-	public void getMovieTitleWithOutPatternProtocolTest() {
-		
-		String movieTitle = iMDbCommunicationProtocol.getMovieTitleWithPatternProtocol();
-		
-		String movieTitleWithPatternProtocol = iMDbCommunicationProtocol.getMovieTitleWithOutPatternProtocol();
-		
-		boolean equal = movieTitle.replace(
-				Constants.PREFIX_PROTOCOL, 
-				Constants.STRING_EMPTY).replace(
-						Constants.SUFIX_PROTOCOL, 
-						Constants.STRING_EMPTY).equals(movieTitleWithPatternProtocol);
-		
-		assertTrue(equal);
-
-		printResult("getMovieTitleWithOutPatternProtocolTest()", equal);
-	}
-	
-	@Test
-    @Order(3)
-	public void isNotMatchPatternProtocolTest() {
+	public void isNotMatchPatternProtocoClientTest() {
 		
 		Random random = new Random();
 		
@@ -95,26 +79,46 @@ public class IMDbCommunicationProtocolTest {
 		
 		String movieTitleExample = movieNotValidArrayTest[random.nextInt(movieNotValidArrayTest.length)];
 		
-		iMDbCommunicationProtocol.setMovieTitleWithPatternProtocol(movieTitleExample);
-
-		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol();
+		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol(movieTitleExample);
 		
 		assertFalse(isMatch);
 		
-		printResult("isNotMatchPatternProtocolTest()", isMatch);
+		logger.info(getResultTest("isNotMatchPatternProtocoClientTest()", !isMatch));		
 	}
 	
-	private void printResult(String method, boolean status) {
+	@Test
+    @Order(4)
+	public void istMatchPatternProtocoServerTest() {
 		
-		String statusMessage = (status ? "passou" : "não passou");
+		String moviesFromServer = 
+				Constants.PREFIX_PROTOCOL + 
+				"Bamtan\nMatrix\nA Origem\n12 Anos de escravidão\n" + 
+				Constants.SUFIX_PROTOCOL;
+
+		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol(moviesFromServer);
 		
-		System.out.println(method + " " + statusMessage);
+		assertTrue(isMatch);
+		
+		logger.info(getResultTest("istMatchPatternProtocoServerTest()", isMatch));		
+	}
+	
+	@Test
+    @Order(5)
+	public void istNotMatchPatternProtocoServerTest() {
+		
+		String moviesFromServer = "<html>bad request</html>";
+
+		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol(moviesFromServer);
+		
+		assertFalse(isMatch);
+		
+		logger.info(getResultTest("istNotMatchPatternProtocoServerTest()", !isMatch));		
 	}
 	
 	@AfterAll
 	public void end() {
-		System.out.println(Constants.STRING_EMPTY);
-		System.out.println("******** FINALIZADO IMDbCommunicationProtocolTest ************");
-		System.out.println(Constants.STRING_EMPTY);
+		logger.info(Constants.STRING_EMPTY);
+		logger.info("******** FINALIZADO IMDbCommunicationProtocolTest ************");
+		logger.info(Constants.STRING_EMPTY);
 	}
 }
