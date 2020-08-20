@@ -40,7 +40,7 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 	private IMDbUrlConnection iMDbUrlConnection;
 	
 	@Override
-	public boolean connect() {
+	public boolean connectToServerSocket() {
 		
 		alternativePort = port;
 		
@@ -112,7 +112,7 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 				
 			} catch (Exception e) {
 				
-				if(isRequestedStoped()) {  // Se foi requisitado para parar o servidor socket pela thread chamadora.
+				if(isExecutionRequestedStoped()) {  // Se foi requisitado para parar o servidor socket pela thread chamadora.
 					break;
 				}
 				
@@ -139,23 +139,23 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 			 }
 		}
 	
-		close();
+		closeServerSocket();
 	}
 	
 	@Override
-	public void requestStop() {
+	public void requestStopExecution() {
 		
 		isExecuting = false;
     }
 	
 	@Override
-	public boolean isRequestedStoped() {
+	public boolean isExecutionRequestedStoped() {
 		
 		return !isExecuting;
 	}
 	
 	@Override
-	public boolean close() {
+	public boolean closeServerSocket() {
 		
 		try {
 				

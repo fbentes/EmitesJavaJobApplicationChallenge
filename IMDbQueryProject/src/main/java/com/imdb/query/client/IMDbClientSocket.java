@@ -25,12 +25,5 @@ public interface IMDbClientSocket {
 	 * @param movieTitle título do filme com o protocolo aplicado
 	 * @return 	Todos os filmes encontrados.
 	 */
-	String sendMovieTitleToSearchInServer(String movieTitle);
-	
-	/**
-	 * Libera os recursos alocados pelo cliente.
-	 * 
-	 * @return Verdadeiro caso todos os recursos sejam liberados.
-	 */
-	boolean stopConnection();
+	String requestMovieTitleToSearchInServer(String movieTitle);	
 }

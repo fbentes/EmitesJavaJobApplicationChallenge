@@ -57,7 +57,7 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		
 		return (result.length() > 0 ? 
 				result.toString() : 
-					"Nenhum filme foi encontrado com o título '" + optionalMovieTitle.get() + "' !");
+					"Nenhum filme foi encontrado com o título '" + optionalMovieTitle.get().trim() + "' !");
 	}
 	
 	@Override

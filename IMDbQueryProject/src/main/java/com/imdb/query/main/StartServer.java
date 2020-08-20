@@ -110,14 +110,14 @@ public class StartServer {
 
 		    if(readKeyboard.isPresent() && readKeyboard.get().toLowerCase().trim().equals("kill")) {
 		    	
-				startServer.imdbServerSocket.requestStop();
+				startServer.imdbServerSocket.requestStopExecution();
 				
 				break;
 		    }
 
 	    } while (true);
 			    
-	    if(startServer.imdbServerSocket.close()) {
+	    if(startServer.imdbServerSocket.closeServerSocket()) {
 			
 	    	thread.interrupt();
 	    	

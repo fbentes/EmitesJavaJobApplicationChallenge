@@ -179,7 +179,7 @@ public class StartClient {
 				continue;
 			}
 			
-			String responseOfServerWithMovieTitles = imdbClientSocket.sendMovieTitleToSearchInServer(movieTitle.get());
+			String responseOfServerWithMovieTitles = imdbClientSocket.requestMovieTitleToSearchInServer(movieTitle.get());
 			
 			logger.info(Constants.STRING_EMPTY);
 			logger.info("Resposta:");
@@ -187,8 +187,6 @@ public class StartClient {
 			logger.info("Conexão com o servidor fechada !");
 			logger.info("******************************************************");
 			
-			imdbClientSocket.stopConnection();
-
 		} while(true);
 		
 		logger.info(Constants.STRING_EMPTY);
@@ -196,8 +194,6 @@ public class StartClient {
 	}
 
 	private boolean canConnectServer(String ipServer, int port) {
-		
-		logger.info("Conectando com o servidor...\n");
 		
 		boolean connected = imdbClientSocket.connectToServer(ipServer, port);
 		

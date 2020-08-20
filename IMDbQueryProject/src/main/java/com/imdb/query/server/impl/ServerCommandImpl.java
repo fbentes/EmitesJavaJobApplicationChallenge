@@ -25,7 +25,7 @@ public class ServerCommandImpl implements ServerCommand {
 		
 		logger.info(String.format("Conectando no servidor na porta %d ...", imdbServerSocket.getPort()));
 		
-		boolean connected = imdbServerSocket.connect();
+		boolean connected = imdbServerSocket.connectToServerSocket();
 		
 		if(connected) {
 

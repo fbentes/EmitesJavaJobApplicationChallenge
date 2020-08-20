@@ -114,7 +114,7 @@ public class ImdbClientSocketImplTest {
 
 		logger.info("Filme pesquisado: " + movieTitleExample);
 		
-		String sent = imdbSocketClient.sendMovieTitleToSearchInServer(movieTitleExample);
+		String sent = imdbSocketClient.requestMovieTitleToSearchInServer(movieTitleExample);
 
 		boolean movieTitleFound = !sent.trim().equals(Constants.STRING_EMPTY);
 
@@ -139,21 +139,13 @@ public class ImdbClientSocketImplTest {
 
 	
 	@AfterAll
-	public void stopConnectionTest() {
+	public void stopServerConnectionTest() {
 		
-		boolean isClientStopped = imdbSocketClient.stopConnection();
+		imdbSocketServer.requestStopExecution();
 		
-		imdbSocketServer.requestStop();
+		boolean isServerStopped = imdbSocketServer.isExecutionRequestedStoped();
 		
-		boolean isServerStopped = imdbSocketServer.isRequestedStoped();
-		
-		assertTrue(isClientStopped && isServerStopped);
-		
-		if(isClientStopped) {
-			logger.info("Conexão do cliente encerrada !");
-		} else {
-			logger.info("Conexão do cliente não encerrada !!!");
-		}
+		assertTrue(isServerStopped);
 		
 		if(isServerStopped) {		
 			logger.info("Servidor parado !");	

@@ -45,7 +45,7 @@ public class ImdbServerSocketTest {
 		
 		imdbSocketServer.setPort(Constants.PORT_DEFAULT);
 		
-		boolean connected = imdbSocketServer.connect();
+		boolean connected = imdbSocketServer.connectToServerSocket();
 		
 		assertTrue(connected);
 		
@@ -58,7 +58,7 @@ public class ImdbServerSocketTest {
 		
 		imdbSocketServer.setPort(135);  // Port RPC
 		
-		boolean connected = imdbSocketServer.connect();
+		boolean connected = imdbSocketServer.connectToServerSocket();
 		
 		boolean isConnectedDifferentPortOrigin = 
 				imdbSocketServer.getPort() != imdbSocketServer.getAlternativePort();
@@ -103,9 +103,9 @@ public class ImdbServerSocketTest {
 	@AfterAll
 	public void isStoped() {
 		
-		imdbSocketServer.requestStop();
+		imdbSocketServer.requestStopExecution();
 		
-		boolean isStopped = imdbSocketServer.isRequestedStoped();
+		boolean isStopped = imdbSocketServer.isExecutionRequestedStoped();
 		
 		assertTrue(isStopped);
 		

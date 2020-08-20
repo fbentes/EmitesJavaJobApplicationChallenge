@@ -30,7 +30,7 @@ public interface IMDbServerSocket {
 	 * @return Verdadeiro caso seja estabelecida a conexão. Falso caso contrário.
 	 * @see ServerCommand#execute(IMDbServerSocket)
 	 */
-	boolean connect();
+	boolean connectToServerSocket();
 
 	/**
 	 * Se connect() disparar exceção pela porta ocupada, uma outra porta disponível 
@@ -56,17 +56,17 @@ public interface IMDbServerSocket {
 	/**
 	 * Força a parada do servidor e encerramento de sua thread.
 	 */
-	void requestStop();
+	void requestStopExecution();
 	
 	/**
 	 * @return Verdadeiro caso o servidor foi solicitado para parar.
 	 */
-	boolean isRequestedStoped();
+	boolean isExecutionRequestedStoped();
 	
 	/**
 	 * Encerra o servidor socket.
 	 * 
 	 * @return Verdadeiro se o servidor socket foi enceraddo com sucesso. Falso caso contrário.
 	 */
-	boolean close();
+	boolean closeServerSocket();
 }
