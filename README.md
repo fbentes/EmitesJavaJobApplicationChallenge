@@ -4,8 +4,7 @@
 
 Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
 
-> OBS.: Suspendi o uso do Oracle JDK 14 porque ele dispara uma exceção quando há tentativa de conexão com algum site https: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**.
- Por não ser o foco do desafio resolver essa questão, foi usado o RedHat OpenJDK 8 que não tem essa restrição de segurança !
+> OBS.: O RedHat OpenJDK 8 que não tem  restrição de segurança para conexão em site htts. Por isso suspendi o uso do de versões mais novas, pois o Oracle JDK 14 dispara uma exceção: **_Exception in thread "main" javax.net.ssl.SSLException: java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty_**.
 
 ### Documentação técnica:
 
@@ -14,6 +13,8 @@ Uso do [RedHat OpenJDK 8 Download](https://developers.redhat.com/download-manage
 [IMDbQueryProject Javadoc](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/IMDbQueryProject/javadoc/com/imdb/query)
 
 > OBS.: Para renderizar as páginas, é melhor acessá-las pelo Eclipse porque o github apenas visualiza o conteúdo html !
+
+> **_Nota para análise dos fontes: As classes responsáveis pela solicitação Client Socket e resposta Server Socket são, respectivamente, IMDbClientSocketImpl e IMDbClientHandler._**
 
 
 ### Documentação para usuário final:
