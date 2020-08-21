@@ -23,6 +23,24 @@ import com.imdb.query.util.network.TCPPortUtility;
  * @version 1.0.0.0
  * @since 09/08/2020
  * 
+ * Tutorial para execução:
+ * 
+ * C:\Temp\java -jar IMDbServerSocket.jar [porta]
+ * 
+ * O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222.  
+ * 
+ * C:\Temp\java -jar IMDbServerSocket.jar  (executa na porta padrão 20222).
+ * 
+ * C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
+ * 
+ * - Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes.
+ *
+ * - Um servidor socket é instanciado numa Thread filha para que a Thread principal possa gerenciá-lo. 
+ *   E o servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
+ *
+ * - Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. 
+ *   Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.
+ * 
  */
 public class StartServer extends StartBase {
 

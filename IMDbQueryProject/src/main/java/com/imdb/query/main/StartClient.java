@@ -25,6 +25,26 @@ import com.imdb.query.util.network.TCPPortUtility;
  * @version 1.0.0.0
  * @since 09/08/2020
  * 
+ * Tutorial para execução:
+ * 
+ * C:\Temp\java -jar IMDbClientSocket.jar [ipServidor | porta]
+ * 
+ * Os argumentos são opcionais. Se forem omititos o ipServidor será localhost e a porta padrão será 20222. Ex.:
+ *
+ * C:\Temp\java -jar IMDbClientSocket.jar  (conecta no servidor em localhost e porta padrão 20222).
+ *
+ * C:\Temp\java -jar IMDbClientSocket.jar 34985 (conecta no servidor em localhost e porta 34985).
+ *
+ * C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 (conecta no servidor em 192.168.0.16 e porta padrão 20222).
+ *
+ * C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
+ * 
+ * - Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
+ * 
+ * - Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou rejeição no caso da porta 6969 (Acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse Acmsoda ou outros serviços afins.
+ *
+ * - As pesquisas por títulos de filmes podem ser feitas pelo nome completo ou pelo início do nome do título (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra).
+ * 
  */
 public class StartClient extends StartBase  {
 
