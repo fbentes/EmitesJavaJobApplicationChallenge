@@ -10,12 +10,26 @@ package com.imdb.query.util;
  */
 public class Constants {
 	
+	/**
+	 * Porta default = 20222.
+	 */
 	public static final int PORT_DEFAULT = 20222;
 	
+	/**
+	 * Porta máxima disponível = 65535
+	 */
 	public static final int PORT_TCP_MAX = 65535;
 	
+	/**
+	 * IP default do servidor = 127.0.0.1.
+	 * 
+	 */
 	public static final String IP_SERVER_DEFAULT = "127.0.0.1";
 	
+	/**
+	 * Site IMDb para listagem de filmes: https://www.imdb.com/chart/top/?ref_=wl_expl_1
+	 * 
+	 */
 	public static final String IMDb_MOVIES_URL = "https://www.imdb.com/chart/top/?ref_=wl_expl_1";
 	
 	public static final String PREFIX_PROTOCOL = "IMDb_";

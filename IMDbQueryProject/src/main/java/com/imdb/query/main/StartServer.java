@@ -5,16 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Optional;
 
-import com.google.inject.Inject;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import com.google.inject.Inject;
 import com.imdb.query.server.IMDbServerSocket;
-import com.imdb.query.server.ServerCommand;
-import com.imdb.query.server.impl.ServerCommandImpl;
+import com.imdb.query.server.ServerCommandThread;
+import com.imdb.query.server.impl.ServerCommandThreadImpl;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.IMDbQueryModuleInjector;
 import com.imdb.query.util.network.TCPPortUtility;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 /**
  *  Classe responsável para iniciar o servidor Socket no prompt de comando.
@@ -24,11 +24,13 @@ import org.apache.logging.log4j.Logger;
  * @since 09/08/2020
  * 
  */
-public class StartServer {
+public class StartServer extends StartBase {
 
     private static final Logger logger;
     
     static {
+    	
+    	disableAccessWarnings();
     	
     	System.out.println("Iniciando mecanismo de log, aguarde ...");
     	
@@ -36,7 +38,7 @@ public class StartServer {
     }
     
     private static int port = Constants.PORT_DEFAULT;
-
+    
 	@Inject
 	private IMDbServerSocket imdbServerSocket;
 	
@@ -66,24 +68,18 @@ public class StartServer {
 		// Cada instância do servidor socket iniciará numa thread única, podendo assim,
 		// ser parada pelo usuário na thread principal a qualquer momento.
         
-        Thread thread = new Thread(new Runnable() {
-		    public void run() {
+    	ServerCommandThread serverCommandThread = new ServerCommandThreadImpl(startServer.imdbServerSocket);
+    	
+    	startServer.imdbServerSocket.setPort(port);
+    	
+    	serverCommandThread.start();
 
-		    	ServerCommand serverCommand = new ServerCommandImpl();
-		    	
-		    	startServer.imdbServerSocket.setPort(port);
-		    	
-		    	serverCommand.execute(startServer.imdbServerSocket);
-		    }
-		  });
-		
-        thread.start();
-        
-        // Espera 3 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a thread principal.
-	    
-        thread.join(3000); 
+    	synchronized(serverCommandThread){
+    		
+       		serverCommandThread.wait();
+    	}
 
-	    do {
+    	do {
 			
 		    logger.info(Constants.STRING_EMPTY);
 			System.out.print("Digite kill para parar o servidor: ");	
@@ -119,7 +115,7 @@ public class StartServer {
 			    
 	    if(startServer.imdbServerSocket.closeServerSocket()) {
 			
-	    	thread.interrupt();
+	    	serverCommandThread.interrupt();
 	    	
 			logger.info(Constants.STRING_EMPTY);
 			logger.info("Servidor parado pelo usuário !!!");
@@ -166,4 +162,5 @@ public class StartServer {
 		
 		return false;
 	}
+	
 }

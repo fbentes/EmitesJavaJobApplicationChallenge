@@ -19,8 +19,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 
 import com.imdb.query.client.IMDbClientSocket;
 import com.imdb.query.server.IMDbServerSocket;
-import com.imdb.query.server.ServerCommand;
-import com.imdb.query.server.impl.ServerCommandImpl;
+import com.imdb.query.server.ServerCommandThread;
+import com.imdb.query.server.impl.ServerCommandThreadImpl;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.IMDbQueryModuleInjector;
 
@@ -45,23 +45,18 @@ public class ImdbClientSocketImplTest {
         
 		logger.info("************ PREPARA SERVIDOR PARA CLIENTE ************");
 		logger.info(Constants.STRING_EMPTY);
-		
-		Thread thread = new Thread(new Runnable() {
-		    public void run() {
 
-		    	ServerCommand serverCommand = new ServerCommandImpl();
-		    	
-		    	imdbSocketServer.setPort(Constants.PORT_DEFAULT);
-		    	
-		    	serverCommand.execute(imdbSocketServer);
-		    }
-		  });
-		
-        thread.start();
+    	ServerCommandThread serverCommandThread = new ServerCommandThreadImpl(imdbSocketServer);
+    	
+    	imdbSocketServer.setPort(Constants.PORT_DEFAULT);
+    	
+    	serverCommandThread.start();
 
-        // Espera 4 segundos para dar tempo de carregar a lista de filmes do site IMDb antes de prosseguir a execução principal.
-	    thread.join(4000);  
-
+    	synchronized (serverCommandThread) {
+			
+    		serverCommandThread.wait();
+		}
+	    
 		logger.info(Constants.STRING_EMPTY);			
 		logger.info("************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************");
 		logger.info(Constants.STRING_EMPTY);			

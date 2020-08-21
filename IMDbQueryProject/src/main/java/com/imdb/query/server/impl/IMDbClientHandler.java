@@ -49,7 +49,7 @@ public class IMDbClientHandler extends Thread {
 	 * Initicializa recursos e injeta dependências.
 	 * 
 	 */
-	private boolean initializedResources() {
+	private boolean isInitializedResources() {
 		
 		IMDbQueryModuleInjector.initialize(this);
 		
@@ -107,12 +107,16 @@ public class IMDbClientHandler extends Thread {
 
 		return true;
 	}
+	
+	/**
+	 * Cada solicitação do cliente é atendida essa Thread do servidor socket.
+	 */
     
     public void run() {
     	
     	try {
 			
-    		if(!initializedResources()) {
+    		if(!isInitializedResources()) {
     			return;
     		}
 

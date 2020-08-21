@@ -28,7 +28,7 @@ public interface IMDbServerSocket {
 	 * Inicia a conexão do servidor socket. 
 	 * 
 	 * @return Verdadeiro caso seja estabelecida a conexão. Falso caso contrário.
-	 * @see ServerCommand#execute(IMDbServerSocket)
+	 * @see ServerCommandThread#run()
 	 */
 	boolean connectToServerSocket();
 

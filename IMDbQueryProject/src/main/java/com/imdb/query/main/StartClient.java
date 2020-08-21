@@ -26,11 +26,13 @@ import com.imdb.query.util.network.TCPPortUtility;
  * @since 09/08/2020
  * 
  */
-public class StartClient {
+public class StartClient extends StartBase  {
 
     private static final Logger logger;
     
     static {
+    	
+    	disableAccessWarnings();
     	
     	System.out.println("Iniciando mecanismo de log, aguarde ...");
     	
