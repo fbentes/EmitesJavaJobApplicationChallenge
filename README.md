@@ -20,16 +20,16 @@
 #### Tutorial para executar a solução pelo prompt de comando:
 
 
-1) Baixar da pasta [Executables](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables) os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: **..\executables**).
+1) Baixar da pasta os executáveis [**IMDbServerSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/executables/IMDbServerSocket.jar) e [**IMDbClientSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/executables/IMDbClientSocket.jar) num diretório local (Ex.: **C:\Temp**).
 
-2) Abrir uma instância do prompt de comando e executar o servidor socket (**..\executables\java -jar IMDbServerSocket.jar [porta]**). 
+2) Abrir uma instância do prompt de comando e executar o servidor socket (**C:\Temp\java -jar IMDbServerSocket.jar [porta]**). 
 
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222. 
    Ex.: 
         
-        ..\executables\java -jar IMDbServerSocket.jar  (executa na porta padrão 20222).
+        .C:\Temp\java -jar IMDbServerSocket.jar  (executa na porta padrão 20222).
         
-        ..\executables\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
+        C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
         
 *    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
 
@@ -39,18 +39,18 @@
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket 
 
-   (**..\executables\java -jar IMDbClientSocket.jar [ipServidor | porta]**). 
+   (**C:\Temp\java -jar IMDbClientSocket.jar [ipServidor | porta]**). 
 
    Os argumentos são opcionais. Se forem omititos o ipServidor será localhost e a porta padrão será 20222.
    Ex.: 
         
-        ..\executables\java -jar IMDbClientSocket.jar  (conecta no servidor em localhost e porta padrão 20222).
+        C:\Temp\java -jar IMDbClientSocket.jar  (conecta no servidor em localhost e porta padrão 20222).
    
-        ..\executables\java -jar IMDbClientSocket.jar 34985 (conecta no servidor em localhost e porta 34985).
+        C:\Temp\java -jar IMDbClientSocket.jar 34985 (conecta no servidor em localhost e porta 34985).
    
-        ..\executables\java -jar IMDbClientSocket.jar 192.168.0.16 (conecta no servidor em 192.168.0.16 e porta padrão 20222).
+        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 (conecta no servidor em 192.168.0.16 e porta padrão 20222).
         
-        ..\executables\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
+        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
         
 *   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
 
@@ -58,7 +58,7 @@
 
 *   As pesquisas por títulos de filmes podem ser feitas pelo nome completo ou pelo início do nome do título (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra).
 
-O arquivo de log será registrado no subdiretório dos executáveis (ex.: **..\executables\log\IMDbQueryProject.log**).
+O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
 ### Referências:
 
