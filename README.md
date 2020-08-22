@@ -4,7 +4,7 @@
 
 - **Windows 10 Home**
 - [**Eclipse IDE for Java Developers Version: 2020-06 (4.16.0) Download**](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576)
-- [**RedHat Java OpenJDK 8 Download**](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi) (caso você não tenha no mínimo um JDK 8 instalado, seja da RedHat, Oracle ou outro fornecedor).
+- [**RedHat Java OpenJDK 8 Download**](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi) (faça o download apenas se você não tiver, **_no mínimo_**, um JDK 8 instalado, seja da RedHat, Oracle ou outro fornecedor).
 
 ### Documentação técnica:
 
