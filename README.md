@@ -20,7 +20,7 @@
 #### Tutorial para executar a solução pelo prompt de comando:
 
 
-1) Baixar da pasta os executáveis [**IMDbServerSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/executables/IMDbServerSocket.jar) e [**IMDbClientSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/executables/IMDbClientSocket.jar) num diretório local (Ex.: **C:\Temp**).
+1) Baixar da pasta os executáveis [**IMDbServerSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbServerSocket.jar) e [**IMDbClientSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbClientSocket.jar) num diretório local (Ex.: **C:\Temp**).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (**C:\Temp\java -jar IMDbServerSocket.jar [porta]**). 
 
