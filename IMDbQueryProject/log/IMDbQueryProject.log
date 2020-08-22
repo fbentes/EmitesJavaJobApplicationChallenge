@@ -2986,3 +2986,1110 @@ Uma Mente Brilhante
 
 2020-08-21 14:24:54 [Thread-2] INFO  ServerCommandThreadImpl:70 - 
 2020-08-21 14:24:54 [main] INFO  ImdbClientSocketImplTest:146 - Servidor parado !
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:41 - 
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:42 - ******** INICIANDO IMDbCommunicationProtocolTest ************
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:43 - 
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:65 - isMatchPatternProtocolTest()  passou.
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:87 - isNotMatchPatternProtocoClientTest()  passou.
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:103 - istMatchPatternProtocoServerTest()  passou.
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:116 - istNotMatchPatternProtocoServerTest()  passou.
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:121 - 
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:122 - ******** FINALIZADO IMDbCommunicationProtocolTest ************
+2020-08-21 19:49:19 [main] INFO  IMDbCommunicationProtocolTest:123 - 
+2020-08-21 19:49:20 [main] INFO  ImdbServerSocketTest:52 - Servidor conectado !
+2020-08-21 19:49:20 [main] ERROR IMDbServerSocketImpl:57 - Problema ao conectar na porta 135: Address already in use: JVM_Bind
+2020-08-21 19:49:20 [main] ERROR IMDbServerSocketImpl:59 - Tentando outra porta ...
+2020-08-21 19:49:20 [main] INFO  ImdbServerSocketTest:68 - Servidor conectado !
+2020-08-21 19:49:23 [main] INFO  ImdbServerSocketTest:79 - Quantidade de filmes = 250
+2020-08-21 19:49:28 [main] INFO  ImdbServerSocketTest:100 - Espera pelo cliente bem sucedida !
+2020-08-21 19:49:28 [main] INFO  ImdbServerSocketTest:112 - Servidor finalizado !
+2020-08-21 19:49:28 [main] INFO  TCPPortUtilityTest:100 - isPortUsedTest()  passou.
+2020-08-21 19:49:28 [main] INFO  TCPPortUtilityTest:71 - isPortNotValidTest()  passou.
+2020-08-21 19:49:28 [main] INFO  TCPPortUtility:38 - A porta não pode ser nula !
+2020-08-21 19:49:28 [main] INFO  TCPPortUtilityTest:42 - NullPortIsInValidTest()  passou.
+2020-08-21 19:49:28 [main] INFO  TCPPortUtilityTest:56 - isPortValidTest()  passou.
+2020-08-21 19:49:28 [main] INFO  TCPPortUtilityTest:110 - getNextPortOpenedToUseTest()  passou.
+2020-08-21 19:49:28 [main] INFO  TCPPortUtilityTest:85 - isPortOpenedTest()  passou.
+2020-08-21 19:49:28 [main] INFO  AddressNetworkValidatorTest:37 - NullPortIsInValidTest()  passou.
+2020-08-21 19:49:28 [main] INFO  AddressNetworkValidator:48 - O IP 678.168.0.14 é inválido !
+2020-08-21 19:49:28 [main] INFO  AddressNetworkValidatorTest:49 - isIpInvalidTest()  passou.
+2020-08-21 19:49:28 [main] INFO  ImdbClientSocketImplTest:46 - ************ PREPARA SERVIDOR PARA CLIENTE ************
+2020-08-21 19:49:28 [main] INFO  ImdbClientSocketImplTest:47 - 
+2020-08-21 19:49:28 [Thread-2] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 19:49:28 [Thread-2] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 19:49:28 [Thread-2] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 19:49:30 [Thread-2] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 19:49:30 [Thread-2] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 19:49:30 [Thread-2] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 19:49:30 [Thread-2] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 19:49:30 [main] INFO  ImdbClientSocketImplTest:60 - 
+2020-08-21 19:49:30 [main] INFO  ImdbClientSocketImplTest:61 - ************ INICIA CLIENTE PARA SOLICITAÇÃO NO SERVIDOR ************
+2020-08-21 19:49:30 [main] INFO  ImdbClientSocketImplTest:62 - 
+2020-08-21 19:49:30 [main] INFO  ImdbClientSocketImplTest:74 - Cliente conectado com o servidor !
+2020-08-21 19:49:30 [main] INFO  ImdbClientSocketImplTest:110 - Filme pesquisado: 12 Homens
+2020-08-21 19:49:30 [main] INFO  ImdbClientSocketImplTest:119 - Filme(s) encontrado(s): 12 Homens e uma Sentença
+
+
+2020-08-21 19:49:30 [main] INFO  ImdbClientSocketImplTest:146 - Servidor parado !
+2020-08-21 20:11:01 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:11:01 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:11:01 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:11:03 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:11:03 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:11:03 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:11:03 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:11:03 [main] INFO  StartServer:103 - 
+2020-08-21 20:11:03 [main] INFO  StartServer:105 - 
+2020-08-21 20:11:15 [main] INFO  StartClient:239 - 
+2020-08-21 20:11:15 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:11:18 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:11:18 [main] INFO  StartClient:207 - 
+2020-08-21 20:11:18 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:11:18 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 20:11:18 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:11:18 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:11:18 [main] INFO  StartClient:239 - 
+2020-08-21 20:11:18 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:11:25 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:11:25 [main] INFO  StartClient:207 - 
+2020-08-21 20:11:25 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:11:25 [main] INFO  StartClient:209 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-21 20:11:25 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:11:25 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:11:25 [main] INFO  StartClient:239 - 
+2020-08-21 20:11:25 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:11:35 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:11:35 [main] INFO  StartClient:207 - 
+2020-08-21 20:11:35 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:11:35 [main] INFO  StartClient:209 - Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-21 20:11:35 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:11:35 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:11:35 [main] INFO  StartClient:239 - 
+2020-08-21 20:11:35 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:11:38 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:11:38 [main] INFO  StartClient:207 - 
+2020-08-21 20:11:38 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:11:38 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-21 20:11:38 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:11:38 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:11:38 [main] INFO  StartClient:239 - 
+2020-08-21 20:11:38 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:11:39 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:11:39 [main] INFO  StartClient:207 - 
+2020-08-21 20:11:39 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:11:39 [main] INFO  StartClient:209 - 3 Idiotas
+
+
+2020-08-21 20:11:39 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:11:39 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:11:39 [main] INFO  StartClient:239 - 
+2020-08-21 20:11:39 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:11:43 [main] INFO  StartClient:215 - 
+2020-08-21 20:11:43 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-21 20:11:48 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 20:11:48 [main] INFO  StartServer:139 - 
+2020-08-21 20:11:48 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 20:29:14 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:29:14 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:29:14 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:29:17 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:29:17 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:29:17 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:29:17 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:29:17 [main] INFO  StartServer:103 - 
+2020-08-21 20:29:17 [main] INFO  StartServer:105 - 
+2020-08-21 20:29:23 [main] INFO  StartClient:239 - 
+2020-08-21 20:29:23 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:29:24 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:29:24 [main] ERROR IMDbClientSocketImpl:140 - Socket is closed
+2020-08-21 20:30:06 [main] INFO  StartClient:239 - 
+2020-08-21 20:30:06 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:30:09 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:30:09 [main] ERROR IMDbClientSocketImpl:140 - Socket is closed
+2020-08-21 20:30:20 [main] INFO  StartClient:239 - 
+2020-08-21 20:30:20 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:30:21 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:30:21 [main] ERROR IMDbClientSocketImpl:140 - Socket is closed
+2020-08-21 20:30:21 [main] INFO  StartClient:207 - 
+2020-08-21 20:30:21 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:30:21 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 20:30:21 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:30:21 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:30:21 [main] INFO  StartClient:239 - 
+2020-08-21 20:30:21 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:30:33 [main] INFO  StartClient:215 - 
+2020-08-21 20:30:33 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-21 20:30:41 [main] INFO  StartClient:239 - 
+2020-08-21 20:30:41 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:30:44 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:30:44 [main] ERROR IMDbClientSocketImpl:140 - Socket is closed
+2020-08-21 20:30:44 [main] INFO  StartClient:207 - 
+2020-08-21 20:30:44 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:30:44 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 20:30:44 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:30:44 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:30:44 [main] INFO  StartClient:239 - 
+2020-08-21 20:30:44 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:31:10 [main] INFO  StartClient:239 - 
+2020-08-21 20:31:10 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:31:12 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:31:49 [main] ERROR IMDbClientSocketImpl:140 - Socket is closed
+2020-08-21 20:31:57 [main] INFO  StartClient:207 - 
+2020-08-21 20:31:57 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:31:57 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 20:31:57 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:31:57 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:31:57 [main] INFO  StartClient:239 - 
+2020-08-21 20:31:57 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:33:41 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 20:33:41 [main] INFO  StartServer:139 - 
+2020-08-21 20:33:41 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 20:33:51 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:33:51 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:33:51 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:33:53 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:33:53 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:33:53 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:33:53 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:33:53 [main] INFO  StartServer:103 - 
+2020-08-21 20:33:53 [main] INFO  StartServer:105 - 
+2020-08-21 20:33:58 [main] INFO  StartClient:239 - 
+2020-08-21 20:33:58 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:34:00 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:34:00 [main] ERROR IMDbClientSocketImpl:141 - Socket is closed
+2020-08-21 20:34:00 [main] INFO  StartClient:207 - 
+2020-08-21 20:34:00 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:34:00 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 20:34:00 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:34:00 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:34:00 [main] INFO  StartClient:239 - 
+2020-08-21 20:34:00 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:34:10 [main] INFO  StartServer:139 - 
+2020-08-21 20:34:10 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 20:34:10 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 20:34:49 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:34:49 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:34:49 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:34:51 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:34:51 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:34:51 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:34:51 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:34:51 [main] INFO  StartServer:103 - 
+2020-08-21 20:34:51 [main] INFO  StartServer:105 - 
+2020-08-21 20:35:02 [main] INFO  StartClient:239 - 
+2020-08-21 20:35:02 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:35:04 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:35:51 [main] ERROR IMDbClientSocketImpl:141 - Socket is closed
+2020-08-21 20:36:01 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 20:36:01 [main] INFO  StartServer:139 - 
+2020-08-21 20:36:01 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 20:37:11 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:37:11 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:37:11 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:37:14 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:37:14 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:37:14 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:37:14 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:37:14 [main] INFO  StartServer:103 - 
+2020-08-21 20:37:14 [main] INFO  StartServer:105 - 
+2020-08-21 20:37:18 [main] INFO  StartClient:239 - 
+2020-08-21 20:37:18 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:37:20 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:37:20 [main] ERROR IMDbClientSocketImpl:141 - Socket is closed
+2020-08-21 20:37:20 [main] INFO  StartClient:207 - 
+2020-08-21 20:37:20 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:37:20 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 20:37:20 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:37:20 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:37:20 [main] INFO  StartClient:239 - 
+2020-08-21 20:37:20 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:37:26 [main] INFO  StartServer:139 - 
+2020-08-21 20:37:26 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 20:37:26 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 20:39:20 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:39:20 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:39:20 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:39:22 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:39:22 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:39:22 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:39:22 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:39:22 [main] INFO  StartServer:103 - 
+2020-08-21 20:39:22 [main] INFO  StartServer:105 - 
+2020-08-21 20:39:29 [main] INFO  StartClient:239 - 
+2020-08-21 20:39:29 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:39:30 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:39:30 [main] INFO  StartClient:207 - 
+2020-08-21 20:39:30 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:39:30 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 20:39:30 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:39:30 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:39:30 [main] INFO  StartClient:239 - 
+2020-08-21 20:39:30 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:39:38 [main] INFO  StartServer:139 - 
+2020-08-21 20:39:38 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 20:39:38 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 20:44:55 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:44:55 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:44:55 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:44:57 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:44:57 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:44:57 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:44:57 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:44:57 [main] INFO  StartServer:103 - 
+2020-08-21 20:44:57 [main] INFO  StartServer:105 - 
+2020-08-21 20:45:02 [main] INFO  StartClient:239 - 
+2020-08-21 20:45:02 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:45:04 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 20:45:04 [main] ERROR IMDbClientSocketImpl:148 - Socket is closed
+2020-08-21 20:45:04 [main] INFO  StartClient:207 - 
+2020-08-21 20:45:04 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 20:45:04 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 20:45:04 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 20:45:04 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 20:45:04 [main] INFO  StartClient:239 - 
+2020-08-21 20:45:04 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:45:19 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 20:45:19 [main] INFO  StartServer:139 - 
+2020-08-21 20:45:19 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 20:48:35 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 20:48:35 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 20:48:35 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 20:48:37 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 20:48:37 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 20:48:37 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 20:48:37 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 20:48:37 [main] INFO  StartServer:103 - 
+2020-08-21 20:48:37 [main] INFO  StartServer:105 - 
+2020-08-21 20:48:42 [main] INFO  StartClient:239 - 
+2020-08-21 20:48:42 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:48:50 [main] INFO  StartClient:239 - 
+2020-08-21 20:48:50 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 20:48:52 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:04:18 [main] INFO  StartClient:239 - 
+2020-08-21 21:04:18 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:04:20 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:04:20 [main] ERROR IMDbClientSocketImpl:148 - Socket is closed
+2020-08-21 21:04:20 [main] INFO  StartClient:207 - 
+2020-08-21 21:04:20 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:04:20 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 21:04:20 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:04:20 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:04:20 [main] INFO  StartClient:239 - 
+2020-08-21 21:04:20 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:05:17 [main] INFO  StartClient:239 - 
+2020-08-21 21:05:17 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:05:18 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:05:18 [main] ERROR IMDbClientSocketImpl:148 - Socket is closed
+2020-08-21 21:05:18 [main] INFO  StartClient:207 - 
+2020-08-21 21:05:18 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:05:18 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 21:05:18 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:05:18 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:05:18 [main] INFO  StartClient:239 - 
+2020-08-21 21:05:18 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:06:00 [main] INFO  StartClient:239 - 
+2020-08-21 21:06:00 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:06:01 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:06:01 [main] ERROR IMDbClientSocketImpl:148 - Socket is closed
+2020-08-21 21:06:01 [main] INFO  StartClient:207 - 
+2020-08-21 21:06:01 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:06:01 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 21:06:01 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:06:01 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:06:01 [main] INFO  StartClient:239 - 
+2020-08-21 21:06:01 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:06:10 [main] INFO  StartServer:139 - 
+2020-08-21 21:06:10 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 21:06:10 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 21:06:19 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 21:06:19 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 21:06:19 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 21:06:23 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 21:06:23 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 21:06:23 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 21:06:23 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 21:06:23 [main] INFO  StartServer:103 - 
+2020-08-21 21:06:23 [main] INFO  StartServer:105 - 
+2020-08-21 21:06:29 [main] INFO  StartClient:239 - 
+2020-08-21 21:06:29 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:06:31 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:06:31 [main] ERROR IMDbClientSocketImpl:148 - Socket is closed
+2020-08-21 21:06:31 [main] INFO  StartClient:207 - 
+2020-08-21 21:06:31 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:06:31 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 21:06:31 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:06:31 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:06:31 [main] INFO  StartClient:239 - 
+2020-08-21 21:06:31 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:07:00 [main] INFO  StartClient:239 - 
+2020-08-21 21:07:00 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:07:02 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:07:02 [main] INFO  StartClient:207 - 
+2020-08-21 21:07:02 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:07:02 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 21:07:02 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:07:02 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:07:02 [main] INFO  StartClient:239 - 
+2020-08-21 21:07:02 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:10:35 [main] INFO  StartClient:239 - 
+2020-08-21 21:10:35 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:10:37 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:10:37 [main] INFO  StartClient:207 - 
+2020-08-21 21:10:37 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:10:37 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 21:10:37 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:10:37 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:10:37 [main] INFO  StartClient:239 - 
+2020-08-21 21:10:37 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:10:39 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:10:39 [main] INFO  StartClient:207 - 
+2020-08-21 21:10:39 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:10:39 [main] INFO  StartClient:209 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-21 21:10:39 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:10:39 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:10:39 [main] INFO  StartClient:239 - 
+2020-08-21 21:10:39 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:10:40 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:10:40 [main] INFO  StartClient:207 - 
+2020-08-21 21:10:40 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:10:40 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-21 21:10:40 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:10:40 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:10:40 [main] INFO  StartClient:239 - 
+2020-08-21 21:10:40 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:13:14 [main] INFO  StartClient:239 - 
+2020-08-21 21:13:14 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:13:16 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:14:25 [main] INFO  StartClient:207 - 
+2020-08-21 21:14:25 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:14:25 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 21:14:25 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:14:25 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:14:25 [main] INFO  StartClient:239 - 
+2020-08-21 21:14:25 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:35:48 [main] INFO  StartClient:239 - 
+2020-08-21 21:35:48 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:35:50 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:35:50 [main] INFO  StartClient:207 - 
+2020-08-21 21:35:50 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:35:50 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 21:35:50 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:35:50 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:35:50 [main] INFO  StartClient:239 - 
+2020-08-21 21:35:50 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:35:52 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:35:52 [main] INFO  StartClient:207 - 
+2020-08-21 21:35:52 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:35:52 [main] INFO  StartClient:209 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-21 21:35:52 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:35:52 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:35:52 [main] INFO  StartClient:239 - 
+2020-08-21 21:35:52 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:35:54 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:35:54 [main] INFO  StartClient:207 - 
+2020-08-21 21:35:54 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:35:54 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-21 21:35:54 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:35:54 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:35:54 [main] INFO  StartClient:239 - 
+2020-08-21 21:35:54 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:35:56 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:35:56 [main] INFO  StartClient:207 - 
+2020-08-21 21:35:56 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:35:56 [main] INFO  StartClient:209 - 3 Idiotas
+
+
+2020-08-21 21:35:56 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:35:56 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:35:56 [main] INFO  StartClient:239 - 
+2020-08-21 21:35:56 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:35:59 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:35:59 [main] INFO  StartClient:207 - 
+2020-08-21 21:35:59 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:35:59 [main] INFO  StartClient:209 - A Lista de Schindler
+
+
+2020-08-21 21:35:59 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:35:59 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:35:59 [main] INFO  StartClient:239 - 
+2020-08-21 21:35:59 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:36:01 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:36:01 [main] INFO  StartClient:207 - 
+2020-08-21 21:36:01 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:36:01 [main] INFO  StartClient:209 - Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-21 21:36:01 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:36:01 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:36:01 [main] INFO  StartClient:239 - 
+2020-08-21 21:36:01 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:36:04 [main] INFO  StartClient:215 - 
+2020-08-21 21:36:04 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-21 21:36:13 [main] INFO  StartClient:239 - 
+2020-08-21 21:36:13 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:36:17 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:36:17 [main] INFO  StartClient:207 - 
+2020-08-21 21:36:17 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:36:17 [main] INFO  StartClient:209 - Nenhum filme foi encontrado com o título 'ttttt' !
+
+2020-08-21 21:36:17 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:36:17 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:36:17 [main] INFO  StartClient:239 - 
+2020-08-21 21:36:17 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 21:36:24 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 21:36:24 [main] INFO  StartClient:207 - 
+2020-08-21 21:36:24 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 21:36:24 [main] INFO  StartClient:209 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-21 21:36:24 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 21:36:24 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 21:36:24 [main] INFO  StartClient:239 - 
+2020-08-21 21:36:24 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:30:52 [main] INFO  StartServer:139 - 
+2020-08-21 22:30:52 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 22:30:52 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 22:30:59 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 22:30:59 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 22:30:59 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 22:31:01 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 22:31:01 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 22:31:01 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 22:31:01 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 22:31:01 [main] INFO  StartServer:103 - 
+2020-08-21 22:31:01 [main] INFO  StartServer:105 - 
+2020-08-21 22:31:05 [main] INFO  StartClient:239 - 
+2020-08-21 22:31:05 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:31:08 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 22:31:08 [main] INFO  StartClient:207 - 
+2020-08-21 22:31:08 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 22:31:08 [main] INFO  StartClient:209 - O protocolo de comunicação está inválido !
+2020-08-21 22:31:08 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 22:31:08 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 22:31:08 [main] INFO  StartClient:239 - 
+2020-08-21 22:31:08 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:31:18 [main] INFO  StartServer:139 - 
+2020-08-21 22:31:18 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 22:31:18 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 22:50:03 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 22:50:03 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 22:50:03 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 22:50:05 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 22:50:05 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 22:50:05 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 22:50:06 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 22:50:06 [main] INFO  StartServer:103 - 
+2020-08-21 22:50:06 [main] INFO  StartServer:105 - 
+2020-08-21 22:50:11 [main] INFO  StartClient:239 - 
+2020-08-21 22:50:11 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:50:17 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 22:50:17 [main] INFO  StartClient:207 - 
+2020-08-21 22:50:17 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 22:50:17 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 22:50:17 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 22:50:17 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 22:50:17 [main] INFO  StartClient:239 - 
+2020-08-21 22:50:17 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:50:21 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 22:50:21 [main] INFO  StartClient:207 - 
+2020-08-21 22:50:21 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 22:50:21 [main] INFO  StartClient:209 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-21 22:50:21 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 22:50:21 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 22:50:21 [main] INFO  StartClient:239 - 
+2020-08-21 22:50:21 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:50:24 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 22:50:24 [main] INFO  StartClient:207 - 
+2020-08-21 22:50:24 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 22:50:24 [main] INFO  StartClient:209 - Nenhum filme foi encontrado com o título 'rara' !
+
+2020-08-21 22:50:24 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 22:50:24 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 22:50:24 [main] INFO  StartClient:239 - 
+2020-08-21 22:50:24 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:50:29 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 22:50:29 [main] INFO  StartClient:207 - 
+2020-08-21 22:50:29 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 22:50:29 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-21 22:50:29 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 22:50:29 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 22:50:29 [main] INFO  StartClient:239 - 
+2020-08-21 22:50:29 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:50:31 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 22:50:31 [main] INFO  StartClient:207 - 
+2020-08-21 22:50:31 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 22:50:31 [main] INFO  StartClient:209 - 3 Idiotas
+
+
+2020-08-21 22:50:31 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 22:50:31 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 22:50:31 [main] INFO  StartClient:239 - 
+2020-08-21 22:50:31 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:50:33 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 22:50:33 [main] INFO  StartClient:207 - 
+2020-08-21 22:50:33 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 22:50:33 [main] INFO  StartClient:209 - Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-21 22:50:33 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 22:50:33 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 22:50:33 [main] INFO  StartClient:239 - 
+2020-08-21 22:50:33 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 22:50:35 [main] INFO  StartClient:215 - 
+2020-08-21 22:50:35 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-21 22:50:40 [main] INFO  StartServer:103 - 
+2020-08-21 22:50:40 [main] INFO  StartServer:105 - 
+2020-08-21 22:50:44 [main] INFO  StartServer:139 - 
+2020-08-21 22:50:44 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 22:50:44 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 23:09:21 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 23:09:21 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 23:09:21 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 23:09:23 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 23:09:23 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 23:09:23 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 23:09:23 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 23:09:23 [main] INFO  StartServer:103 - 
+2020-08-21 23:09:23 [main] INFO  StartServer:105 - 
+2020-08-21 23:09:29 [main] INFO  StartClient:239 - 
+2020-08-21 23:09:29 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:09:32 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:09:32 [main] INFO  StartClient:207 - 
+2020-08-21 23:09:32 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:09:32 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 23:09:32 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:09:32 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:09:32 [main] INFO  StartClient:239 - 
+2020-08-21 23:09:32 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:09:34 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:09:34 [main] INFO  StartClient:207 - 
+2020-08-21 23:09:34 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:09:34 [main] INFO  StartClient:209 - Nenhum filme foi encontrado com o título 'adasda' !
+
+2020-08-21 23:09:34 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:09:34 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:09:34 [main] INFO  StartClient:239 - 
+2020-08-21 23:09:34 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:09:37 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:09:37 [main] INFO  StartClient:207 - 
+2020-08-21 23:09:37 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:09:37 [main] INFO  StartClient:209 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-21 23:09:37 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:09:37 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:09:37 [main] INFO  StartClient:239 - 
+2020-08-21 23:09:37 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:09:39 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:09:39 [main] INFO  StartClient:207 - 
+2020-08-21 23:09:39 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:09:39 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-21 23:09:39 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:09:39 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:09:39 [main] INFO  StartClient:239 - 
+2020-08-21 23:09:39 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:09:41 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:09:41 [main] INFO  StartClient:207 - 
+2020-08-21 23:09:41 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:09:41 [main] INFO  StartClient:209 - Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-21 23:09:41 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:09:41 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:09:41 [main] INFO  StartClient:239 - 
+2020-08-21 23:09:41 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:09:43 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:09:43 [main] INFO  StartClient:207 - 
+2020-08-21 23:09:43 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:09:43 [main] INFO  StartClient:209 - 3 Idiotas
+
+
+2020-08-21 23:09:43 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:09:43 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:09:43 [main] INFO  StartClient:239 - 
+2020-08-21 23:09:43 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:09:45 [main] INFO  StartClient:215 - 
+2020-08-21 23:09:45 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-21 23:09:50 [main] INFO  StartServer:139 - 
+2020-08-21 23:09:50 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 23:09:50 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 23:14:03 [Thread-1] INFO  ServerCommandThreadImpl:35 - Conectando no servidor na porta 20222 ...
+2020-08-21 23:14:03 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 23:14:03 [Thread-1] INFO  ServerCommandThreadImpl:55 - Carregando a lista de filmes ...
+2020-08-21 23:14:05 [Thread-1] INFO  ServerCommandThreadImpl:59 - Total de filmes carregados = 250
+2020-08-21 23:14:05 [Thread-1] INFO  ServerCommandThreadImpl:61 - 
+2020-08-21 23:14:05 [Thread-1] INFO  ServerCommandThreadImpl:62 - Esperando requisição do cliente ...
+2020-08-21 23:14:05 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 23:14:05 [main] INFO  StartServer:103 - 
+2020-08-21 23:14:05 [main] INFO  StartServer:105 - 
+2020-08-21 23:14:18 [main] INFO  StartServer:139 - 
+2020-08-21 23:14:18 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 23:14:18 [main] INFO  StartServer:140 - Servidor parado pelo usuário !!!
+2020-08-21 23:17:46 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-21 23:17:46 [Thread-1] INFO  ServerCommandThreadImpl:36 - Conectando no servidor na porta 20222 ...
+2020-08-21 23:17:46 [Thread-1] INFO  ServerCommandThreadImpl:47 - Servidor conectado na porta 20222.
+2020-08-21 23:17:46 [Thread-1] INFO  ServerCommandThreadImpl:56 - 
+2020-08-21 23:17:46 [Thread-1] INFO  ServerCommandThreadImpl:57 - Carregando a lista de filmes ...
+2020-08-21 23:17:48 [Thread-1] INFO  ServerCommandThreadImpl:61 - Total de filmes carregados = 250
+2020-08-21 23:17:48 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-21 23:17:48 [Thread-1] INFO  ServerCommandThreadImpl:64 - Esperando requisição do cliente ...
+2020-08-21 23:17:48 [Thread-1] INFO  ServerCommandThreadImpl:65 - 
+2020-08-21 23:17:48 [main] INFO  StartServer:104 - 
+2020-08-21 23:18:44 [main] INFO  StartServer:138 - 
+2020-08-21 23:18:44 [Thread-1] INFO  ServerCommandThreadImpl:72 - 
+2020-08-21 23:18:44 [main] INFO  StartServer:139 - Servidor parado pelo usuário !!!
+2020-08-21 23:18:50 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-21 23:18:50 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 23:18:50 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-21 23:18:50 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-21 23:18:52 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-21 23:18:52 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-21 23:18:52 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-21 23:18:52 [Thread-1] INFO  ServerCommandThreadImpl:64 - 
+2020-08-21 23:18:52 [main] INFO  StartServer:104 - 
+2020-08-21 23:19:29 [main] INFO  StartServer:138 - 
+2020-08-21 23:19:29 [Thread-1] INFO  ServerCommandThreadImpl:71 - 
+2020-08-21 23:19:29 [main] INFO  StartServer:139 - Servidor parado pelo usuário !!!
+2020-08-21 23:31:36 [main] INFO  StartClient:239 - 
+2020-08-21 23:31:36 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:36:40 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-21 23:36:40 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 23:36:40 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-21 23:36:40 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-21 23:36:43 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-21 23:36:43 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-21 23:36:43 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-21 23:36:43 [main] INFO  StartServer:104 - 
+2020-08-21 23:36:51 [main] INFO  StartServer:137 - 
+2020-08-21 23:36:51 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 23:36:51 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-21 23:37:07 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-21 23:37:07 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-21 23:37:07 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-21 23:37:07 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-21 23:37:09 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-21 23:37:09 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-21 23:37:09 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-21 23:37:09 [main] INFO  StartServer:104 - 
+2020-08-21 23:37:24 [main] INFO  StartClient:239 - 
+2020-08-21 23:37:24 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:37:25 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:37:25 [main] INFO  StartClient:207 - 
+2020-08-21 23:37:25 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:37:25 [main] INFO  StartClient:209 - A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+
+
+2020-08-21 23:37:25 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:37:25 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:37:25 [main] INFO  StartClient:239 - 
+2020-08-21 23:37:25 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:37:27 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:37:27 [main] INFO  StartClient:207 - 
+2020-08-21 23:37:27 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:37:27 [main] INFO  StartClient:209 - Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+
+
+2020-08-21 23:37:27 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:37:27 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:37:27 [main] INFO  StartClient:239 - 
+2020-08-21 23:37:27 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:37:28 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:37:28 [main] INFO  StartClient:207 - 
+2020-08-21 23:37:28 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:37:28 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-21 23:37:28 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:37:28 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:37:28 [main] INFO  StartClient:239 - 
+2020-08-21 23:37:28 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:37:30 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-21 23:37:30 [main] INFO  StartClient:207 - 
+2020-08-21 23:37:30 [main] INFO  StartClient:208 - Resposta:
+2020-08-21 23:37:30 [main] INFO  StartClient:209 - 3 Idiotas
+
+
+2020-08-21 23:37:30 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-21 23:37:30 [main] INFO  StartClient:211 - ******************************************************
+2020-08-21 23:37:30 [main] INFO  StartClient:239 - 
+2020-08-21 23:37:30 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-21 23:37:36 [main] INFO  StartClient:215 - 
+2020-08-21 23:37:36 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-21 23:37:46 [main] INFO  StartServer:137 - 
+2020-08-21 23:37:46 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-21 23:37:46 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
