@@ -1,6 +1,6 @@
 # IMDbQueryProject
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
-> Desenvolvido no **[Eclipse IDE for Java Developers Version: 2020-06 (4.16.0) Download] **(https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576) usando o **[RedHat Java OpenJDK 8 Download]**(https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi).
+> Desenvolvido no **[Eclipse IDE for Java Developers Version: 2020-06 (4.16.0) Download]**(https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576) usando o **[RedHat Java OpenJDK 8 Download]**(https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi).
 
 
 ### Documentação técnica:
