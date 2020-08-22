@@ -27,7 +27,7 @@
    O argumento é opcional. Se for omitido o argumento, a porta padrão será 20222. 
    Ex.: 
         
-        .C:\Temp\java -jar IMDbServerSocket.jar  (executa na porta padrão 20222).
+        C:\Temp\java -jar IMDbServerSocket.jar  (executa na porta padrão 20222).
         
         C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
         
