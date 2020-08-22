@@ -1,9 +1,10 @@
 # IMDbQueryProject
 ## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
-> Eclipse IDE for Java Developers Version: 2020-06 (4.16.0)
+### Ambiente de desenvolvimento adotado:
 
-Uso do [RedHat Java OpenJDK 8 Download](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi)
-
+- **Windows 10 Home**
+- [**Eclipse IDE for Java Developers Version: 2020-06 (4.16.0) Download**](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576)
+- [**RedHat Java OpenJDK 8 Download**](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi) (faça o download apenas se você não tiver, **_no mínimo_**, um JDK 8 instalado, seja da RedHat, Oracle ou outro fornecedor).
 
 ### Documentação técnica:
 
@@ -21,8 +22,9 @@ Uso do [RedHat Java OpenJDK 8 Download](https://developers.redhat.com/download-m
 
 #### Tutorial para executar a solução pelo prompt de comando:
 
+> OBS.: Se você for apenas executar os _*.jar_ abaixo e não for compilar os fontes, tenha instalado um JRE 8, **no mínimo**, e devidamente setado seu diretório \bin na variável de ambiente PATH. **Digite na linha de comando _java -version_ para checar se os requisitos para execução dos _*.jar_ estão sendo atendidos !**
 
-1) Baixar da pasta [Executables](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/tree/master/executables) os arquivos **IMDbServerSocket.jar** e **IMDbClientSocket.jar** num diretório local (Ex.: **C:\Temp**).
+1) Baixar da pasta os executáveis [**IMDbServerSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbServerSocket.jar) e [**IMDbClientSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbClientSocket.jar) num diretório local (Ex.: **C:\Temp**).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (**C:\Temp\java -jar IMDbServerSocket.jar [porta]**). 
 
@@ -33,11 +35,11 @@ Uso do [RedHat Java OpenJDK 8 Download](https://developers.redhat.com/download-m
         
         C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
         
-*    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
+>    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
 
-*    Um servidor socket é instanciado numa Thread filha para que a Thread principal possa gerenciá-lo. E o servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
+>    Um servidor socket é instanciado numa Thread filha para que a Thread principal possa gerenciá-lo. E o servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
 
-*    Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.
+>    Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket 
 
@@ -54,17 +56,15 @@ Uso do [RedHat Java OpenJDK 8 Download](https://developers.redhat.com/download-m
         
         C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
         
-*   Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.
+>   **Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.**
 
-*   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou           rejeição no caso da porta 6969 (Acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse Acmsoda ou outros serviços afins.
+>   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC), ou         rejeição no caso da porta 6969 (serviço acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse acmsoda ou outros serviços afins.
 
-*   As pesquisas por títulos de filmes podem ser feitas pelo nome completo ou pelo início do nome do título (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra).
+>   **As pesquisas por títulos de filmes podem ser feitas pelo nome completo, ou pelo início do nome, do título do filme (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra)**.
 
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
 ### Referências:
-
-[Eclipse Version: 2020-06 (4.16.0) Download](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576)
 
 [Eclipse Community](https://www.eclipse.org/community/eclipse_newsletter/2018/february/buildship.php)
 
