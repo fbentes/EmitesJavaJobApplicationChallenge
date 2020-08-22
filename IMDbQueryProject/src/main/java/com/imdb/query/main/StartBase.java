@@ -13,26 +13,41 @@ import java.lang.reflect.Method;
  */
 public class StartBase {
 
+	protected static String INPUT_QUIT = "quit";
+	
 	/**
-	 * Método para desabilitar warnings devido a diferentes versões do Java.
+	 * Método para desabilitar warnings no console devido a diferentes versões do Java, pois poluem a tela.
+	 * 
+	 * OBS.: Carece de um melhor tratamento no futuro !
 	 * 
 	 */
 	public static void disableAccessWarnings() {
+		
         try {
-            Class<?> unsafeClass = Class.forName("sun.misc.Unsafe");
-            Field field = unsafeClass.getDeclaredField("theUnsafe");
-            field.setAccessible(true);
-            Object unsafe = field.get(null);
+            
+        	Class<?> unsafeClass = Class.forName("sun.misc.Unsafe");
+            
+        	Field field = unsafeClass.getDeclaredField("theUnsafe");
+            
+        	field.setAccessible(true);
+            
+        	Object unsafe = field.get(null);
 
             Method putObjectVolatile = unsafeClass.getDeclaredMethod("putObjectVolatile", Object.class, long.class, Object.class);
+            
             Method staticFieldOffset = unsafeClass.getDeclaredMethod("staticFieldOffset", Field.class);
 
             Class<?> loggerClass = Class.forName("jdk.internal.module.IllegalAccessLogger");
+            
             Field loggerField = loggerClass.getDeclaredField("logger");
+            
             Long offset = (Long) staticFieldOffset.invoke(unsafe, loggerField);
+            
             putObjectVolatile.invoke(unsafe, loggerClass, offset, null);
             
         } catch (Exception ignored) {
+        	
+        	// Exceção ignorada devido ao propósito do método.
         }
     }
 }

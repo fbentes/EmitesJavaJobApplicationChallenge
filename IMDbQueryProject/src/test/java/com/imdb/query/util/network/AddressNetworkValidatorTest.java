@@ -10,12 +10,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
-import com.imdb.query.test.TestBase;
+import com.imdb.query.test.util.TestBase;
 
 @TestInstance(Lifecycle.PER_CLASS)
 public class AddressNetworkValidatorTest extends TestBase {
 
-    private static final Logger logger = LogManager.getLogger("AddressNetworkValidatorTest");
+    private static final Logger logger = LogManager.getLogger(AddressNetworkValidatorTest.class);
 
     private AddressNetworkValidator addressNetworkValidator;
 	

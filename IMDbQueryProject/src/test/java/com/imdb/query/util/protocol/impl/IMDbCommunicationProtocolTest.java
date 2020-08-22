@@ -1,4 +1,4 @@
-package com.imdb.query.util;
+package com.imdb.query.util.protocol.impl;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -16,9 +16,9 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import com.imdb.query.test.TestBase;
+import com.imdb.query.test.util.TestBase;
+import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
-import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 
 /**
  * @author Fábio Bentes
@@ -28,7 +28,7 @@ import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class IMDbCommunicationProtocolTest extends TestBase {
 
-    private static final Logger logger = LogManager.getLogger("IMDbCommunicationProtocolTest");
+    private static final Logger logger = LogManager.getLogger(IMDbCommunicationProtocolTest.class);
 
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
 

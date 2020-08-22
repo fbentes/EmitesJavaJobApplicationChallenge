@@ -11,7 +11,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.google.inject.Inject;
-
 import com.imdb.query.client.IMDbClientSocket;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
@@ -26,16 +25,10 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
  */
 public class IMDbClientSocketImpl implements IMDbClientSocket {
 	
-    private static final Logger logger = LogManager.getLogger("IMDbClientSocketImpl");
+    private static final Logger logger = LogManager.getLogger(IMDbClientSocketImpl.class);
 
-    private boolean isClientSocketConnected;
-	
 	private Socket clientSocket;
 	
-    private BufferedReader readFromServerBufferedReader;
-    
-    private PrintWriter writeToServerPrintWriter;
-    
     @Inject
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
     
@@ -46,7 +39,7 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 			
 			clientSocket = new Socket(ipServer,port);
 			
-			isClientSocketConnected = true;			
+			return true;			
 			
 		} catch (Exception e) {
 			
@@ -59,31 +52,6 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 				
 				logger.error(e.getMessage());
 			}
-			
-			isClientSocketConnected = false;
-		}
-
-		return isClientSocketConnected;
-	}
-    
-	/**
-	 * Initicializa recursos e injeta dependências.
-	 * 
-	 */
-	private boolean isInitializedResources() {
-		
-		try {
-
-			readFromServerBufferedReader = new BufferedReader(
-					new InputStreamReader(clientSocket.getInputStream()));
-
-			writeToServerPrintWriter = new PrintWriter(clientSocket.getOutputStream(), true);
-			
-			return true;
-
-		} catch (IOException e) {
-			
-			logger.error(e.getMessage());
 			
 			return false;
 		}
@@ -112,45 +80,33 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
     	
     	return iMDbCommunicationProtocol.getMessageWithPatternProtocolApplied(movieTitle);
     }
-    
+       
     /**
-     * Envia título do filme a ser pesquisado para o servidor socket.
-     * 
-     * @param movieTitle Título do filme.
-     */
-    private void sendMovieTitleToServerSocket(String movieTitle) {
-    	
-		writeToServerPrintWriter.println(movieTitle);	
-    }
-    
-    /**
-     * Captura a resposta do servidor socket (lista de filmes solicitadas pelo cliente socket).
+     * Captura a resposta do servidor socket (filmes encontrados separados por \n).
      * 
      * @return Filme ou filmes respondidos pelo servidor socket.
      */
     private String readResponseFromServerSocket() {
     	
-		StringBuffer responseOfServerWithMovieTitles = new StringBuffer();
+		StringBuilder responseOfServerWithMovieTitles = new StringBuilder();
 		
-		String responseReadLine;
+		// Lê a resposta do servidor socket iterativamente 
 		
-		// PS: Não usado Optional e nem Constants.STRING_EMPTY para não afetar no 
-		// desempenho na iteração.
-		
-		try {
+		try(BufferedReader readFromServerBufferedReader = 
+				new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 			
-	        while ((responseReadLine = readFromServerBufferedReader.readLine()) != null) {
+			readFromServerBufferedReader.lines().forEach(responseReadLine ->{
 	        	
-	        	if(!responseReadLine.trim().equals("")) {
+				if(!responseReadLine.trim().equals(Constants.STRING_EMPTY)) {
 	        		
 	            	responseOfServerWithMovieTitles.append(responseReadLine + "\n");
 	        	}
-	        }
-	        
+			});
+			
 	        return responseOfServerWithMovieTitles.toString();
-	        
-		} catch (IOException e) {
 
+		} catch (IOException e) {
+			
 			logger.error(e.getMessage());
 			
 			return e.getMessage();
@@ -162,24 +118,32 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 		
     	try {
     		
-			if(!isInitializedResources()) {
-				return Constants.STRING_EMPTY;
-			}
-	
 			if(!isValidMovieTitle(movieTitle)) {
 				
 				return Constants.INFORME_TITULO_FILME;
 			}
 	
-			// Envia pro servidor socket o título do filme com o protocolo de comunicação aplicado.
+			String responseFromServerSocket;
 			
-			sendMovieTitleToServerSocket(applyCommunicationProtocol(movieTitle));
-			
-			// Recebe a resposta do servidor socket com o(s) filme(s) encontrado(s) com o protocolo de comunicação aplicado.
-			
-			String responseFromServerSocket = readResponseFromServerSocket();
-			
-	        // Se a resposta do servidor não obedecer o protocolo especificado, significa que outro
+	    	try (PrintWriter writeToServerPrintWriter = 
+	    			new PrintWriter(clientSocket.getOutputStream(), true)){
+	    		
+				// Envia para o servidor socket o título do filme com o protocolo de comunicação aplicado.
+				
+	    		writeToServerPrintWriter.println(applyCommunicationProtocol(movieTitle));
+	    			    				
+				// Recebe a resposta do servidor socket com o(s) filme(s) encontrado(s) com o protocolo de comunicação aplicado.
+				
+				responseFromServerSocket = readResponseFromServerSocket();
+
+	    	} catch (Exception e) {
+				
+				logger.error(e.getMessage());
+				
+				return Constants.MOVIE_TITLE_TO_SERVER_SOCKET_COMMUNICATION_ERROR;
+			}
+	    	
+    		// Se a resposta do servidor não obedecer o protocolo especificado, significa que outro
 	        // servidor respondeu ao cliente. Então será registrado no log a resposta original
 	        // e apresentada ao cliente apenas que a resposta desobedeceu o protocolo.
 	        
@@ -188,53 +152,26 @@ public class IMDbClientSocketImpl implements IMDbClientSocket {
 	        	return Constants.IVALID_MESSAGE_PROTOCOL;
 	        }
 	        
-	        // Retira o protocolo aplicado no servidor socket para exibição puramente dos dados retornados no cliente.
+	        // Retira o protocolo aplicado no servidor socket para exibição puramente dos dados retornados para o cliente.
 	        
 	        return iMDbCommunicationProtocol.
 	        		getMessageWithOutPatternProtocolApplied(responseFromServerSocket);
-	
-	    	}
+	    }
     	finally {
     		
-    		clearAllocatedResources();    		
+    		closeClientSocket();    		
     	}
    }
     
-	/**
-	 * Libera os recursos alocados pelo cliente.
-	 * 
-	 * @return Verdadeiro caso todos os recursos sejam liberados.
-	 */
-	private boolean clearAllocatedResources() {
+	private void closeClientSocket() {
 		
-    	if(!isClientSocketConnected) {
-    		return false;
-    	}
-    	
         try {
-			
-        	readFromServerBufferedReader.close();
-			
-		} catch (IOException e) {
-			
-			logger.error(e.getMessage());
-			
-			return false;
-		}
-        
-        writeToServerPrintWriter.close();
-        
-        try {
-			
+
         	clientSocket.close();
         	
 		} catch (IOException e) {
 			
 			logger.error(e.getMessage());
-			
-			return false;
 		}
-        
-        return true;
     }	
 }

@@ -32,9 +32,9 @@ import com.imdb.query.util.Constants;
 @Singleton
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 
-    private static final Logger logger = LogManager.getLogger("IMDbUrlConnectionImpl");
+    private static final Logger logger = LogManager.getLogger(IMDbUrlConnectionImpl.class);
 
-	private List<Object> movieList = new ArrayList<Object>();
+	private List<Object> movieList = new ArrayList<>();
 	
 	@Override
 	public String getMoviesFound(String movieTitle) {
@@ -45,9 +45,9 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 			return Constants.STRING_EMPTY;
 		}
 		
-		StringBuffer result = new StringBuffer();
+		StringBuilder result = new StringBuilder();
 
-		// Preenche o StringBuffer result apenas com os filmes encontrados (já ordenados na origem) !
+		// Preenche o StringBuilder result apenas com os filmes encontrados (já ordenados na origem) !
 		
 		movieList.
 		stream().
@@ -104,9 +104,13 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
         	}
         }
         
-        // Ordenação para tornar os retornos das pesquisas mais rápidos para os clientes.
+        // Ordenação para tornar os retornos das pesquisas mais rápidas para os clientes.
         
-        movieList = movieList.stream().sorted().collect(Collectors.toList());
+        movieList = 
+        		movieList.
+        		stream().
+        		sorted().
+        		collect(Collectors.toList());
         
         return movieList.size();
     }

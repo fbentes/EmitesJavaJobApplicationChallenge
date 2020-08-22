@@ -26,7 +26,7 @@ import com.imdb.query.util.network.TCPPortUtility;
  */
 public class IMDbServerSocketImpl implements IMDbServerSocket {
 		
-    private static final Logger logger = LogManager.getLogger("IMDbServerSocketImpl");
+    private static final Logger logger = LogManager.getLogger(IMDbServerSocketImpl.class);
 
 	private ServerSocket serverSocket;
 	

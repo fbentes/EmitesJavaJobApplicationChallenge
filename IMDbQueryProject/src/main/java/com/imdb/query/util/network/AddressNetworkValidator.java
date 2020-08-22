@@ -20,7 +20,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class AddressNetworkValidator {
 	
-    private static final Logger logger = LogManager.getLogger("AddressNetworkValidator");
+    private static final Logger logger = LogManager.getLogger(AddressNetworkValidator.class);
 
     private Pattern pattern;
     private Matcher matcher;

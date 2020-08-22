@@ -21,10 +21,6 @@ import com.imdb.query.util.network.TCPPortUtility;
  *  Podem ser pesquisados nomes completos, mas também iniciais de nomes de filmes para o retorno
  *  dos nomes concatenados com "\n". Nesse caso a pesquisa funcionará como um like no SQL !
  *  
- * @author Fábio Bentes
- * @version 1.0.0.0
- * @since 09/08/2020
- * 
  * Tutorial para execução:
  * 
  * C:\Temp\java -jar IMDbClientSocket.jar [ipServidor | porta]
@@ -44,6 +40,10 @@ import com.imdb.query.util.network.TCPPortUtility;
  * - Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC) ou rejeição no caso da porta 6969 (Acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse Acmsoda ou outros serviços afins.
  *
  * - As pesquisas por títulos de filmes podem ser feitas pelo nome completo ou pelo início do nome do título (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra).
+ *
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
  * 
  */
 public class StartClient extends StartBase  {
@@ -54,9 +54,10 @@ public class StartClient extends StartBase  {
     	
     	disableAccessWarnings();
     	
+    	System.out.println("");
     	System.out.println("Iniciando mecanismo de log, aguarde ...");
     	
-    	logger = LogManager.getLogger("StartClient");
+    	logger = LogManager.getLogger(StartClient.class);
     }
 
 	private static String ipServer = Constants.IP_SERVER_DEFAULT;
@@ -68,7 +69,7 @@ public class StartClient extends StartBase  {
 	
 	/**
 	 *  
-	 * @param args[0] pode ser o IP do servidor ou a porta usada. Se for a porta, args.length deve ser 1 !
+	 * @param args[0] pode ser o IP do servidor ou a porta usada.
 	 *  
 	 * Ex.: c:\java -jar IMDbClientSocket.jar 192.168.0.12
 	 *  ou  c:\java -jar IMDbClientSocket.jar 20233

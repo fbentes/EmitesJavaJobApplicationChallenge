@@ -18,7 +18,8 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 
 /**
  * Handler responsável pelos atendimentos das requisições dos clientes.
- *
+ * Cada solicitação do cliente é atendida por essa Thread do servidor socket.
+ * 
  * @author Fábio Bentes
  * @version 1.0.0.0
  * @since 09/08/2020
@@ -26,7 +27,7 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
  */
 public class IMDbClientHandler extends Thread {
 	
-    private static final Logger logger = LogManager.getLogger("IMDbClientHandler");
+    private static final Logger logger = LogManager.getLogger(IMDbClientHandler.class);
 
     private Socket clientSocket;
 
@@ -36,123 +37,63 @@ public class IMDbClientHandler extends Thread {
     @Inject
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
     
-    private PrintWriter writeToClientPrintWriter;
-    
-    private BufferedReader readFromClientBufferedReader;
-    
 	public void setClientSocket(Socket clientSocket) {
     	
     	this.clientSocket = clientSocket;
     }
 	
-	/**
-	 * Initicializa recursos e injeta dependências.
-	 * 
-	 */
-	private boolean isInitializedResources() {
-		
-		IMDbQueryModuleInjector.initialize(this);
-		
-        try {
-			
-        	writeToClientPrintWriter = new PrintWriter(clientSocket.getOutputStream(), true);
-			
-			readFromClientBufferedReader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-			
-			return true;
-
-        } catch (IOException e) {
-			
-			logger.error(e.getMessage());
-			
-			return false;
-		}
-	}
-
-	/**
-	 * Leitura do título do filme enviado pelo client socket que foi digitado pelo usuário.
-	 * 
-	 * @return Título do filme digitado pelo usuário do cliente. 
-	 */
-	private Optional<String> readFromClientSocket() {
-		
-		try {
-			
-			return Optional.ofNullable(readFromClientBufferedReader.readLine());
-			
-		} catch (IOException e) {
-			
-			logger.error("Problema na resposta para o cliente: " + e.getMessage());
-		}
-			
-		return Optional.empty();
-	}
-	
-	/**
-	 * Valida se o cliente socket enviou um título de filme para o servidor.
-	 * 
-	 * @param movieTitle Título do filme.
-	 * @return Verdadeiro se foi digitado um título. Falso caso contrário.
-	 */
-	private boolean isValidMovieTitle(Optional<String> movieTitle) {
-		
-		if(!movieTitle.isPresent() ) {
-			
-            writeToClientPrintWriter.println(Constants.IVALID_MESSAGE_CLIENT_TO_SERVER);
-
-            logger.error(String.format(Constants.IVALID_MESSAGE_CLIENT_TO_SERVER, ""));
-            
-            return false;
-		}
-
-		return true;
-	}
-	
-	/**
-	 * Cada solicitação do cliente é atendida essa Thread do servidor socket.
-	 */
-    
     public void run() {
-    	
-    	try {
-			
-    		if(!isInitializedResources()) {
-    			return;
-    		}
 
-    		// Leitura do título do filme enviado pelo cliente socket.
+    	IMDbQueryModuleInjector.initialize(this);  // Injeta dependências
+
+    	// Aloca recursos para leitura e escrita de/para o cliente socket.
+    	
+		try (BufferedReader readFromClientBufferedReader = new 
+				BufferedReader(
+						new InputStreamReader(clientSocket.getInputStream()));
+			 PrintWriter writeToClientPrintWriter = 
+						new PrintWriter(
+								clientSocket.getOutputStream(), true)) {
+			
+    		// Leitura do título do filme enviado pelo cliente.
     		
-    		Optional<String> movieTitle = readFromClientSocket();
+    		Optional<String> movieTitle = Optional.ofNullable(readFromClientBufferedReader.readLine());    		
     		
-    		if(!isValidMovieTitle(movieTitle)) {
+    		if(!movieTitle.isPresent()) {
     			
-    			return;
+                writeToClientPrintWriter.println(Constants.IVALID_MESSAGE_CLIENT_TO_SERVER);
+
+                return;
     		}
     		       
-    		// Checa se o título do filme foi enviado pelo cliente socket com o protocolo correto. 
+    		// Checa se o título do filme foi recebido do cliente com o protocolo correto. 
     		
             if(!iMDbCommunicationProtocol.isMatchPatternProtocol(movieTitle.get())) {
             	
-                responseToClientSocketWithMessageError(movieTitle.get());
+            	writeToClientPrintWriter.println(Constants.IVALID_MESSAGE_PROTOCOL);
                 
                 return;
             }
             
-            // Remove o protocolo aplicado no título do filme.
+            // Remove o protocolo aplicado pelo cliente no título do filme.
             
             String movieTitleWithOutProtocol = removeMovieTitleProtocolToSearch(movieTitle.get());
             
-            // Retorna o(s) filme(s) encontrado(s).
+            // Retorna o(s) filme(s) encontrado(s) pelo servidor.
             
             String moviesFound = iMDbUrlConnection.getMoviesFound(movieTitleWithOutProtocol);
 
-            // Responde para o cliente socket o(s) filme(s) encontrados com o protocolo de comunicação aplicado.
+            // Responde para o cliente o(s) filme(s) encontrados com o mesmo protocolo de comunicação aplicado pelo cliente.
             
-            responseToClientSocket(applyCommunicationProtocol(moviesFound));			
+            writeToClientPrintWriter.println(applyCommunicationProtocol(moviesFound));	
 		} 
+		catch (IOException e) {
+			
+			logger.error("Problema na resposta para o cliente: " + e.getMessage());
+		}
         finally {
 			
-			clearAllocatedResources();
+			closeClientSocket();
 		}
     }
     
@@ -178,49 +119,14 @@ public class IMDbClientHandler extends Thread {
         return iMDbCommunicationProtocol.getMessageWithOutPatternProtocolApplied(movieTitle);
     }
     
-    
-    /**
-     * Responde para o cliente socket mensagem inválida para protocolo.
-     * 
-     * @param movieTitle Título do filme.
-     */
-    private void responseToClientSocketWithMessageError(String movieTitle) {
+    private void closeClientSocket() {
     	
-         writeToClientPrintWriter.println(Constants.IVALID_MESSAGE_PROTOCOL);
-    }
-
-    /**
-     * Responde para o cliente socket os filmes encontrados pelo servidor.
-     * 
-     * @param moviesFound Filmes encontrados.
-     */
-    private void responseToClientSocket(String moviesFound) {
-    	
-        writeToClientPrintWriter.println(moviesFound);			
-    }
-
-    /**
-     * Libera todos os recursos alocados.
-     * 
-     */
-    private void clearAllocatedResources() {
-    	
-        try {
-			
-        	readFromClientBufferedReader.close();
-			
-		} catch (IOException e) {
-			
-			logger.error(e.getMessage());
-		}
-        
-        writeToClientPrintWriter.close();
-
         try {
 			
         	clientSocket.close();
 			
 		} catch (IOException e) {
+			
 			logger.error(e.getMessage());
 		}
     }

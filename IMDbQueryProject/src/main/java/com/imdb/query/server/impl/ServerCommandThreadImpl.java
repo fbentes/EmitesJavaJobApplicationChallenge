@@ -18,7 +18,7 @@ import com.imdb.query.util.Constants;
  */
 public class ServerCommandThreadImpl extends Thread implements ServerCommandThread {
 
-    private static final Logger logger = LogManager.getLogger("ServerCommandThreadImpl");
+    private static final Logger logger = LogManager.getLogger(ServerCommandThreadImpl.class);
 
     private IMDbServerSocket imdbServerSocket;
     
@@ -32,7 +32,7 @@ public class ServerCommandThreadImpl extends Thread implements ServerCommandThre
 		
     	 synchronized(this) {
     		 
-    			logger.info(String.format("Conectando no servidor na porta %d ...", imdbServerSocket.getPort()));
+				logger.info("");
     			
     			boolean connected = imdbServerSocket.connectToServerSocket();
     			
@@ -52,6 +52,7 @@ public class ServerCommandThreadImpl extends Thread implements ServerCommandThre
 					logger.info("****************************************");
 				}
 
+				logger.info("");
 				logger.info("Carregando a lista de filmes ...");
 				
 				int totalMovies = imdbServerSocket.loadMovieLlistFromImdb();
@@ -60,7 +61,6 @@ public class ServerCommandThreadImpl extends Thread implements ServerCommandThre
 				
 				logger.info(Constants.STRING_EMPTY);
 				logger.info("Esperando requisição do cliente ...");
-				logger.info(Constants.STRING_EMPTY);
 				
 				notify();
     	 }

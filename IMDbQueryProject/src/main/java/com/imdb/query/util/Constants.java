@@ -46,5 +46,7 @@ public class Constants {
 
 	public static final String STRING_EMPTY = "";
 	
-	public static final String INFORME_TITULO_FILME = "Informe o título de filme ou parte inicial. Ex: Bat para buscar filmes que comecem com Bat."; 
+	public static final String INFORME_TITULO_FILME = "Informe o título de filme ou parte inicial. Ex: Bat para buscar filmes que comecem com Bat.";
+	
+	public static final String MOVIE_TITLE_TO_SERVER_SOCKET_COMMUNICATION_ERROR = "Problema na comunicação do título do filme para o servidor.";
 }

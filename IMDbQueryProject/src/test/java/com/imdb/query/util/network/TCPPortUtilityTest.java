@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
-import com.imdb.query.test.TestBase;
+import com.imdb.query.test.util.TestBase;
 import com.imdb.query.util.Constants;
 
 /**
@@ -22,7 +22,7 @@ import com.imdb.query.util.Constants;
 @TestInstance(Lifecycle.PER_CLASS)
 public class TCPPortUtilityTest extends TestBase {
 
-    private static final Logger logger = LogManager.getLogger("TCPPortUtilityTest");
+    private static final Logger logger = LogManager.getLogger(TCPPortUtilityTest.class);
 
     private TCPPortUtility tcpPortValidator;
 	

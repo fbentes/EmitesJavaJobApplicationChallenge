@@ -1,4 +1,4 @@
-package com.imdb.query.test;
+package com.imdb.query.test.util;
 public class TestBase {
 
 	protected String getResultTest(String methodTest, boolean isPassed) {

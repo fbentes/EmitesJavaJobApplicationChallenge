@@ -28,7 +28,7 @@ import com.imdb.query.util.IMDbQueryModuleInjector;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ImdbClientSocketImplTest {
     
-    private static final Logger logger = LogManager.getLogger("ImdbClientSocketImplTest");
+    private static final Logger logger = LogManager.getLogger(ImdbClientSocketImplTest.class);
 
     @Inject
 	private IMDbClientSocket imdbSocketClient;

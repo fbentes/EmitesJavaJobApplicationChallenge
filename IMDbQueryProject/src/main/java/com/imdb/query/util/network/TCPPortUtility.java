@@ -21,7 +21,7 @@ import com.imdb.query.util.Constants;
  */
 public class TCPPortUtility {
 
-    private static final Logger logger = LogManager.getLogger("TCPPortUtility");
+    private static final Logger logger = LogManager.getLogger(TCPPortUtility.class);
 
     /**
 	 * Valida se a porta está dentro da faixa numérica permitida.

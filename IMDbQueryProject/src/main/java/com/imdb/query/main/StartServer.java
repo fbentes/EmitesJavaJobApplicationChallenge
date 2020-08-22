@@ -19,10 +19,6 @@ import com.imdb.query.util.network.TCPPortUtility;
 /**
  *  Classe responsável para iniciar o servidor Socket no prompt de comando.
  *  
- * @author Fábio Bentes
- * @version 1.0.0.0
- * @since 09/08/2020
- * 
  * Tutorial para execução:
  * 
  * C:\Temp\java -jar IMDbServerSocket.jar [porta]
@@ -41,6 +37,10 @@ import com.imdb.query.util.network.TCPPortUtility;
  * - Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. 
  *   Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.
  * 
+ * @author Fábio Bentes
+ * @version 1.0.0.0
+ * @since 09/08/2020
+ * 
  */
 public class StartServer extends StartBase {
 
@@ -50,9 +50,10 @@ public class StartServer extends StartBase {
     	
     	disableAccessWarnings();
     	
+    	System.out.println("");
     	System.out.println("Iniciando mecanismo de log, aguarde ...");
     	
-    	logger = LogManager.getLogger("StartServer");
+    	logger = LogManager.getLogger(StartServer.class);
     }
     
     private static int port = Constants.PORT_DEFAULT;
@@ -99,11 +100,10 @@ public class StartServer extends StartBase {
 
     	do {
 			
-		    logger.info(Constants.STRING_EMPTY);
-			System.out.print("Digite kill para parar o servidor: ");	
+			System.out.print("(Digite kill para parar o servidor)");	
 		    logger.info(Constants.STRING_EMPTY);
 
-		    // Só para o servidor se for digitado, literalmente, "kill" !
+		    // Só para o servidor se for digitado, literalmente, "quit" !
 		    
 	        BufferedReader movieTitleBufferedReader =  
 	                new BufferedReader(new InputStreamReader(System.in)); 
@@ -116,7 +116,6 @@ public class StartServer extends StartBase {
 				
 			} catch (IOException e) {
 				
-				logger.info("Problema na leitura do teclado: " + e.getMessage());
 				logger.info("Problema na leitura do teclado: " + e.getMessage());
 				
 				readKeyboard = Optional.of("kill");

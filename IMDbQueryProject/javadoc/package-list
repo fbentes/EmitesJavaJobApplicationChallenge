@@ -3,7 +3,7 @@ com.imdb.query.client.impl
 com.imdb.query.main
 com.imdb.query.server
 com.imdb.query.server.impl
-com.imdb.query.test
+com.imdb.query.test.util
 com.imdb.query.util
 com.imdb.query.util.network
 com.imdb.query.util.protocol
