@@ -4093,3 +4093,47 @@ Uma Mente Brilhante
 2020-08-21 23:37:46 [main] INFO  StartServer:137 - 
 2020-08-21 23:37:46 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
 2020-08-21 23:37:46 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-22 19:50:26 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-22 19:50:26 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-22 19:50:26 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-22 19:50:26 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-22 19:50:29 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-22 19:50:29 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-22 19:50:29 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-22 19:50:29 [main] INFO  StartServer:104 - 
+2020-08-22 19:51:26 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-22 19:51:26 [main] INFO  StartServer:137 - 
+2020-08-22 19:51:26 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-22 19:51:41 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-22 19:51:41 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-22 19:51:41 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-22 19:51:41 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-22 19:51:44 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-22 19:51:44 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-22 19:51:44 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-22 19:51:44 [main] INFO  StartServer:104 - 
+2020-08-22 19:51:48 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-22 19:51:48 [main] INFO  StartServer:137 - 
+2020-08-22 19:51:48 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-22 19:54:08 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-22 19:54:08 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-22 19:54:08 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-22 19:54:08 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-22 19:54:11 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-22 19:54:11 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-22 19:54:11 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-22 19:54:11 [main] INFO  StartServer:104 - 
+2020-08-22 19:54:14 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-22 19:54:14 [main] INFO  StartServer:137 - 
+2020-08-22 19:54:14 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-22 20:26:01 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-22 20:26:06 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-22 20:26:06 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-22 20:26:06 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-22 20:26:12 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-22 20:26:12 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-22 20:26:12 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-22 20:26:18 [main] INFO  StartServer:104 - 
+2020-08-22 20:26:27 [main] INFO  StartServer:137 - 
+2020-08-22 20:26:27 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-22 20:26:27 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!

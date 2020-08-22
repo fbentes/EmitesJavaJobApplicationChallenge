@@ -15,13 +15,41 @@ public class StartBase {
 
 	protected static String INPUT_QUIT = "quit";
 	
+	private static String javaVersion;
+	
+	private static boolean isJavaVersion8OrHigher() {
+		
+		// Versão mínima aceitável: 1.8.0_265
+		// Versão  "14.0.1" não é compatível
+		
+		javaVersion = System.getProperty("java.version");   
+		
+		String majorVersionOnly = javaVersion.substring(0, 3);
+		
+		Double versionValue = Double.parseDouble(majorVersionOnly);
+		
+		return versionValue >= 1.8;
+	}
+	
 	/**
 	 * Método para desabilitar warnings no console devido a diferentes versões do Java, pois poluem a tela.
 	 * 
 	 * OBS.: Carece de um melhor tratamento no futuro !
 	 * 
 	 */
-	public static void disableAccessWarnings() {
+	protected static void disableAccessWarnings() {
+		
+		if(!isJavaVersion8OrHigher()) {
+			
+			System.out.println("");
+			
+			System.out.println("A versão atual do seu Java é " + javaVersion +".");
+			System.out.println("Esse projeto só permite versões do Java >= 1.8 !");
+
+			System.out.println("");
+			
+			Runtime.getRuntime().exit(0);
+		}
 		
         try {
             
