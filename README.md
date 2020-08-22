@@ -22,6 +22,7 @@
 
 #### Tutorial para executar a solução pelo prompt de comando:
 
+> OBS.: Se você for apenas executar em linha de comando os *.jar sem baixar os fontes, tenha instalado um JRE 8, **no mínimo**, e devidamente setado seu diretório \bin na variável de ambiente PATH.
 
 1) Baixar da pasta os executáveis [**IMDbServerSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbServerSocket.jar) e [**IMDbClientSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbClientSocket.jar) num diretório local (Ex.: **C:\Temp**).
 
