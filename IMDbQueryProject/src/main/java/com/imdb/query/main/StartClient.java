@@ -144,8 +144,6 @@ public class StartClient extends StartBase  {
 					
 					port = Integer.parseInt(optionalFirstArg.get());
 					
-					logger.info(String.format("O argumento %s é uma porta válida !", optionalFirstArg.get()));
-
 					retorno = true;				
 				}
 			}

@@ -6,9 +6,6 @@ package com.imdb.query.util.network;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * Responsável pela validação de IP.
  * 
@@ -20,8 +17,6 @@ import org.apache.logging.log4j.Logger;
  */
 public class AddressNetworkValidator {
 	
-    private static final Logger logger = LogManager.getLogger(AddressNetworkValidator.class);
-
     private Pattern pattern;
     private Matcher matcher;
     
@@ -42,12 +37,6 @@ public class AddressNetworkValidator {
 		pattern = Pattern.compile(IPADDRESS_PATTERN);
 		matcher = pattern.matcher(ipAddress);
 	    
-		boolean isMatch = matcher.matches();
-		
-		if(!isMatch) {
-			logger.info(String.format("O IP %s é inválido !", ipAddress));
-		}
-		
-		return isMatch;   
+		return  matcher.matches();
 	}
 }
