@@ -6,7 +6,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
@@ -39,9 +38,8 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 	@Override
 	public String getMoviesFound(String movieTitle) {
 		
-		Optional<String> optionalMovieTitle = Optional.ofNullable(movieTitle);
-		
-		if(!optionalMovieTitle.isPresent()) {
+		if(movieTitle == null || movieTitle.trim().equals("")) {
+			
 			return Constants.STRING_EMPTY;
 		}
 		
@@ -52,12 +50,12 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		movieList.
 		stream().
 		filter(title -> 
-		title.toString().trim().toLowerCase().contains(optionalMovieTitle.get().trim().toLowerCase())).
+				title.toString().trim().toLowerCase().contains(movieTitle.trim().toLowerCase())).
 		forEach(title -> result.append(title + "\n"));
 		
 		return (result.length() > 0 ? 
 				result.toString() : 
-					"Nenhum filme foi encontrado com o título '" + optionalMovieTitle.get().trim() + "' !");
+					"Nenhum filme foi encontrado com o título '" + movieTitle.trim() + "' !");
 	}
 	
 	@Override

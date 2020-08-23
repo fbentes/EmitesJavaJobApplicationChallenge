@@ -123,3 +123,651 @@ Batman: O Cavaleiro das Trevas Ressurge
 2020-08-22 14:54:50 [main] INFO  StartServer:137 - 
 2020-08-22 14:54:50 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
 2020-08-22 14:54:50 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-22 21:27:04 [main] INFO  StartClient:239 - 
+2020-08-22 21:27:04 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:27:04 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:27:04 [main] INFO  StartClient:207 - 
+2020-08-22 21:27:04 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:27:04 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+2001: Uma Odisséia no Espaço
+3 Idiotas
+A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+Bancando o Águia
+Barry Lyndon
+Bastardos Inglórios
+Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+Beleza Americana
+Blade Runner: O Caçador de Androides
+Brilho Eterno de uma Mente sem Lembranças
+Cafarnaum
+Cantando na Chuva
+Casablanca
+Cassino
+Chinatown
+Cidade de Deus
+Cidadão Kane
+Cinema Paradiso
+Clube da Luta
+Como Estrelas na Terra
+Como Treinar o Seu Dragão
+Conta Comigo
+Coração Valente
+Coringa
+Cães de Aluguel
+Dangal
+De Volta para o Futuro
+Disque M para Matar
+Divertida Mente
+Django Livre
+Dr. Fantástico
+Duro de Matar
+Em Busca do Ouro
+Em Nome do Pai
+Era uma Vez em Tóquio
+Era uma Vez na América
+Era uma Vez no Oeste
+Fargo: Uma Comédia de Erros
+Filhos do Paraíso
+Fogo Contra Fogo
+Ford vs Ferrari
+Forrest Gump: O Contador de Histórias
+Gangues de Wasseypur
+Garota Exemplar
+Gladiador
+Glória Feita de Sangue
+Gran Torino
+Green Book: O Guia
+Guerra nas Estrelas
+Hamilton
+Harakiri
+Harry Potter e as Relíquias da Morte - Parte 2
+Histórias Cruzadas
+Homem-Aranha no Aranhaverso
+Hotel Ruanda
+Ilha do Medo
+Indiana Jones e a Última Cruzada
+Interestelar
+Intriga Internacional
+Janela Indiscreta
+Jogos, Trapaças e Dois Canos Fumegantes
+Julgamento em Nuremberg
+Jurassic Park: O Parque dos Dinossauros
+Klaus
+Ladrões de Bicicletas
+Lagaan: Era uma Vez na Índia
+Laranja Mecânica
+Lawrence da Arábia
+Logan
+Los Angeles: Cidade Proibida
+Luzes da Cidade
+M, o Vampiro de Dusseldorf
+Mad Max: Estrada da Fúria
+Mary e Max: Uma Amizade Diferente
+Matrix
+Memórias de um Assassino
+Menina de Ouro
+Meu Amigo Totoro
+Meu Pai e Meu Filho
+Monstros S.A.
+Monty Python em Busca do Cálice Sagrado
+Morangos Silvestres
+Na Natureza Selvagem
+Nascido para Matar
+Nausicaä do Vale do Vento
+O Bandido
+O Barco: Inferno no Mar
+O Castelo Animado
+O Enigma de Outro Mundo
+O Exterminador do Futuro
+O Exterminador do Futuro 2: O Julgamento Final
+O Fabuloso Destino de Amélie Poulain
+O Franco Atirador
+O Garoto
+O Grande Ditador
+O Grande Hotel Budapeste
+O Grande Lebowski
+O Grande Truque
+O Homem Elefante
+O Iluminado
+O Labirinto do Fauno
+O Lobo de Wall Street
+O Martírio de Joana D'Arc
+O Pianista
+O Profissional
+O Quarto de Jack
+O Resgate do Soldado Ryan
+O Salário do Medo
+O Senhor dos Anéis: A Sociedade do Anel
+O Senhor dos Anéis: As Duas Torres
+O Senhor dos Anéis: O Retorno do Rei
+O Show de Truman: O Show da Vida
+O Sol é para Todos
+O Tesouro da Sierra Madre
+Onde os Fracos Não Têm Vez
+Os Bons Companheiros
+Os Caçadores da Arca Perdida
+Os Infiltrados
+Os Sete Samurais
+Pacto de Sangue
+Parasita
+Paris, Texas
+Pinte de Açafrão
+Platoon
+Por uns Dólares a Mais
+Prenda-me se for Capaz
+Princesa Mononoke
+Procurando Nemo
+Pulp Fiction: Tempo de Violência
+Quando Duas Mulheres Pecam
+Quanto Mais Quente Melhor
+Ran
+Rashomon
+Rebecca, a Mulher Inesquecível
+Rebeldia Indomável
+Rede de Intrigas
+Relatos Selvagens
+Retrato de uma Jovem em Chamas
+Rocky: Um Lutador
+Rush: No Limite da Emoção
+Réquiem para um Sonho
+Sangue Negro
+Scarface
+Se Meu Apartamento Falasse
+Sempre ao Seu Lado
+Seven: Os Sete Crimes Capitais
+Sindicato de Ladrões
+Snatch: Porcos e Diamantes
+Sociedade dos Poetas Mortos
+Spotlight: Segredos Revelados
+Stalker
+Star Wars, Episódio V: O Império Contra-Ataca
+Star Wars, Episódio VI: O Retorno do Jedi
+Swades: We, the People
+Taxi Driver: Motorista de Táxi
+Testemunha de Acusação
+Trainspotting: Sem Limites
+Trono Manchado de Sangue
+Três Anúncios para um Crime
+Túmulo dos Vagalumes
+Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+Up: Altas Aventuras
+V de Vingança
+Vingadores: Guerra Infinita
+Vingadores: Ultimato
+Viva: A Vida é uma Festa
+Vá e Veja
+WALL·E
+Whiplash: Em Busca da Perfeição
+Yojimbo, o Guarda-Costas
+Your Name.
+À Espera de um Milagre
+
+
+2020-08-22 21:27:04 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:27:04 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:27:04 [main] INFO  StartClient:239 - 
+2020-08-22 21:27:04 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:27:18 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:27:18 [main] INFO  StartClient:207 - 
+2020-08-22 21:27:18 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:27:18 [main] INFO  StartClient:209 - 12 Homens e uma Sentença
+2001: Uma Odisséia no Espaço
+Brilho Eterno de uma Mente sem Lembranças
+Cafarnaum
+Era uma Vez em Tóquio
+Era uma Vez na América
+Era uma Vez no Oeste
+Fargo: Uma Comédia de Erros
+Forrest Gump: O Contador de Histórias
+Jogos, Trapaças e Dois Canos Fumegantes
+Kill Bill: Volume 1
+Lagaan: Era uma Vez na Índia
+Mary e Max: Uma Amizade Diferente
+Memórias de um Assassino
+O Iluminado
+O Show de Truman: O Show da Vida
+Retrato de uma Jovem em Chamas
+Rocky: Um Lutador
+Réquiem para um Sonho
+Três Anúncios para um Crime
+Túmulo dos Vagalumes
+Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+Viva: A Vida é uma Festa
+À Espera de um Milagre
+
+
+2020-08-22 21:27:18 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:27:18 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:27:18 [main] INFO  StartClient:239 - 
+2020-08-22 21:27:18 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:27:21 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:27:21 [main] INFO  StartClient:207 - 
+2020-08-22 21:27:21 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:27:21 [main] INFO  StartClient:209 - Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-22 21:27:21 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:27:21 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:27:21 [main] INFO  StartClient:239 - 
+2020-08-22 21:27:21 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:27:25 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:27:25 [main] INFO  StartClient:207 - 
+2020-08-22 21:27:25 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:27:25 [main] INFO  StartClient:209 - Como Estrelas na Terra
+Como Treinar o Seu Dragão
+
+
+2020-08-22 21:27:25 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:27:25 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:27:25 [main] INFO  StartClient:239 - 
+2020-08-22 21:27:25 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:27:28 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:27:28 [main] INFO  StartClient:207 - 
+2020-08-22 21:27:28 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:27:28 [main] INFO  StartClient:209 - A Separação
+Cinema Paradiso
+De Volta para o Futuro
+Disque M para Matar
+Filhos do Paraíso
+Nascido para Matar
+O Sol é para Todos
+Parasita
+Réquiem para um Sonho
+Três Anúncios para um Crime
+
+
+2020-08-22 21:27:28 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:27:28 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:27:28 [main] INFO  StartClient:239 - 
+2020-08-22 21:27:28 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:27:31 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:27:31 [main] INFO  StartClient:207 - 
+2020-08-22 21:27:31 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:27:31 [main] INFO  StartClient:209 - Disque M para Matar
+Duro de Matar
+Nascido para Matar
+
+
+2020-08-22 21:27:32 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:27:32 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:27:32 [main] INFO  StartClient:239 - 
+2020-08-22 21:27:32 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:27:34 [main] INFO  StartClient:215 - 
+2020-08-22 21:27:34 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-22 21:29:00 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:00 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:04 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:29:04 [main] INFO  StartClient:207 - 
+2020-08-22 21:29:04 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:29:04 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+2001: Uma Odisséia no Espaço
+3 Idiotas
+A Batalha de Argel
+A Caça
+A Chantagem
+A Criada
+A Felicidade Não se Compra
+A General
+A Lista de Schindler
+A Malvada
+A Mulher Faz o Homem
+A Origem
+A Outra História Americana
+A Ponte do Rio Kwai
+A Princesa Prometida
+A Queda! As Últimas Horas de Hitler
+A Separação
+A Viagem de Chihiro
+A Vida de Brian
+A Vida dos Outros
+A Vida é Bela
+A Voz do Silêncio
+Aconteceu Naquela Noite
+Alien - O 8º Passageiro
+Aliens, o Resgate
+Amadeus
+Amnésia
+Amor à Flor da Pele
+Amores Brutos
+Anand
+Andrei Rublev
+Antes do Amanhecer
+Antes do Pôr-do-Sol
+Apocalypse Now
+Assassinato às Cegas
+Até o Último Homem
+Bancando o Águia
+Barry Lyndon
+Bastardos Inglórios
+Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+Beleza Americana
+Blade Runner: O Caçador de Androides
+Brilho Eterno de uma Mente sem Lembranças
+Cafarnaum
+Cantando na Chuva
+Casablanca
+Cassino
+Chinatown
+Cidade de Deus
+Cidadão Kane
+Cinema Paradiso
+Clube da Luta
+Como Estrelas na Terra
+Como Treinar o Seu Dragão
+Conta Comigo
+Coração Valente
+Coringa
+Cães de Aluguel
+Dangal
+De Volta para o Futuro
+Disque M para Matar
+Divertida Mente
+Django Livre
+Dr. Fantástico
+Duro de Matar
+Em Busca do Ouro
+Em Nome do Pai
+Era uma Vez em Tóquio
+Era uma Vez na América
+Era uma Vez no Oeste
+Fargo: Uma Comédia de Erros
+Filhos do Paraíso
+Fogo Contra Fogo
+Ford vs Ferrari
+Forrest Gump: O Contador de Histórias
+Gangues de Wasseypur
+Garota Exemplar
+Gladiador
+Glória Feita de Sangue
+Gran Torino
+Green Book: O Guia
+Guerra nas Estrelas
+Hamilton
+Harakiri
+Harry Potter e as Relíquias da Morte - Parte 2
+Histórias Cruzadas
+Homem-Aranha no Aranhaverso
+Hotel Ruanda
+Ilha do Medo
+Indiana Jones e a Última Cruzada
+Interestelar
+Intriga Internacional
+Janela Indiscreta
+Jogos, Trapaças e Dois Canos Fumegantes
+Julgamento em Nuremberg
+Jurassic Park: O Parque dos Dinossauros
+Klaus
+Ladrões de Bicicletas
+Lagaan: Era uma Vez na Índia
+Laranja Mecânica
+Lawrence da Arábia
+Logan
+Los Angeles: Cidade Proibida
+Luzes da Cidade
+M, o Vampiro de Dusseldorf
+Mad Max: Estrada da Fúria
+Mary e Max: Uma Amizade Diferente
+Matrix
+Memórias de um Assassino
+Menina de Ouro
+Meu Amigo Totoro
+Meu Pai e Meu Filho
+Monstros S.A.
+Monty Python em Busca do Cálice Sagrado
+Morangos Silvestres
+Na Natureza Selvagem
+Nascido para Matar
+Nausicaä do Vale do Vento
+O Bandido
+O Barco: Inferno no Mar
+O Castelo Animado
+O Enigma de Outro Mundo
+O Exterminador do Futuro
+O Exterminador do Futuro 2: O Julgamento Final
+O Fabuloso Destino de Amélie Poulain
+O Franco Atirador
+O Garoto
+O Grande Ditador
+O Grande Hotel Budapeste
+O Grande Lebowski
+O Grande Truque
+O Homem Elefante
+O Iluminado
+O Labirinto do Fauno
+O Lobo de Wall Street
+O Martírio de Joana D'Arc
+O Pianista
+O Profissional
+O Quarto de Jack
+O Resgate do Soldado Ryan
+O Salário do Medo
+O Senhor dos Anéis: A Sociedade do Anel
+O Senhor dos Anéis: As Duas Torres
+O Senhor dos Anéis: O Retorno do Rei
+O Show de Truman: O Show da Vida
+O Sol é para Todos
+O Tesouro da Sierra Madre
+Onde os Fracos Não Têm Vez
+Os Bons Companheiros
+Os Caçadores da Arca Perdida
+Os Infiltrados
+Os Sete Samurais
+Pacto de Sangue
+Parasita
+Paris, Texas
+Pinte de Açafrão
+Platoon
+Por uns Dólares a Mais
+Prenda-me se for Capaz
+Princesa Mononoke
+Procurando Nemo
+Pulp Fiction: Tempo de Violência
+Quando Duas Mulheres Pecam
+Quanto Mais Quente Melhor
+Ran
+Rashomon
+Rebecca, a Mulher Inesquecível
+Rebeldia Indomável
+Rede de Intrigas
+Relatos Selvagens
+Retrato de uma Jovem em Chamas
+Rocky: Um Lutador
+Rush: No Limite da Emoção
+Réquiem para um Sonho
+Sangue Negro
+Scarface
+Se Meu Apartamento Falasse
+Sempre ao Seu Lado
+Seven: Os Sete Crimes Capitais
+Sindicato de Ladrões
+Snatch: Porcos e Diamantes
+Sociedade dos Poetas Mortos
+Spotlight: Segredos Revelados
+Stalker
+Star Wars, Episódio V: O Império Contra-Ataca
+Star Wars, Episódio VI: O Retorno do Jedi
+Swades: We, the People
+Taxi Driver: Motorista de Táxi
+Testemunha de Acusação
+Trainspotting: Sem Limites
+Trono Manchado de Sangue
+Três Anúncios para um Crime
+Túmulo dos Vagalumes
+Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+Up: Altas Aventuras
+V de Vingança
+Vingadores: Guerra Infinita
+Vingadores: Ultimato
+Viva: A Vida é uma Festa
+Vá e Veja
+WALL·E
+Whiplash: Em Busca da Perfeição
+Yojimbo, o Guarda-Costas
+Your Name.
+À Espera de um Milagre
+
+
+2020-08-22 21:29:04 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:29:04 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:29:04 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:04 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:06 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:29:06 [main] INFO  StartClient:207 - 
+2020-08-22 21:29:06 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:29:06 [main] INFO  StartClient:209 - 12 Homens e uma Sentença
+2001: Uma Odisséia no Espaço
+Brilho Eterno de uma Mente sem Lembranças
+Cafarnaum
+Era uma Vez em Tóquio
+Era uma Vez na América
+Era uma Vez no Oeste
+Fargo: Uma Comédia de Erros
+Forrest Gump: O Contador de Histórias
+Jogos, Trapaças e Dois Canos Fumegantes
+Kill Bill: Volume 1
+Lagaan: Era uma Vez na Índia
+Mary e Max: Uma Amizade Diferente
+Memórias de um Assassino
+O Iluminado
+O Show de Truman: O Show da Vida
+Retrato de uma Jovem em Chamas
+Rocky: Um Lutador
+Réquiem para um Sonho
+Três Anúncios para um Crime
+Túmulo dos Vagalumes
+Um Contratempo
+Um Corpo que Cai
+Um Estranho no Ninho
+Um Sonho de Liberdade
+Uma Mente Brilhante
+Viva: A Vida é uma Festa
+À Espera de um Milagre
+
+
+2020-08-22 21:29:06 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:29:06 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:29:06 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:06 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:09 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:29:09 [main] INFO  StartClient:207 - 
+2020-08-22 21:29:09 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:29:09 [main] INFO  StartClient:209 - O Show de Truman: O Show da Vida
+Rashomon
+
+
+2020-08-22 21:29:09 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:29:09 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:29:09 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:09 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:11 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:29:11 [main] INFO  StartClient:207 - 
+2020-08-22 21:29:11 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:29:11 [main] INFO  StartClient:209 - A Batalha de Argel
+Batman Begins
+Batman: O Cavaleiro das Trevas
+Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-22 21:29:11 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:29:11 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:29:11 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:11 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:13 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:29:13 [main] INFO  StartClient:207 - 
+2020-08-22 21:29:13 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:29:13 [main] INFO  StartClient:209 - Como Estrelas na Terra
+Como Treinar o Seu Dragão
+
+
+2020-08-22 21:29:13 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:29:13 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:29:13 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:13 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:18 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:29:18 [main] INFO  StartClient:207 - 
+2020-08-22 21:29:18 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:29:18 [main] INFO  StartClient:209 - Batman: O Cavaleiro das Trevas Ressurge
+
+
+2020-08-22 21:29:18 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:29:18 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:29:18 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:18 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:21 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 21:29:21 [main] INFO  StartClient:207 - 
+2020-08-22 21:29:21 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 21:29:21 [main] INFO  StartClient:209 - 3 Idiotas
+O 3º Homem
+Toy Story 3
+
+
+2020-08-22 21:29:21 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 21:29:21 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 21:29:21 [main] INFO  StartClient:239 - 
+2020-08-22 21:29:21 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 21:29:38 [main] INFO  StartClient:215 - 
+2020-08-22 21:29:38 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-23 19:30:20 [main] INFO  StartClient:32 - javaVersion = 1.8.0_231
+2020-08-23 19:30:20 [main] INFO  StartClient:36 - majorVersionOnly = 1.8
+2020-08-23 19:30:20 [main] INFO  StartClient:40 - versionValue = 1.8
+2020-08-23 19:30:20 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-23 19:30:20 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-23 19:30:20 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-23 19:30:20 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-23 19:30:22 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-23 19:30:22 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-23 19:30:22 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-23 19:30:22 [main] INFO  StartServer:104 - 

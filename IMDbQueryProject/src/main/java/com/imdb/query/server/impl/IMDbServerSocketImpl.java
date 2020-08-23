@@ -116,7 +116,7 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 					break;
 				}
 				
-				logger.error("Tentiva " + attemptsToAcceptClientRequest + ". Problema na espera de requisição do cliente: " + e.getMessage());
+				logger.error("Tentiva " + attemptsToAcceptClientRequest + ". Problema no aceite da requisição do cliente: " + e.getMessage());
 				
 				// Tenta 30 vezes receber requisição do cliente. Se ultrapassar encerra o servidor.
 				

@@ -3,9 +3,6 @@ package com.imdb.query.main;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * Responsável para suprimir mensagens de alertas no start.
  * 
@@ -16,8 +13,6 @@ import org.apache.logging.log4j.Logger;
  */
 public class StartBase {
 
-	private static final Logger logger = LogManager.getLogger(StartClient.class);
-
 	protected static String INPUT_QUIT = "quit";
 	
 	private static String javaVersion;
@@ -25,19 +20,13 @@ public class StartBase {
 	private static boolean isJavaVersion8OrHigher() {
 		
 		// Versão mínima aceitável: 1.8.0_265
-		// Versão  "14.0.1" não é compatível
+		// Versões  <= 1.8 não são compatíveis.
 		
 		javaVersion = System.getProperty("java.version");   
 		
-		logger.info("javaVersion = " + javaVersion);
-		
 		String majorVersionOnly = javaVersion.substring(0, 3);
 		
-		logger.info("majorVersionOnly = " + majorVersionOnly);
-		
 		Double versionValue = Double.parseDouble(majorVersionOnly);
-		
-		logger.info("versionValue = " + versionValue);
 		
 		return versionValue >= 1.8;
 	}
@@ -52,12 +41,12 @@ public class StartBase {
 		
 		if(!isJavaVersion8OrHigher()) {
 			
-			logger.info("");
+			System.out.println("");
 			
-			logger.info("A versão atual do seu Java é " + javaVersion +".");
-			logger.info("Esse projeto só permite versões do Java >= 1.8 !");
+			System.out.println("A versão atual do seu Java é " + javaVersion +".");
+			System.out.println("Esse projeto só permite versões do Java >= 1.8 !");
 
-			logger.info("");
+			System.out.println("");
 			
 			Runtime.getRuntime().exit(0);
 		}
