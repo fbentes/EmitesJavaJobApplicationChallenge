@@ -37,7 +37,7 @@
         
 >    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
 
-Exemplo de execução de dois servidores socketes, um na porta padrão 20222 e outro na porta 32987:
+Exemplo de execução de dois servidores socketes, um na porta padrão 20222 e outro na porta 32987. Ambos esperando requisições dos clientes:
 
 ![Exemplo ServerSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ServerSocket_Exemplo.jpg)
 
