@@ -37,7 +37,7 @@
         
 >    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
 
-Exemplo de execução:
+Exemplo de execução de dois servidores socketes, um na porta padrão 20222 e outro na porta 32987:
 
 ![Exemplo ServerSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ServerSocket_Exemplo.jpg)
 
@@ -62,15 +62,19 @@ Exemplo de execução:
         
 >   **Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.**
 
+Exemplo de execução de dois clientes sockets, um na porta padrão e outro na porta 32987. Cada um requisitando para uma instância de servidor socket:
+
 ![Exemplo ClientSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ClientSocket_Exemplo.jpg)
 
 >   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC), ou         rejeição no caso da porta 6969 (serviço acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse acmsoda ou outros serviços afins.
 
 >   **As pesquisas por títulos de filmes podem ser feitas pelo nome completo, ou pelo início do nome, do título do filme (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra)**.
 
-![Exemplo de comunicação](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/Exemplo_Comunicacao.jpg)
-
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
+
+Exemplo de execução de três clientes sockets concorrendo em requisições para um mesmo servidor socket na porta padrão 20222:
+
+![Exemplo de comunicação](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/Exemplo_Comunicacao.jpg)
 
 ### Referências:
 
