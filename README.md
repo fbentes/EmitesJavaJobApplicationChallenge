@@ -62,6 +62,7 @@
 
 >   **As pesquisas por títulos de filmes podem ser feitas pelo nome completo, ou pelo início do nome, do título do filme (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra)**.
 
+![Exemplo de comunicação](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/Exemplo_Comunicacao.jpg)
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
 ### Referências:
