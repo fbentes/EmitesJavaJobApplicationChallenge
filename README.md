@@ -54,15 +54,15 @@ Exemplo de execução:
         
         C:\Temp\java -jar IMDbClientSocket.jar  (conecta no servidor em localhost e porta padrão 20222).
    
-        C:\Temp\java -jar IMDbClientSocket.jar 34985 (conecta no servidor em localhost e porta 34985).
+        C:\Temp\java -jar IMDbClientSocket.jar 32987 (conecta no servidor em localhost e porta 32987).
    
         C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 (conecta no servidor em 192.168.0.16 e porta padrão 20222).
         
-        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 33845 (conecta no servidor em 192.168.0.16 e porta 33845).
+        C:\Temp\java -jar IMDbClientSocket.jar 192.168.0.16 32987 (conecta no servidor em 192.168.0.16 e porta 32987).
         
 >   **Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.**
 
-![Exemplo ClientSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ClientSocket_Execucao.jpg)
+![Exemplo ClientSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ClientSocket_Exemplo.jpg)
 
 >   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC), ou         rejeição no caso da porta 6969 (serviço acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse acmsoda ou outros serviços afins.
 
