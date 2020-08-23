@@ -37,6 +37,10 @@
         
 >    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
 
+Exemplo de execução:
+
+![Exemplo ServerSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ServerSocket_Exemplo.jpg)
+
 >    Um servidor socket é instanciado numa Thread filha para que a Thread principal possa gerenciá-lo. E o servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
 
 >    Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.
@@ -58,11 +62,14 @@
         
 >   **Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.**
 
+![Exemplo ClientSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ClientSocket_Execucao.jpg)
+
 >   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC), ou         rejeição no caso da porta 6969 (serviço acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse acmsoda ou outros serviços afins.
 
 >   **As pesquisas por títulos de filmes podem ser feitas pelo nome completo, ou pelo início do nome, do título do filme (Ex.: 'Batman' para retornar todos os filmes que comecem por essa palavra)**.
 
 ![Exemplo de comunicação](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/Exemplo_Comunicacao.jpg)
+
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
 ### Referências:
