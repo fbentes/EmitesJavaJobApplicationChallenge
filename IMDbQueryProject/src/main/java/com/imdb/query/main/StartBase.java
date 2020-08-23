@@ -3,6 +3,9 @@ package com.imdb.query.main;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Responsável para suprimir mensagens de alertas no start.
  * 
@@ -12,6 +15,8 @@ import java.lang.reflect.Method;
  *
  */
 public class StartBase {
+
+	private static final Logger logger = LogManager.getLogger(StartClient.class);
 
 	protected static String INPUT_QUIT = "quit";
 	
@@ -24,9 +29,15 @@ public class StartBase {
 		
 		javaVersion = System.getProperty("java.version");   
 		
+		logger.info("javaVersion = " + javaVersion);
+		
 		String majorVersionOnly = javaVersion.substring(0, 3);
 		
+		logger.info("majorVersionOnly = " + majorVersionOnly);
+		
 		Double versionValue = Double.parseDouble(majorVersionOnly);
+		
+		logger.info("versionValue = " + versionValue);
 		
 		return versionValue >= 1.8;
 	}
@@ -41,12 +52,12 @@ public class StartBase {
 		
 		if(!isJavaVersion8OrHigher()) {
 			
-			System.out.println("");
+			logger.info("");
 			
-			System.out.println("A versão atual do seu Java é " + javaVersion +".");
-			System.out.println("Esse projeto só permite versões do Java >= 1.8 !");
+			logger.info("A versão atual do seu Java é " + javaVersion +".");
+			logger.info("Esse projeto só permite versões do Java >= 1.8 !");
 
-			System.out.println("");
+			logger.info("");
 			
 			Runtime.getRuntime().exit(0);
 		}

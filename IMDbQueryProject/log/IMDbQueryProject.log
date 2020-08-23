@@ -4137,3 +4137,82 @@ Uma Mente Brilhante
 2020-08-22 20:26:27 [main] INFO  StartServer:137 - 
 2020-08-22 20:26:27 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
 2020-08-22 20:26:27 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-22 20:50:28 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-22 20:50:28 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-22 20:50:28 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-22 20:50:28 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-22 20:50:31 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-22 20:50:31 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-22 20:50:31 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-22 20:50:31 [main] INFO  StartServer:104 - 
+2020-08-22 20:50:40 [main] INFO  StartClient:239 - 
+2020-08-22 20:50:40 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 20:50:50 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 20:50:50 [main] INFO  StartClient:207 - 
+2020-08-22 20:50:50 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 20:50:50 [main] INFO  StartClient:209 - Nenhum filme foi encontrado com o título 'anos' !
+
+2020-08-22 20:50:50 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 20:50:50 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 20:50:50 [main] INFO  StartClient:239 - 
+2020-08-22 20:50:50 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 20:50:55 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 20:50:55 [main] INFO  StartClient:207 - 
+2020-08-22 20:50:55 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 20:50:55 [main] INFO  StartClient:209 - Nenhum filme foi encontrado com o título 'Anos' !
+
+2020-08-22 20:50:55 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 20:50:55 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 20:50:55 [main] INFO  StartClient:239 - 
+2020-08-22 20:50:55 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 20:50:57 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 20:50:57 [main] INFO  StartClient:207 - 
+2020-08-22 20:50:57 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 20:50:57 [main] INFO  StartClient:209 - 12 Anos de Escravidão
+12 Homens e uma Sentença
+
+
+2020-08-22 20:50:57 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 20:50:57 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 20:50:57 [main] INFO  StartClient:239 - 
+2020-08-22 20:50:57 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 20:51:02 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 20:51:02 [main] INFO  StartClient:207 - 
+2020-08-22 20:51:02 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 20:51:02 [main] INFO  StartClient:209 - De Volta para o Futuro
+
+
+2020-08-22 20:51:02 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 20:51:02 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 20:51:02 [main] INFO  StartClient:239 - 
+2020-08-22 20:51:02 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 20:51:08 [main] INFO  StartClient:225 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-22 20:51:08 [main] INFO  StartClient:207 - 
+2020-08-22 20:51:08 [main] INFO  StartClient:208 - Resposta:
+2020-08-22 20:51:08 [main] INFO  StartClient:209 - Parasita
+
+
+2020-08-22 20:51:08 [main] INFO  StartClient:210 - Conexão com o servidor fechada !
+2020-08-22 20:51:08 [main] INFO  StartClient:211 - ******************************************************
+2020-08-22 20:51:08 [main] INFO  StartClient:239 - 
+2020-08-22 20:51:08 [main] INFO  StartClient:240 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-22 20:51:15 [main] INFO  StartClient:215 - 
+2020-08-22 20:51:15 [main] INFO  StartClient:216 - Cliente finalizado pelo usuário !!!
+2020-08-22 20:52:17 [main] INFO  StartServer:104 - 
+2020-08-22 20:52:20 [main] INFO  StartServer:137 - 
+2020-08-22 20:52:20 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-22 20:52:20 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-22 21:04:22 [main] INFO  StartClient:32 - javaVersion = 1.8.0_265
+2020-08-22 21:04:22 [main] INFO  StartClient:36 - majorVersionOnly = 1.8
+2020-08-22 21:04:22 [main] INFO  StartClient:40 - versionValue = 1.8
+2020-08-22 21:04:23 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-22 21:04:23 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-22 21:04:23 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-22 21:04:23 [Thread-1] INFO  ServerCommandThreadImpl:56 - Carregando a lista de filmes ...
+2020-08-22 21:04:25 [Thread-1] INFO  ServerCommandThreadImpl:60 - Total de filmes carregados = 250
+2020-08-22 21:04:25 [Thread-1] INFO  ServerCommandThreadImpl:62 - 
+2020-08-22 21:04:25 [Thread-1] INFO  ServerCommandThreadImpl:63 - Esperando requisição do cliente ...
+2020-08-22 21:04:25 [main] INFO  StartServer:104 - 
+2020-08-22 21:04:39 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
+2020-08-22 21:04:39 [main] INFO  StartServer:137 - 
+2020-08-22 21:04:39 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!

@@ -52,7 +52,7 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 		movieList.
 		stream().
 		filter(title -> 
-		title.toString().trim().toLowerCase().startsWith(optionalMovieTitle.get().trim().toLowerCase())).
+		title.toString().trim().toLowerCase().contains(optionalMovieTitle.get().trim().toLowerCase())).
 		forEach(title -> result.append(title + "\n"));
 		
 		return (result.length() > 0 ? 
