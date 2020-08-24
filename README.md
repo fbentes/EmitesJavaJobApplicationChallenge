@@ -39,7 +39,7 @@
         
 >    **Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes.** 
 
-Exemplo de execução de dois servidores socketes, um na porta padrão 20222 e outro na porta 32987. Ambos esperando requisições dos clientes:
+Exemplo de execução no Windows de dois servidores socketes, um na porta padrão 20222 e outro na porta 32987. Ambos esperando requisições dos clientes:
 
 ![Exemplo ServerSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ServerSocket_Exemplo.jpg)
 
@@ -64,7 +64,7 @@ Exemplo de execução de dois servidores socketes, um na porta padrão 20222 e o
         
 >   **Cada cliente deve ser executado em sua instância de prompt de comando para simular chamadas simultâneas.**
 
-Exemplo de execução de dois clientes sockets, um na porta padrão e outro na porta 32987. Cada um requisitando para uma instância de servidor socket:
+Exemplo de execução no Windows de dois clientes sockets, um na porta padrão e outro na porta 32987. Cada um requisitando para uma instância de servidor socket:
 
 ![Exemplo ClientSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ClientSocket_Exemplo.jpg)
 
@@ -86,9 +86,13 @@ Exemplo de execução de dois clientes sockets, um na porta padrão e outro na p
 
 O arquivo de log será registrado no subdiretório dos executáveis (ex.: **C:\Temp\log\IMDbQueryProject.log**).
 
-Exemplo de execução de três clientes sockets concorrendo em requisições para um mesmo servidor socket na porta padrão 20222:
+Exemplo de execução no Windows de três clientes sockets concorrendo em requisições para um mesmo servidor socket na porta padrão 20222:
 
 ![Exemplo de comunicação](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/Exemplo_Comunicacao.jpg)
+
+Exemplo de execução no macOS de um cliente para um servidor socket:
+
+![Exemplo de comunicação](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/Exemplo_Comunicacao_macOS.jpg)
 
 ### Referências:
 
