@@ -37,15 +37,15 @@
         
         C:\Temp\java -jar IMDbServerSocket.jar 32987 (executa na porta 32987).
         
->    Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes. 
+>    **Vários servidores podem ser instanciados, cada um no seu prompt e na sua porta, para futuras conexões de clientes.** 
 
 Exemplo de execução de dois servidores socketes, um na porta padrão 20222 e outro na porta 32987. Ambos esperando requisições dos clientes:
 
 ![Exemplo ServerSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ServerSocket_Exemplo.jpg)
 
->    Um servidor socket é instanciado numa Thread filha para que a Thread principal possa gerenciá-lo. E o servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.
+>    **Um servidor socket é instanciado numa Thread filha para que a Thread principal possa gerenciá-lo. E o servidor aloca uma Thread para cada atendimento de solicitação de cliente. Assim múltiplas conexões podem ser estabelecidas.**
 
->    Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.
+>    **Se a porta estiver ocupada por outro processo, será feita tentativas de alocação pelo servidor socket até encontrar uma porta aberta. Essa porta aberta recém alocada pelo servidor socket será impressa no console para que o cliente saiba qual porta se conectar.**
 
 3) Abrir outra instância do prompt de comando e executar o cliente socket 
 
@@ -68,9 +68,9 @@ Exemplo de execução de dois clientes sockets, um na porta padrão e outro na p
 
 ![Exemplo ClientSocket](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/blob/master/images/ClientSocket_Exemplo.jpg)
 
->   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC), ou         rejeição no caso da porta 6969 (serviço acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse acmsoda ou outros serviços afins.
+>   **Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC), ou         rejeição no caso da porta 6969 (serviço acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse acmsoda ou outros serviços afins.**
 
->   Somente será aberta uma conexão com o servidor socket quando for solicitada uma busca de filme, e após a resposta do servidor, a conexão do cliente socket será encerrada para não mantê-la aberta desnecessariamente.
+>   **Somente será aberta uma conexão com o servidor socket quando for solicitada uma busca de filme, e após a resposta do servidor, a conexão do cliente socket será encerrada para não mantê-la aberta desnecessariamente.**
 
 **As pesquisas por filmes podem ser feitas pelo nome completo, ou qualquer parte do nome, do título do filme. Ex.:**
 
