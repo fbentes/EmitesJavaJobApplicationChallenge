@@ -23,7 +23,7 @@
 #### Tutorial para executar a solução pelo prompt de comando:
 
 > OBS.: Se você for apenas executar os _*.jar_ abaixo e não for compilar os fontes, tenha instalado um JRE 8, **no mínimo**, e devidamente setado seu diretório \bin na variável de ambiente PATH. **Digite na linha de comando _java -version_ para checar se os requisitos para execução dos _*.jar_ estão sendo atendidos !**
-
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
 1) Baixar da pasta os executáveis [**IMDbServerSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbServerSocket.jar) e [**IMDbClientSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbClientSocket.jar) num diretório local (Ex.: **C:\Temp**).
 
 2) Abrir uma instância do prompt de comando e executar o servidor socket (**C:\Temp\java -jar IMDbServerSocket.jar [porta]**). 
