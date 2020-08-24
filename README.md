@@ -72,12 +72,12 @@ Exemplo de execução de dois clientes sockets, um na porta padrão e outro na p
 
 **As pesquisas por filmes podem ser feitas pelo nome completo, ou qualquer parte do nome, do título do filme. Ex.:**
 
-        Digitando 3 e teclando ENTTER, serão listado:
+        Digitando 3 e teclando ENTTER, serão listados:
         3 Idiotas
         O 3 Homem
         Toy Story 3
    
-        Digitando batman e teclando ENTTER, serão listado:
+        Digitando batman e teclando ENTTER, serão listados:
         Batman Begins
         Batman: O Cavaleiro das Trevas
         Batman: O Cavaleiro das Trevas Ressurge
