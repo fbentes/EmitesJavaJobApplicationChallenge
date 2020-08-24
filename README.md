@@ -89,7 +89,3 @@ Exemplo de execução de três clientes sockets concorrendo em requisições par
 [JUnit5 Gradle](https://www.baeldung.com/junit-5-gradle)
 
 [Log4j 2](https://logging.apache.org/log4j/2.x/)
-
-**```diff
-- text in red
-```**
