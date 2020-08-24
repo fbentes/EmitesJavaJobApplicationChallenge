@@ -70,7 +70,7 @@ Exemplo de execução de dois clientes sockets, um na porta padrão e outro na p
 
 >   Se o cliente tentar se conectar numa porta alocada por outro processo que não seja o servidor socket da solução, poderá haver travamento no caso da porta 135 (RPC), ou         rejeição no caso da porta 6969 (serviço acmsoda - cliente bittorrent) com a mensagem personalizada ('O protocolo de comunicação está inválido') para resposta de Bad Request desse acmsoda ou outros serviços afins.
 
->   **As pesquisas por filmes podem ser feitas pelo nome completo, ou qualquer parte do nome, do título do filme. Ex.:
+**As pesquisas por filmes podem ser feitas pelo nome completo, ou qualquer parte do nome, do título do filme. Ex.:
 
         Digitando 3 e teclando ENTTER, serão listado:
         3 Idiotas
