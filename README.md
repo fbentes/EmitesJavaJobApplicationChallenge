@@ -6,6 +6,8 @@
 - [**Eclipse IDE for Java Developers Version: 2020-06 (4.16.0) Download**](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-06/R/eclipse-inst-win64.exe&mirror_id=576)
 - [**RedHat Java OpenJDK 8 Download**](https://developers.redhat.com/download-manager/file/java-1.8.0-openjdk-1.8.0.265-3.b01.redhat.windows.x86_64.msi) (faça o download apenas se você não tiver, **_no mínimo_**, um JDK 8 instalado, seja da RedHat, Oracle ou outro fornecedor).
 
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **`VERSÕES ANTERIORES AO JAVA 1.8 NÃO EXECUTARÃO PORQUE FORAM USADOS RECURSOS DO 1.8 !!!`**
+
 ### Documentação técnica:
 
 [IMDbQueryProject Lucidchart Package Diagram](https://app.lucidchart.com/documents/view/0d56f59b-9c80-4575-a536-f7564f94275a/0_0)
@@ -23,8 +25,6 @@
 #### Tutorial para executar a solução pelo prompt de comando:
 
 > OBS.: Se você for apenas executar os _*.jar_ abaixo e não for compilar os fontes, tenha instalado um JRE 8, **no mínimo**, e devidamente setado seu diretório \bin na variável de ambiente PATH. **Digite na linha de comando _java -version_ para checar se os requisitos para execução dos _*.jar_ estão sendo atendidos !**
-
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **`VERSÕES ANTERIORES AO JAVA 1.8 NÃO EXECUTARÃO PORQUE FORAM USADOS RECURSOS DO 1.8 !!!`**
 
 1) Baixar da pasta os executáveis [**IMDbServerSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbServerSocket.jar) e [**IMDbClientSocket.jar**](https://github.com/fbentes/EmitesJavaJobApplicationChallenge/raw/master/executables/IMDbClientSocket.jar) num diretório local (Ex.: **C:\Temp**).
 
