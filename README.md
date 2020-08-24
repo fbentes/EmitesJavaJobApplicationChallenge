@@ -90,6 +90,6 @@ Exemplo de execução de três clientes sockets concorrendo em requisições par
 
 [Log4j 2](https://logging.apache.org/log4j/2.x/)
 
-```diff
+**```diff
 - text in red
-```
+```**
