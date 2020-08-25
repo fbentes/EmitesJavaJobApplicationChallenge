@@ -17,6 +17,7 @@ import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
  * @since 14/08/2020
  * 
  */
+@Deprecated
 public class IMDbCommunicationProtocolImpl implements IMDbCommunicationProtocol {
 
 	@Override

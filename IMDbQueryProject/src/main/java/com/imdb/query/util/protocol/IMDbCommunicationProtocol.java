@@ -29,7 +29,7 @@ public interface IMDbCommunicationProtocol {
 	
     /**
      * Checa se o protocolo de comunicação entre o cliente e servidor socket
-     * foi corretamente aplicadao.
+     * foi corretamente aplicado.
      * 
      * @param message Mensagem entre o cliente e servidor.
      * @return Verdadeiro se o protocolo correto foi aplicado na mensagem. Falso caso contrário.

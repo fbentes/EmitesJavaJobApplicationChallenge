@@ -9,7 +9,7 @@ import com.imdb.query.server.IMDbUrlConnection;
 import com.imdb.query.server.impl.IMDbServerSocketImpl;
 import com.imdb.query.server.impl.IMDbUrlConnectionImpl;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
-import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolImpl;
+import com.imdb.query.util.protocol.impl.IMDbCommunicationProtocolWithLengthDataTransferImpl;
 
 /**
  * Injeta as dependências necessárias para a solução.
@@ -30,6 +30,8 @@ public class IMDbQueryModule extends AbstractModule {
 		
 		bind(IMDbUrlConnection.class).to(IMDbUrlConnectionImpl.class).in(Singleton.class);
 		
-		bind(IMDbCommunicationProtocol.class).to(IMDbCommunicationProtocolImpl.class);		
+		//bind(IMDbCommunicationProtocol.class).to(IMDbCommunicationProtocolImpl.class);
+		
+		bind(IMDbCommunicationProtocol.class).to(IMDbCommunicationProtocolWithLengthDataTransferImpl.class);		
 	}
 }

@@ -7,39 +7,38 @@ import java.util.Random;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 
+import com.google.inject.Inject;
 import com.imdb.query.test.util.TestBase;
 import com.imdb.query.util.Constants;
+import com.imdb.query.util.IMDbQueryModuleInjector;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 
-/**
- * @author Fábio Bentes
- *
- */
 @TestInstance(Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@Deprecated
-public class IMDbCommunicationProtocolTest extends TestBase {
+public class IMDbCommunicationProtocolWithLengthDataTransferImplTest extends TestBase {
 
-    private static final Logger logger = LogManager.getLogger(IMDbCommunicationProtocolTest.class);
+    private static final Logger logger = LogManager.getLogger(IMDbCommunicationProtocolWithLengthDataTransferImplTest.class);
 
+    @Inject
     private IMDbCommunicationProtocol iMDbCommunicationProtocol;
 
 	@BeforeAll
 	public void initialize() {
 
-		iMDbCommunicationProtocol = new IMDbCommunicationProtocolImpl();	
+		// Injetando dependências ...
+		
+		IMDbQueryModuleInjector.initialize(this);
 		
 		logger.info(Constants.STRING_EMPTY);
-		logger.info("******** INICIANDO IMDbCommunicationProtocolTest ************");
+		logger.info("******** INICIANDO IMDbCommunicationProtocolWithLengthDataTransferImplTest ************");
 		logger.info(Constants.STRING_EMPTY);
 	}
 	
@@ -50,11 +49,12 @@ public class IMDbCommunicationProtocolTest extends TestBase {
 		Random random = new Random();
 		
 		String[] movieValidArrayTest = 
-			{Constants.PREFIX_PROTOCOL + "...E o Vento Levou" + Constants.SUFIX_PROTOCOL,
-			 Constants.PREFIX_PROTOCOL + "12" + Constants.SUFIX_PROTOCOL,
-			 Constants.PREFIX_PROTOCOL + "1917, 2001: Uma Odisséia no Espaço" + Constants.SUFIX_PROTOCOL, 
-			 Constants.PREFIX_PROTOCOL + "Batman" + Constants.SUFIX_PROTOCOL,
-			 Constants.PREFIX_PROTOCOL + "Um sonho" + Constants.SUFIX_PROTOCOL};
+			{"18:...E o Vento Levou",
+			 "2:12",
+			 "4:1917", 
+			 "28:2001: Uma Odisséia no Espaço", 
+			 "6:Batman",
+			 "8:Um sonho"};
 		
 		String movieTitleExample = movieValidArrayTest[random.nextInt(movieValidArrayTest.length)];
 		
@@ -74,7 +74,8 @@ public class IMDbCommunicationProtocolTest extends TestBase {
 		String[] movieNotValidArrayTest = 
 			{"...E o Vento Levou",
 			 "12",
-			 "1917, 2001: Uma Odisséia no Espaço", 
+			 "1917", 
+			 "2001: Uma Odisséia no Espaço", 
 			 "Batman",
 			 "Um sonho"};
 		
@@ -91,10 +92,9 @@ public class IMDbCommunicationProtocolTest extends TestBase {
     @Order(4)
 	public void istMatchPatternProtocoServerTest() {
 		
-		String moviesFromServer = 
-				Constants.PREFIX_PROTOCOL + 
-				"Bamtan\nMatrix\nA Origem\n12 Anos de escravidão\n" + 
-				Constants.SUFIX_PROTOCOL;
+		String queryResponse = "Bamtan\nMatrix\nA Origem\n12 Anos de escravidão\n";
+		
+		String moviesFromServer = queryResponse.length() + ":" +queryResponse;
 
 		boolean isMatch = iMDbCommunicationProtocol.isMatchPatternProtocol(moviesFromServer);
 		
@@ -116,10 +116,4 @@ public class IMDbCommunicationProtocolTest extends TestBase {
 		logger.info(getResultTest("istNotMatchPatternProtocoServerTest()", !isMatch));		
 	}
 	
-	@AfterAll
-	public void end() {
-		logger.info(Constants.STRING_EMPTY);
-		logger.info("******** FINALIZADO IMDbCommunicationProtocolTest ************");
-		logger.info(Constants.STRING_EMPTY);
-	}
 }
