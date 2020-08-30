@@ -105,3 +105,7 @@ Exemplo de execução no macOS de um cliente para um servidor socket:
 [JUnit5 Gradle](https://www.baeldung.com/junit-5-gradle)
 
 [Log4j 2](https://logging.apache.org/log4j/2.x/)
+
+[Gson](https://github.com/google/gson/blob/master/UserGuide.md)
+
+[IMDb WebApi](http://www.omdbapi.com/)
