@@ -20,12 +20,4 @@ public interface IMDbUrlConnection {
 	 * @return Filmes encontrados.
 	 */
 	 String getMoviesFound(String movieTitle);
-	
-	/**
-	 * Preenche a lista em memória com os nomes retornados do site IMDb.
-	 * 
-	 * @return Quantidade de filmes inseridos na lista.
-	 * @see IMDbServerSocket#loadMovieLlistFromImdb()
-	 */
-	int fillMovieListFromImdbUrl();
 }

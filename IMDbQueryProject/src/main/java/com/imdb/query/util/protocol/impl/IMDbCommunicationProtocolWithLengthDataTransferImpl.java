@@ -1,8 +1,10 @@
 package com.imdb.query.util.protocol.impl;
 
+import com.google.inject.Singleton;
 import com.imdb.query.util.Constants;
 import com.imdb.query.util.protocol.IMDbCommunicationProtocol;
 
+@Singleton
 public class IMDbCommunicationProtocolWithLengthDataTransferImpl implements IMDbCommunicationProtocol {
 
 	private static final String SEPARATOR_PROTOCOL = ":";
@@ -60,32 +62,5 @@ public class IMDbCommunicationProtocolWithLengthDataTransferImpl implements IMDb
 		}
 		
 		return queryLength == query.length();
-	}
-
-	public static void main(String[] args) {
-		
-		IMDbCommunicationProtocolWithLengthDataTransferImpl iMDbCommunication = new IMDbCommunicationProtocolWithLengthDataTransferImpl();
-		
-		String s = "6:batman";
-		String s1 = "33:3 Idiotas\\nO 3 Homem\\nToy Story 3";
-		
-		String s2 = "7:batman";
-		String s3 = "35:3 Idiotas\\nO 3 Homem\\nToy Story 3";
-
-		String s4 = "28:2001: Uma Odisséia no Espaço";
-		String s5 = "2001: Uma Odisséia no Espaço";
-		
-		System.out.println(iMDbCommunication.isMatchPatternProtocol(s));
-		System.out.println(iMDbCommunication.isMatchPatternProtocol(s1));
-
-		System.out.println(!iMDbCommunication.isMatchPatternProtocol(s2));
-		System.out.println(!iMDbCommunication.isMatchPatternProtocol(s3));
-
-		System.out.println(iMDbCommunication.isMatchPatternProtocol(s4));
-		System.out.println(!iMDbCommunication.isMatchPatternProtocol(s5));
-		
-		String s6 = iMDbCommunication.getMessageWithOutPatternProtocolApplied(s4);
-		
-		System.out.println(s6);
 	}
 }

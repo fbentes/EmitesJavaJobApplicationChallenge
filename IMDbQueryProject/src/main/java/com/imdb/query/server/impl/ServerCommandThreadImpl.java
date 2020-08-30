@@ -52,13 +52,6 @@ public class ServerCommandThreadImpl extends Thread implements ServerCommandThre
 					logger.info("****************************************");
 				}
 
-				logger.info("");
-				logger.info("Carregando a lista de filmes ...");
-				
-				int totalMovies = imdbServerSocket.loadMovieLlistFromImdb();
-				
-				logger.info("Total de filmes carregados = " + totalMovies);
-				
 				logger.info(Constants.STRING_EMPTY);
 				logger.info("Esperando requisição do cliente ...");
 				

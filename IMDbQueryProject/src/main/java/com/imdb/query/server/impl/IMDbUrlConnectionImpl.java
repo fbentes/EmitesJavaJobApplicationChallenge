@@ -28,6 +28,7 @@ import com.imdb.query.util.Constants;
  * @since 09/08/2020
  * 
  */
+@Deprecated
 @Singleton
 public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 
@@ -58,8 +59,8 @@ public class IMDbUrlConnectionImpl implements IMDbUrlConnection {
 					"Nenhum filme foi encontrado com o título '" + movieTitle.trim() + "' !");
 	}
 	
-	@Override
-	public int fillMovieListFromImdbUrl() {
+	@Deprecated
+	public int fillMovieCacheListFromImdbUrl() {
 		
         URL urlIMDb;
         URLConnection urlConnection;

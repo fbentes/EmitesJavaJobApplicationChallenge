@@ -36,9 +36,6 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 	
 	private Integer alternativePort;
 	
-	@Inject
-	private IMDbUrlConnection iMDbUrlConnection;
-	
 	@Override
 	public boolean connectToServerSocket() {
 		
@@ -84,17 +81,6 @@ public class IMDbServerSocketImpl implements IMDbServerSocket {
 	@Override
 	public Integer getAlternativePort() {
 		return alternativePort;
-	}
-	
-	@Override
-	public int loadMovieLlistFromImdb() {
-		
-		if(!isExecuting) {
-			logger.error("O método connect() deve ser chamado !");
-			return -1;
-		}
-		
-		return iMDbUrlConnection.fillMovieListFromImdbUrl();
 	}
 	
 	@Override

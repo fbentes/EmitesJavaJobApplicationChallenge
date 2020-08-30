@@ -44,15 +44,7 @@ public interface IMDbServerSocket {
 	 * Fica espera de solicitações dos clientes enquanto não for parado pelo usuário.
 	 */
 	void waitingForClientRequests();
-	
-	/**
-	 * Carrega em cache a lista de filmes buscadas do site IMDb.
-	 * 
-	 * @return Quantidade de itens da lista.
-	 * @see IMDbUrlConnection#fillMovieListFromImdbUrl()
-	 */
-	int loadMovieLlistFromImdb();
-	
+		
 	/**
 	 * Força a parada do servidor e encerramento de sua thread.
 	 */

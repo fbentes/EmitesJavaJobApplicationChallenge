@@ -70,17 +70,6 @@ public class ImdbServerSocketTest {
 	
 	@Test
 	@Order(3)
-	public void loadMovieLlistFromImdbTest() {
-		
-		int movieQuantity = imdbSocketServer.loadMovieLlistFromImdb();
-		
-		assertTrue(movieQuantity > 0);
-		
-		logger.info("Quantidade de filmes = " + movieQuantity);
-	}
-	
-	@Test
-	@Order(4)
 	public void waitingForClientRequests() throws InterruptedException {
 			
 		Thread thread = new Thread(new Runnable() {

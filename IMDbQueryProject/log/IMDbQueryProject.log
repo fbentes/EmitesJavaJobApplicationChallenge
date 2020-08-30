@@ -4855,3 +4855,49 @@ Toy Story 3
 2020-08-24 22:04:36 [Thread-1] INFO  ServerCommandThreadImpl:70 - 
 2020-08-24 22:04:36 [main] INFO  StartServer:137 - 
 2020-08-24 22:04:36 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-30 12:17:22 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-30 12:17:22 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-30 12:17:22 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-30 12:17:22 [Thread-1] INFO  ServerCommandThreadImpl:56 - Esperando requisição do cliente ...
+2020-08-30 12:17:22 [main] INFO  StartServer:104 - 
+2020-08-30 12:17:29 [main] INFO  StartClient:237 - 
+2020-08-30 12:17:29 [main] INFO  StartClient:238 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-30 12:17:32 [main] INFO  StartClient:223 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-30 12:17:32 [main] INFO  StartClient:205 - 
+2020-08-30 12:17:32 [main] INFO  StartClient:206 - Resposta:
+2020-08-30 12:17:32 [main] INFO  StartClient:207 - O protocolo de comunicação está inválido !
+2020-08-30 12:17:32 [main] INFO  StartClient:208 - Conexão com o servidor fechada !
+2020-08-30 12:17:32 [main] INFO  StartClient:209 - ******************************************************
+2020-08-30 12:17:32 [main] INFO  StartClient:237 - 
+2020-08-30 12:17:32 [main] INFO  StartClient:238 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-30 12:17:38 [main] INFO  StartServer:137 - 
+2020-08-30 12:17:38 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!
+2020-08-30 12:17:38 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-30 12:21:47 [Thread-1] INFO  ServerCommandThreadImpl:35 - 
+2020-08-30 12:21:47 [Thread-1] INFO  ServerCommandThreadImpl:46 - Servidor conectado na porta 20222.
+2020-08-30 12:21:47 [Thread-1] INFO  ServerCommandThreadImpl:55 - 
+2020-08-30 12:21:47 [Thread-1] INFO  ServerCommandThreadImpl:56 - Esperando requisição do cliente ...
+2020-08-30 12:21:47 [main] INFO  StartServer:104 - 
+2020-08-30 12:21:52 [main] INFO  StartClient:237 - 
+2020-08-30 12:21:52 [main] INFO  StartClient:238 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-30 12:21:55 [main] INFO  StartClient:223 - Conectado no servidor em 127.0.0.1:20222.
+2020-08-30 12:21:56 [main] INFO  StartClient:205 - 
+2020-08-30 12:21:56 [main] INFO  StartClient:206 - Resposta:
+2020-08-30 12:21:56 [main] INFO  StartClient:207 - Batman Begins
+Batman v Superman: Dawn of Justice
+Batman
+Batman Returns
+Batman Forever
+Batman & Robin
+The Lego Batman Movie
+Batman: The Animated Series
+Batman: Under the Red Hood
+Batman: The Dark Knight Returns, Part 1
+
+2020-08-30 12:21:56 [main] INFO  StartClient:208 - Conexão com o servidor fechada !
+2020-08-30 12:21:56 [main] INFO  StartClient:209 - ******************************************************
+2020-08-30 12:21:56 [main] INFO  StartClient:237 - 
+2020-08-30 12:21:56 [main] INFO  StartClient:238 - Digite o título do filme para pesquisa no IMDb (p/ sair digite quit): 
+2020-08-30 12:22:07 [main] INFO  StartServer:137 - 
+2020-08-30 12:22:07 [Thread-1] INFO  ServerCommandThreadImpl:63 - 
+2020-08-30 12:22:07 [main] INFO  StartServer:138 - Servidor parado pelo usuário !!!

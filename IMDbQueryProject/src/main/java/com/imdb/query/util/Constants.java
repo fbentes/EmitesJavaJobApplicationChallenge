@@ -30,7 +30,14 @@ public class Constants {
 	 * Site IMDb para listagem de filmes: https://www.imdb.com/chart/top/?ref_=wl_expl_1
 	 * 
 	 */
+	@Deprecated
 	public static final String IMDb_MOVIES_URL = "https://www.imdb.com/chart/top/?ref_=wl_expl_1";
+	
+	/**
+	 * Web Service IMDb para busca de filmes pelo título: http://www.omdbapi.com/?apikey=988ce20c&s=batman
+	 * 
+	 */
+	public static final String IMDB_WEBAPI_MOVIES = "http://www.omdbapi.com/?apikey=988ce20c&s=%s";
 	
 	public static final String PREFIX_PROTOCOL = "IMDb_";
 	
