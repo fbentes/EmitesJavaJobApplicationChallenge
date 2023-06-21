@@ -1,5 +1,12 @@
 # IMDbQueryProject
-## Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
+## Agosto/2020 - Aplicação console em Java para consultas via socket de títulos de filmes no site IMDb.
+
+## Requisito: 
+O usuário (cliente) precisa digitar o nome de um filme que deseja e o componente (server) deve buscá-lo no site IMDb com tempo de resposta satisfatório para o usuário. Um ou mais servers devem aguardar as solicitações em background esperando as solicitações pelas suas respectivas portas TCP. O client e server devem usar um protocolo comum de comunicação, e a comunicação deve ser concorrente e performática.
+
+## Solução: 
+Uma aplicação console foi criada para o server e outra para o client. O server deve executar numa porta TCP especificada pelo usuário e ficar aguardando as solicitações. Vários clients solicitam a estes TCP servers o filme desejado, e o server responsável dispara uma Thread para cada client, permitindo assim múltiplas requisições simultâneas usando Sockets com Threads.
+
 ### Ambiente de desenvolvimento adotado:
 
 - **Windows 10 Home**
